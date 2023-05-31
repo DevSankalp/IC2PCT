@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <title>IC2PCT 2023</title>
+</head>
+<style>
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+</style>
+
+<body class="font-['poppins']" id="body">
+
+  <!-- Background-Image -->
+  <img class="hidden md:block fixed h-[100vh] w-[100vw] blur-[2px] z-[-1]"
+    src="https://www.galgotiasuniversity.edu.in/public/uploads/media/EOv7eGMLRuNVFbo2LzeuQxg79IxvJm3FY2tgFCZW.jpg"
+    alt="background-image">
+
+  <!-- Navbar -->
+  <nav class="w-[100vw] h-[max-content] flex justify-center fixed z-10">
+    <div
+      class="navbar w-[95%] md:w-[100%] bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(226,226,240,1)_85%,rgba(211,242,255,1)_100%)] transition-all rounded-lg md:rounded-none shadow-xl mt-4 md:mt-0 p-0"
+      id="nav_cont">
+      <div class="hidden md:w-[50%] h-[100%] md:flex">
+
+        <!-- SideBar -->
+        <div class="relative self-end">
+          <div tabindex="0"
+            class="z-[-1] fixed bottom-0 bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(255,255,255,.9)_100%)] text-[#B70404] h-[92vh] w-[15vw] flex flex-col translate-x-[-20vw] origin-left duration-300"
+            id="menu1">
+            <a href="#about"
+              class="relative p-8 before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-300">About
+            </a>
+            <a href="#committes"
+              class="relative p-8 before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-300">Committes
+            </a>
+            <a href="#author"
+              class="relative p-8 before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-300">For
+              Author
+            </a>
+            <a href="#previousconference"
+              class="relative p-8 before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-300">Previous
+              Conferences
+            </a>
+            <a href="#programs"
+              class="relative p-8 before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-300">Programs
+            </a>
+            <a href="#registrations"
+              class="relative p-8 before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-300">Registration
+            </a>
+            <a onclick="open_modal()"
+              class="cursor-pointer relative p-8 before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-300">Contact
+            </a>
+            <a href="#"
+              class="relative p-8 before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-300">Submission
+            </a>
+          </div>
+        </div>
+
+        <!-- Burger-Icon -->
+        <label tabindex="0" class="btn btn-ghost btn-circle h-[100%] hover:bg-transparent" id="menu1_btn">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+          </svg>
+        </label>
+      </div>
+
+      <!-- Screen-Smaller-than-768px -->
+      <div class="md:hidden navbar-start h-[100%]">
+        <div class="h-[100%]">
+
+          <!-- Burger-Icon -->
+          <label tabindex="0" class="btn btn-ghost btn-circle h-[100%] hover:bg-transparent" id="menu_btn">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+            </svg>
+          </label>
+
+          <!-- Top-MenuBar -->
+          <ul tabindex="0"
+            class="absolute scale-y-0 menu menu-compact p-2 bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(226,226,240,1)_85%,rgba(211,242,255,1)_100%)] text-[#B70404] font-[600] rounded-b-lg w-[95vw] origin-top duration-500 shadow-xl transition-all"
+            id="menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#committes">Committes</a></li>
+            <li><a href="#author">For Author</a></li>
+            <li><a href="#previousconferences">Previous Conferences</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#registration">Registration</a></li>
+            <li><a onclick="open_modal()" class="cursor-pointer">Contact</a></li>
+            <li><a href="#">Submission</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Logo -->
+      <div class="navbar-center">
+        <img class="w-64 md:w-80" src="asset/galgotias-logo-1.png" alt="">
+      </div>
+
+      <!-- Search-Bar -->
+      <div class="navbar-end h-[100%] mr-4">
+        <div
+          class="hidden w-12 h-[75%] sm:flex justify-end items-center bg-[#B70404] transition-all origin-right duration-300 rounded-full border-0"
+          id="search-cont">
+          <input type="text" placeholder="Search"
+            class="h-[100%] w-[100%] placeholder:text-white bg-transparent text-white focus:outline-none scale-x-0 text-black rounded-l-full"
+            id="search-bar">
+          <button
+            class="btn w-12 h-12 rounded-full bg-transparent focus:outline-none border-0 text-white hover:bg-black duration-500 origin-right transition-all"
+            id="search-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Heading-Container -->
+  <div class="h-[60vh] flex items-center justify-center">
+    <h1
+      class="fixed text-6xl sm:text-8xl font-['poppins_extrabold'] bg-clip-text text-transparent bg-gradient-to-r from-violet-500 to-orange-500 z-[-1]">
+      IC2PCT</h1>
+
+    <!-- CountDown-Canvas -->
+    <canvas id="canvas"
+      class="fixed top-64 sm:top-80 bg-black p-4 rounded-lg z-[-1] contrast-100 saturate-100"></canvas>
+  </div>
+
+
+  <!-- About-Section -->
+  <section class="bg-[rgba(255,255,255,0.9)] flex justify-center text-justify text-black text-sm sm:text-lg pb-12"
+    id="about">
+    <div class="w-[80%]">
+      <h1
+        class="uppercase text-3xl sm:text-5xl text-center animate-pulse text-blue-700 font-['poppins_extrabold'] my-4">
+        DETAILS
+        WILL BE PUBLISHED SOON HERE</h1>
+      <h1 class="text-2xl sm:text-4xl text-center text-blue-700 font-bold mt-8 mb-4">About</h1>
+      <p class="">2024 IEEE International Conference on Computing, Power and Communication Technologies (IC2PCT) is
+        being organized on FEB 8-9, 2024 at Galgotias University, Greater Noida, India with Financial and Technical
+        Sponsorship of IEEE Uttar Pradesh Section.</p>
+      <p class="mt-4 mb-8">
+        IC2PCT will provide an opportunity to the practicing engineers, academicians and researchers to meet in a
+        forum to discuss various issues and its future direction of various Emerging Technologies. The
+        conference aims to put together the experts from the relevant areas to disseminate their knowledge and
+        experience for the relevant future research scope. There are 10 tracks in the conference covering almost
+        all areas related to.
+      </p>
+      <h1 class="text-lg sm:text-2xl font-bold my-4">Conference Tracks:</h1>
+      <ul class="mb-8">
+        <li>Track I. Smart Cities & Technologies for sustainable development</li>
+        <li>Track II. Renewable Energy technologies including hydrogen</li>
+        <li>Track III. Modern Power Electronics, Drives & Control, Electric Vehicles</li>
+        <li>Track IV. Big data, Cloud Computing and Quantum Computing</li>
+        <li>Track V. Smart Manufacturing, Smart Tourism and Industry 5.0</li>
+        <li>Track VI. 5G Applications,Emerging 6G Technologies, E-Commerce</li>
+        <li>Track VII. Robotics, UAV, and Unmanned Vehicle Technologies</li>
+        <li>Track VIII. AI, AIoT, IIoT, Deep Learning, and Machine Learning</li>
+        <li>Track IX. Applications of Wide Bandgap Semiconductors</li>
+        <li>Track X. Cyber Security and Humanitarian Technologies</li>
+        <li>Track XI. Blockchain Applications</li>
+        <li>Track XII. AR,VR and Metaverse</li>
+        <li>Track XIII. Healthcare Applications</li>
+        <li>Track XIV. Human Computer Interface (HCI)</li>
+        <li>Special/ Track XI. Financial Technologies</li>
+        <li>Special/ Track XII. Sports Analytics and Technologies</li>
+      </ul>
+      <h1 class="text-lg sm:text-2xl font-bold my-4">Objectives</h1>
+      <p class="">The major objectives of the conference series (IC2PCT) are as follows:</p>
+      <ul>
+        <li class="list-disc ml-12 ">To provide a prestigious international forum for specialist presentations and
+          interactions in one or more areas of Engineering and Technology with in its tracks through papers,
+          exhibitions, plenary talk, tutorials, etc;
+        </li>
+        <li class="list-disc ml-12 ">To contribute to the development, progress and welfare of societies (S/Y/W) by
+          disseminating technological knowledge and experience;</li>
+        <li class="list-disc ml-12 ">To encourage the study and discussion of technology and technological
+          applications in
+          a broad social, political and human context;</li>
+        <li class="list-disc ml-12 ">To polish and boost the interpersonal and professional skills of volunteers
+          with
+          the
+          guidance of leaders and renowned personalities in the respective field of Engineering & Technology.
+        </li class="list-disc ml-12 ">
+      </ul>
+    </div>
+  </section>
+
+  <!-- Committes-Section -->
+  <section class="bg-[rgba(255,255,255,0.9)] flex justify-center text-justify text-black text-sm sm:text-lg pb-12"
+    id="committes">
+    <div class="w-[60%]">
+      <h1 class="text-2xl sm:text-4xl text-center text-blue-700 font-bold mt-8 mb-4">IEEE IC2PCT 2024 ORGANIZING
+        COMMITTEES</h1>
+      <div class="flex flex-col items-center">
+        <p class="">Shri Suneel Galgotias, Chancellor, Galgotias University, India</p>
+        <p class="">Shri Dhruv Galgotias, CEO, Galgotias University, India</p>
+        <p class="">Prof. Mallikharjuna Babu Kayala, Vice Chancellor, Galgotias University,India</p>
+        <p class="">Prof. S.N. Singh, Director, IIITM Gwalior, India</p>
+        <h1 class="my-2 font-black">Conference General Chair</h1>
+        <p class="">Prof. Avadhesh Kumar, Galgotias University, India</p>
+        <h1 class="my-2 font-black">Conference Chair</h1>
+        <p class="">Prof. Aanjey Mani Tripathi, Galgotias University, India</p>
+        <p class="">Prof. Prashant Johri, Galgotias University, India</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Authors -->
+  <section class="bg-[rgba(255,255,255,0.9)] flex justify-center text-justify text-black text-sm sm:text-lg pb-12"
+    id="author">
+    <div class="w-[80%]">
+      <h1 class="text-2xl sm:text-4xl text-center text-blue-700 font-bold mt-8 mb-4">FOR AUTHOR</h1>
+      <p>Original contributions based on the results of research and
+        developments are solicited. Prospective authors are requested to submit their papers in not more than 6
+        pages, prepared in the two column IEEE format. All the accepted and presented papers will be eligible
+        for submission to IEEE HQ for publication in the form of e-proceedings in IEEE Xplore Which indexed with
+        world's leading Abstracting & Indexing (A&I) databases, including ISI / SCOPUS/ DBLP/ EI-Compendex /
+        Google Scholar.
+      </p>
+      <div class="flex justify-around mt-12">
+        <a href="#"
+          class="btn btn-round bg-[#B70404] text-white hover:bg-white hover:text-black border-0 shadow-xl">PAPER
+          TEMPLATE</a>
+        <a href="#"
+          class="btn btn-round bg-[#B70404] text-white hover:bg-white hover:text-black border-0 shadow-xl">SUBMIT YOUR
+          PAPER</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs -->
+  <section class="bg-[rgba(255,255,255,0.9)] flex justify-center text-justify text-black text-sm sm:text-lg pb-12"
+    id="programs">
+    <div class="w-[80%]">
+      <h1 class="text-2xl sm:text-4xl text-center text-blue-700 font-bold mt-8 mb-4">Programs</h1>
+    </div>
+  </section>
+
+  <!-- Registrations -->
+  <section
+    class="translate-x-[-100vw] duration-700 fixed top-[12vh] md:top-[8vh] h-[88vh] md:h-[92vh] w-[100vw] bg-[rgba(0,0,0,0.8)] flex justify-center text-justify text-black text-sm sm:text-lg pb-12"
+    id="registrations">
+    <div class="w-[80%] text-white flex flex-col justify-center items-center">
+      <h1 class=" text-2xl sm:text-4xl text-center text-white font-bold mt-8 mb-4">Registrations</h1>
+      <div id="registration" class="table table-compact" data-theme="">
+        <h1 class="">REGISTRATION</h1>
+        <h3>Registration Fees</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Registration Type</th>
+              <th>Country of registration</th>
+              <th>IEEE Member</th>
+              <th>Non-IEEE Member</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Regular Author</td>
+              <td>Indian<br>Foreigner</td>
+              <td>7,000 INR<br>350 USD</td>
+              <td>9,000 INR<br>400 USD</td>
+            </tr>
+            <tr>
+              <td>Student Author</td>
+              <td>Indian<br>Foreigner</td>
+              <td>5,000 INR<br>300 USD</td>
+              <td>6,500 INR<br>350 USD</td>
+            </tr>
+            <tr>
+              <td>Industry</td>
+              <td>Indian<br>Foreigner</td>
+              <td>8,000 INR<br>350 USD</td>
+              <td>10,000 INR<br>400 USD</td>
+            </tr>
+            <tr>
+              <td>Attendee</td>
+              <td>Indian<br>Foreigner</td>
+              <td>4,000 INR<br>200 USD</td>
+              <td>4,000 INR<br>200 USD</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td style="text-align: left;" colspan="4">* Extra page charge of ₹ 1000/- INR per page Indian author and $
+                50
+                per page International author will be chargeable to the author's during registration process.</td>
+            </tr>
+          </tfoot>
+        </table>
+        <h3>Account Details</h3>
+        <table>
+          <tr>
+            <th>Name of Account</th>
+            <td>GU Conferences</td>
+          </tr>
+          <tr>
+            <th>Account Number</th>
+            <td>6717000100025845</td>
+          </tr>
+          <tr>
+            <th>IFSC Code</th>
+            <td>PUNB0671700</td>
+          </tr>
+          <tr>
+            <th>Bank Name</th>
+            <td>Punjab National Bank</td>
+          </tr>
+          <tr>
+            <th>Branch</th>
+            <td>Punjab National Bank, Sector-63,<br>Gautam Buddha Nagar, Noida-201301, UP
+            </td>
+          </tr>
+        </table>
+        <div style="margin-top: 30px;"></div>
+      </div>
+  </section>
+
+  <!-- Contact -->
+  <section
+    class="translate-y-[-100vh] duration-700 fixed top-[12vh] md:top-[8vh] bg-[rgba(0,0,0,.8)] h-[88vh] md:h-[92vh] w-[100vw] flex justify-center text-justify text-black text-sm sm:text-lg overflow-hidden drop-shadow-none z-20"
+    id="contact">
+    <button
+      class="btn btn-circle btn-outline absolute md:right-[25%] top-16 md:top-[12%] m-2 bg-white text-black border-0 hover:bg-black hover:text-white drop-shadow-[0_0_10px_rgba(0,0,0,0.2)] z-[99]"
+      onclick="close_modal()">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    <div class="w-[80%]">
+      <h1 class="text-2xl sm:text-4xl text-center text-white font-bold mt-8 mb-4">Contact</h1>
+      <div class="w-[100%] flex items-center justify-center font-semibold">
+        <form method="" autocomplete="off" name=""
+          class="flex flex-col px-8 w-[100%] md:w-[35%] rounded-md shadow-[0_0_15px_rgba(255,255,255,0.3)] scale-75 md:scale-100"
+          id="formCont" data-theme="light">
+          <label for="Name"
+            class="my-8 border-0 text-left relative before:absolute before:bg-black before:bottom-0 before:w-[100%] before:h-[2px] before:scale-x-0 before:focus-within:scale-x-100 before:origin-right before:duration-500">
+            Full Name
+            <input type="text" name="Name" class="focus:outline-none bg-inherit w-[100%] p-2 border-2 rounded-sm"
+              required />
+          </label>
+          <label for="Email"
+            class="border-0 relative before:absolute before:bg-black before:bottom-0 before:w-[100%] before:h-[2px] before:scale-x-0 before:focus-within:scale-x-100 before:origin-right before:duration-500">
+            Email
+            <input type="email" placeholder="you@example.com" name="Email"
+              class="focus:outline-none bg-inherit border-2 w-[100%] p-2 rounded-sm" required />
+          </label>
+          <label for="Message"
+            class="my-8 border-0 relative before:absolute before:bg-black before:bottom-0 before:w-[100%] before:h-[2px] before:scale-x-0 before:focus-within:scale-x-100 before:origin-right before:duration-500">
+            Message
+            <textarea type="text" name="Message"
+              class="focus:outline-none bg-inherit w-[100%] p-2 border-2 h-[100px] rounded-sm"></textarea>
+          </label>
+          <button type="submit" name="submit"
+            class="mb-8 w-[50%] self-center hover:drop-shadow-[5px_5px_5px_rgba(0,0,0,0.3)] btn border-0 hover:border-0 hover:bg-black bg-[#B70404] text-white hover:text-white">Submit</button>
+        </form>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer
+    class="grid grid-rows-[max-content_max-content_max-content_max-content_max-content] grid-cols-1 sm:grid-cols-[40%_20%_40%] sm:grid-rows-[max-content_auto] bg-[linear-gradient(90deg,rgba(210,210,221,0.9)_0%,rgba(165,184,205,0.9)_100%)] sm:h-[40vh] p-4 sm:pb-0 sm:px-8 sm:pt-8 text-black">
+
+    <!-- Logo -->
+    <img src="asset/galgotias-logo-2.png" alt="Galgotias University" class="w-56 row-start-1">
+
+    <!-- Contact -->
+    <div class="row-start-2 sm:col-start-1 grid">
+      <h1 class="text-lg sm:text-2xl font-bold">Contact Us</h1>
+      <address class="text-[12px] sm:text-sm font-semibold">
+        Plot No. 2, Yamuna Expy, opposite Buddha International Circuit, Sector 17A, Greater Noida, Uttar
+        Pradesh 203201
+        <span class="block">Phone: +91 9807978299</span>
+        <a class="" href="mailto:IC2pct@galgotiasuniversity.edu.in">Email: IC2pct@galgotiasuniversity.edu.in</a>
+      </address>
+      <div class="hidden sm:block text-sm font-bold">Copyright &#169; 2023 IC2PCT</div>
+    </div>
+
+    <!-- Social-Links -->
+    <div
+      class="flex sm:flex-col justify-center items-center gap-4  row-start-4 sm:row-start-1 sm:col-start-2 sm:row-span-2 pb-4 sm:pb-0">
+      <a href="#"><i class="hover:invert">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 50 50">
+            <path
+              d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M37,19h-2c-2.14,0-3,0.5-3,2 v3h5l-1,5h-4v15h-5V29h-4v-5h4v-3c0-4,2-7,6-7c2.9,0,4,1,4,1V19z">
+            </path>
+          </svg>
+        </i>
+      </a>
+      <a href="#"><i class="hover:invert">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 50 50">
+            <path
+              d="M 50.0625 10.4375 C 48.214844 11.257813 46.234375 11.808594 44.152344 12.058594 C 46.277344 10.785156 47.910156 8.769531 48.675781 6.371094 C 46.691406 7.546875 44.484375 8.402344 42.144531 8.863281 C 40.269531 6.863281 37.597656 5.617188 34.640625 5.617188 C 28.960938 5.617188 24.355469 10.21875 24.355469 15.898438 C 24.355469 16.703125 24.449219 17.488281 24.625 18.242188 C 16.078125 17.8125 8.503906 13.71875 3.429688 7.496094 C 2.542969 9.019531 2.039063 10.785156 2.039063 12.667969 C 2.039063 16.234375 3.851563 19.382813 6.613281 21.230469 C 4.925781 21.175781 3.339844 20.710938 1.953125 19.941406 C 1.953125 19.984375 1.953125 20.027344 1.953125 20.070313 C 1.953125 25.054688 5.5 29.207031 10.199219 30.15625 C 9.339844 30.390625 8.429688 30.515625 7.492188 30.515625 C 6.828125 30.515625 6.183594 30.453125 5.554688 30.328125 C 6.867188 34.410156 10.664063 37.390625 15.160156 37.472656 C 11.644531 40.230469 7.210938 41.871094 2.390625 41.871094 C 1.558594 41.871094 0.742188 41.824219 -0.0585938 41.726563 C 4.488281 44.648438 9.894531 46.347656 15.703125 46.347656 C 34.617188 46.347656 44.960938 30.679688 44.960938 17.09375 C 44.960938 16.648438 44.949219 16.199219 44.933594 15.761719 C 46.941406 14.3125 48.683594 12.5 50.0625 10.4375 Z">
+            </path>
+          </svg>
+        </i>
+      </a>
+      <a href="#"><i class="hover:invert" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 50 50">
+            <path
+              d="M 44.898438 14.5 C 44.5 12.300781 42.601563 10.699219 40.398438 10.199219 C 37.101563 9.5 31 9 24.398438 9 C 17.800781 9 11.601563 9.5 8.300781 10.199219 C 6.101563 10.699219 4.199219 12.199219 3.800781 14.5 C 3.398438 17 3 20.5 3 25 C 3 29.5 3.398438 33 3.898438 35.5 C 4.300781 37.699219 6.199219 39.300781 8.398438 39.800781 C 11.898438 40.5 17.898438 41 24.5 41 C 31.101563 41 37.101563 40.5 40.601563 39.800781 C 42.800781 39.300781 44.699219 37.800781 45.101563 35.5 C 45.5 33 46 29.398438 46.101563 25 C 45.898438 20.5 45.398438 17 44.898438 14.5 Z M 19 32 L 19 18 L 31.199219 25 Z">
+            </path>
+          </svg>
+        </i>
+      </a>
+      <a href="#"><i class="hover:invert" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 50 50">
+            <path
+              d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z">
+            </path>
+          </svg>
+        </i>
+      </a>
+    </div>
+
+    <!-- Other-Logo -->
+    <div
+      class="sm:col-start-3 sm:row-start-1 sm:row-span-2 grid grid-cols-[max-content_max-content_max-content] sm:grid-cols-1 sm:grid-rows-[max-content_max-content_max-content_max-content] justify-center sm:justify-start gap-6 sm:justify-items-center py-4 sm:py-0">
+      <img class="w-20 sm:w-36" src="asset/logo-ieee.svg" alt="IEEE">
+      <img class="w-20 sm:w-36" src="asset/g20-logo.png" alt="G20">
+      <img class="w-20 sm:w-36" src="asset/iiclogo.png" alt="IIC">
+      <h1 class="hidden sm:block">Made with <span class="text-red-700">❤</span> by Sankalp</h1>
+    </div>
+
+    <!-- Screen-Smaller-than-768px -->
+    <div class="sm:hidden block text-sm font-bold text-center">Copyright &#169; 2023 IC2PCT
+      <h1 class="mt-2 text-[12px] sm:hidden">Made with <span class="text-red-700">❤</span> by Sankalp</h1>
+    </div>
+  </footer>
+</body>
+
+<!-- Top-Menu-Script -->
+<script>
+  window.addEventListener('click', function (e) {
+    if (document.getElementById('menu_btn').contains(e.target)) {
+      document.getElementById("menu").classList.remove("scale-y-0")
+      document.getElementById("nav_cont").classList.remove("rounded-lg")
+      document.getElementById("nav_cont").classList.add("rounded-t-lg")
+    } else {
+      document.getElementById("menu").classList.add("scale-y-0")
+      setTimeout(() => {
+        document.getElementById("nav_cont").classList.add("rounded-lg")
+        document.getElementById("nav_cont").classList.remove("rounded-t-lg")
+      }, 400);
+    }
+  });
+</script>
+
+<!-- Side-Menu-Script -->
+<script>
+  window.addEventListener('click', function (e) {
+    if (document.getElementById('menu1_btn').contains(e.target)) {
+      document.getElementById("menu1").classList.remove("translate-x-[-20vw]")
+    } else {
+      document.getElementById("menu1").classList.add("translate-x-[-20vw]")
+    }
+  });
+</script>
+
+<!-- Search-Bar-Script -->
+<script>
+  window.addEventListener('click', function (e) {
+    if (window.innerWidth > 767) {
+      if (document.getElementById('search-btn').contains(e.target) || document.getElementById("search-bar").contains(e.target)) {
+        document.getElementById("search-bar").classList.remove("scale-x-0")
+        document.getElementById("search-bar").classList.add("p-2")
+        document.getElementById("search-bar").classList.add("pl-4")
+        document.getElementById("search-btn").classList.remove("rounded-full")
+        document.getElementById("search-btn").classList.add("rounded-r-full")
+        document.getElementById("search-cont").classList.remove("w-12")
+        document.getElementById("search-cont").classList.add("w-[80%]")
+      } else {
+        document.getElementById("search-bar").classList.add("scale-x-0")
+        document.getElementById("search-bar").classList.remove("p-2")
+        document.getElementById("search-bar").classList.remove("pl-4")
+        document.getElementById("search-btn").classList.add("rounded-full")
+        document.getElementById("search-btn").classList.remove("rounded-r-full")
+        document.getElementById("search-cont").classList.add("w-12")
+        document.getElementById("search-cont").classList.remove("w-[80%]")
+      }
+    }
+  });
+</script>
+
+<!-- CountDown-Script -->
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+  crossorigin="anonymous"></script>
+<script>
+  var ringer = {
+    countdown_to: "08/15/2023",
+    rings: {
+      DAYS: {
+        s: 86400000, // mseconds in a day,
+        max: 365
+      },
+      HOURS: {
+        s: 3600000, // mseconds per hour,
+        max: 24
+      },
+      MINUTES: {
+        s: 60000, // mseconds per minute
+        max: 60
+      },
+      SECONDS: {
+        s: 1000,
+        max: 60
+      },
+    },
+    r_count: 4,
+    r_spacing: 10, // px
+    r_size: 100, // px
+    r_thickness: 5, // px
+    update_interval: 11, // ms
+
+    init: function () {
+      $r = ringer;
+      $r.cvs = document.getElementById("canvas");
+
+      $r.size = {
+        w:
+          ($r.r_size + $r.r_thickness) * $r.r_count +
+          $r.r_spacing * ($r.r_count - 1),
+        h: $r.r_size + $r.r_thickness
+      };
+
+      $r.cvs.setAttribute("width", $r.size.w);
+      $r.cvs.setAttribute("height", $r.size.h);
+      $r.ctx = $r.cvs.getContext("2d");
+      $r.cvs = $($r.cvs);
+      $r.ctx.textAlign = "center";
+      $r.actual_size = $r.r_size + $r.r_thickness;
+      $r.countdown_to_time = new Date($r.countdown_to).getTime();
+      $r.go();
+    },
+    ctx: null,
+    go: function () {
+      var idx = 0;
+
+      $r.time = new Date().getTime() - $r.countdown_to_time;
+
+      for (var r_key in $r.rings) $r.unit(idx++, r_key, $r.rings[r_key]);
+
+      setTimeout($r.go, $r.update_interval);
+    },
+    unit: function (idx, label, ring) {
+      var x,
+        y,
+        value,
+        ring_secs = ring.s;
+      value = parseFloat($r.time / ring_secs);
+      $r.time -= Math.round(parseInt(value)) * ring_secs;
+      value = Math.abs(value);
+
+      x = $r.r_size * 0.5 + $r.r_thickness * 0.5;
+      x += +(idx * ($r.r_size + $r.r_spacing + $r.r_thickness));
+      y = $r.r_size * 0.5;
+      y += $r.r_thickness * 0.5;
+
+      // calculate arc end angle
+      var degrees = 360 - (value / ring.max) * 360.0;
+      var endAngle = degrees * (Math.PI / 180);
+
+      $r.ctx.save();
+
+      $r.ctx.translate(x, y);
+      $r.ctx.clearRect(
+        $r.actual_size * -0.5,
+        $r.actual_size * -0.5,
+        $r.actual_size,
+        $r.actual_size
+      );
+
+      // first circle
+      $r.ctx.strokeStyle = "rgba(128,128,128,0.2)";
+      $r.ctx.beginPath();
+      $r.ctx.arc(0, 0, $r.r_size / 2, 0, 2 * Math.PI, 2);
+      $r.ctx.lineWidth = $r.r_thickness;
+      $r.ctx.stroke();
+
+      // second circle
+      $r.ctx.strokeStyle = "#fff";
+      $r.ctx.beginPath();
+      $r.ctx.arc(0, 0, $r.r_size / 2, 0, endAngle, 1);
+      $r.ctx.lineWidth = $r.r_thickness;
+      $r.ctx.stroke();
+
+      // label
+      $r.ctx.fillStyle = "#B70404";
+
+      $r.ctx.font = "12px poppins";
+      $r.ctx.fillText(label, 0, 23);
+      $r.ctx.fillText(label, 0, 23);
+
+      $r.ctx.font = "bold 40px poppins";
+      $r.ctx.fillText(Math.floor(value), 0, 10);
+
+      $r.ctx.restore();
+    }
+  };
+
+  ringer.init();
+</script>
+
+<!-- Contact-Script -->
+<script>
+  function open_modal() {
+    document.getElementById("body").classList.add("overflow-hidden");
+    document.getElementById("contact").classList.remove("translate-y-[-100vh]");
+  }
+  function close_modal() {
+    document.getElementById("contact").classList.add("translate-y-[-100vh]");
+    document.getElementById("body").classList.remove("overflow-hidden");
+  }
+</script>
+
+</html>
