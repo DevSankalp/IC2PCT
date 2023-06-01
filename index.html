@@ -59,8 +59,8 @@
             <a href="#programs"
               class="relative p-8 before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-300">Programs
             </a>
-            <a href="#registrations"
-              class="relative p-8 before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-300">Registration
+            <a onclick="open_modal2()"
+              class="cursor-pointer relative p-8 before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-300">Registration
             </a>
             <a onclick="open_modal()"
               class="cursor-pointer relative p-8 before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-300">Contact
@@ -101,7 +101,7 @@
             <li><a href="#author">For Author</a></li>
             <li><a href="#previousconferences">Previous Conferences</a></li>
             <li><a href="#programs">Programs</a></li>
-            <li><a href="#registration">Registration</a></li>
+            <li><a class="cursor-pointer" onclick="open_modal2()">Registration</a></li>
             <li><a onclick="open_modal()" class="cursor-pointer">Contact</a></li>
             <li><a href="#">Submission</a></li>
           </ul>
@@ -258,12 +258,19 @@
     </div>
   </section>
 
-  <!-- Registrations -->
+  <!-- registration -->
   <section
-    class="translate-x-[-100vw] duration-700 fixed top-[12vh] md:top-[8vh] h-[88vh] md:h-[92vh] w-[100vw] bg-[rgba(0,0,0,0.8)] flex justify-center text-justify text-black text-sm sm:text-lg pb-12"
-    id="registrations">
+    class="translate-x-[-200vw] duration-700 fixed top-0 h-[100vh] w-[100vw] bg-[rgba(0,0,0,0.8)] flex justify-center text-justify text-black text-sm sm:text-lg z-20"
+    id="registration">
+    <button
+      class="btn btn-circle btn-outline absolute md:left-[2%] top-16 md:top-[2%] m-2 bg-white text-black border-0 hover:bg-black hover:text-white drop-shadow-[0_0_10px_rgba(0,0,0,0.2)] z-[99]"
+      onclick="close_modal2()">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
     <div class="w-[80%] text-white flex flex-col justify-center items-center">
-      <h1 class=" text-2xl sm:text-4xl text-center text-white font-bold mt-8 mb-4">Registrations</h1>
+      <h1 class=" text-2xl sm:text-4xl text-center text-white font-bold mt-8 mb-4">Registration</h1>
       <div id="registration" class="table table-compact" data-theme="">
         <h1 class="">REGISTRATION</h1>
         <h3>Registration Fees</h3>
@@ -340,17 +347,17 @@
 
   <!-- Contact -->
   <section
-    class="translate-y-[-100vh] duration-700 fixed top-[12vh] md:top-[8vh] bg-[rgba(0,0,0,.8)] h-[88vh] md:h-[92vh] w-[100vw] flex justify-center text-justify text-black text-sm sm:text-lg overflow-hidden drop-shadow-none z-20"
+    class="translate-y-[-100vh] duration-700 fixed top-0 bg-[rgba(0,0,0,.8)] h-[100vh] w-[100vw] flex justify-center text-justify text-black text-sm sm:text-lg overflow-hidden drop-shadow-none z-20"
     id="contact">
     <button
-      class="btn btn-circle btn-outline absolute md:right-[25%] top-16 md:top-[12%] m-2 bg-white text-black border-0 hover:bg-black hover:text-white drop-shadow-[0_0_10px_rgba(0,0,0,0.2)] z-[99]"
+      class="btn btn-circle btn-outline absolute md:right-[25%] top-12 md:top-[12%] m-2 bg-white text-black border-0 hover:bg-black hover:text-white drop-shadow-[0_0_10px_rgba(0,0,0,0.2)] z-[99]"
       onclick="close_modal()">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
       </svg>
     </button>
-    <div class="w-[80%]">
-      <h1 class="text-2xl sm:text-4xl text-center text-white font-bold mt-8 mb-4">Contact</h1>
+    <div class="w-[80%] flex flex-col justify-center">
+      <h1 class="text-2xl sm:text-5xl text-center text-white font-bold mt-8 md:mb-12">Contact Us</h1>
       <div class="w-[100%] flex items-center justify-center font-semibold">
         <form method="" autocomplete="off" name=""
           class="flex flex-col px-8 w-[100%] md:w-[35%] rounded-md shadow-[0_0_15px_rgba(255,255,255,0.3)] scale-75 md:scale-100"
@@ -633,6 +640,19 @@
   }
   function close_modal() {
     document.getElementById("contact").classList.add("translate-y-[-100vh]");
+    document.getElementById("body").classList.remove("overflow-hidden");
+  }
+</script>
+
+
+<!-- registration-Script -->
+<script>
+  function open_modal2() {
+    document.getElementById("body").classList.add("overflow-hidden");
+    document.getElementById("registration").classList.remove("translate-x-[-200vw]");
+  }
+  function close_modal2() {
+    document.getElementById("registration").classList.add("translate-x-[-200vw]");
     document.getElementById("body").classList.remove("overflow-hidden");
   }
 </script>
