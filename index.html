@@ -58,22 +58,37 @@
         <!-- SideBar -->
         <div class="relative self-end">
           <div tabindex="0"
-            class="z-[-1] fixed bottom-0 bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(255,255,255,.9)_100%)] text-[#B70404] h-[92vh] md:w-[25%] flex flex-col translate-x-[-25vw] origin-left duration-300"
+            class="fixed bottom-0 bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(255,255,255,1)_100%)] text-[#B70404] h-[92vh] md:w-[25%] flex flex-col translate-x-[-25vw] origin-left duration-300"
             id="menu1">
             <a href="#about"
               class="relative p-8 before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">About
             </a>
-            <a href="#committes"
+            <a href="committee.html"
               class="relative p-8 before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Committes
             </a>
             <a href="#author"
               class="relative p-8 before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">For
               Author
             </a>
-            <a href="http://www.iccsai.in/" target="_blank"
-              class="relative p-8 before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Previous
-              Conferences
-            </a>
+            <div id="prev-conf-cont"
+              class="relative py-6 px-8 flex items-center justify-between before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500 h-[min-content]">
+              Previous Conferences <img src="asset/back-arrow.png" alt="" class="rotate-180 invert scale-75">
+              <div id="prev-conf-links"
+                class="translate-x-[-100%] absolute z-[-10] w-[50%] top-0 left-[100%] text-[#B70404] flex flex-col justify-center h-[192px] origin-left duration-500 before:absolute before:w-[100%] before:h-[100%] before:top-0 before:bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(255,255,255,1)_100%)] before:z-[1]">
+                <a href="https://ieeexplore.ieee.org/xpl/conhome/9573501/proceeding" target="_blank"
+                  class="relative p-2 h-[100%] flex items-center before:bg-[#B70404] hover:text-white before:w-[100%] before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500"><span
+                    class="pl-4">2021</span></a>
+                <a href="https://ieeexplore.ieee.org/xpl/conhome/9230460/proceeding" target="_blank"
+                  class="relative p-2 h-[100%] flex items-center before:bg-[#B70404] hover:text-white before:w-[100%] before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500"><span
+                    class="pl-4">2020</span></a>
+                <a href="https://ieeexplore.ieee.org/xpl/conhome/8933293/proceeding" target="_blank"
+                  class="relative p-2 h-[100%] flex items-center before:bg-[#B70404] hover:text-white before:w-[100%] before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500"><span
+                    class="pl-4">2019</span></a>
+                <a href="https://ieeexplore.ieee.org/xpl/conhome/8671767/proceeding" target="_blank"
+                  class="relative p-2 h-[100%] flex items-center before:bg-[#B70404] hover:text-white before:w-[100%] before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500"><span
+                    class="pl-4">2018</span></a>
+              </div>
+            </div>
             <a href="#programs"
               class="relative p-8 before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Programs
             </a>
@@ -164,7 +179,7 @@
 
     <!-- CountDown -->
     <section class="fixed bottom-48 sm:bottom-20 z-[-1]">
-      <div id="timer" class="w-[95vw] sm:w-[80vw] h-[22vh] sm:h-[30vh] p-4 flex gap-1 sm:gap-4 justify-center">
+      <div id="timer" class="w-[95vw] sm:w-[65vw] h-[22vh] sm:h-[25vh] p-4 flex gap-1 sm:gap-4 justify-center">
         <div
           class="w-[25%] h-[100%] text-4xl md:text-[72px] font-['poppins_extrabold'] backdrop-blur-[5px] bg-[rgba(255,255,255,0.5)] text-black flex flex-col items-center justify-center gap-2"
           id="days"></div>
@@ -512,6 +527,24 @@
       document.getElementById("menu1").classList.add("translate-x-[-25vw]")
     }
   });
+</script>
+
+<!-- Previous-Conference-Links-Container -->
+<script>
+  const el = document.getElementById('prev-conf-cont');
+  const hiddenDiv = document.getElementById('prev-conf-links');
+  el.addEventListener('mouseover', function handleMouseOver() {
+    hiddenDiv.classList.remove('translate-x-[-100%]')
+    hiddenDiv.classList.add('translate-x-0')
+    hiddenDiv.classList.remove('before:z-[1]')
+    hiddenDiv.classList.add('before:z-[-1]')
+  });
+  el.addEventListener('mouseout', function handleMouseOut() {
+    hiddenDiv.classList.add('translate-x-[-100%]')
+    hiddenDiv.classList.remove('translate-x-0')
+    hiddenDiv.classList.add('before:z-[1]')
+    hiddenDiv.classList.remove('before:z-[-1]')
+  })
 </script>
 
 <!-- Search-Bar-Script -->

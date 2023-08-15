@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="committee.css">
+  <title>IC2PCT 2023</title>
+</head>
+
+<body class="font-['poppins'] scroll-smooth overflow-x-hidden" id="body">
+
+  <!-- Navbar -->
+  <nav class="w-[100vw] flex justify-center fixed z-10 top-0">
+    <div
+      class="navbar w-[95%] md:w-[100%] bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(226,226,240,1)_85%,rgba(211,242,255,1)_100%)] transition-all rounded-lg md:rounded-none shadow-xl mt-4 md:mt-0 p-0"
+      id="nav_cont">
+      <div class="hidden md:w-[50%] h-[100%] md:flex">
+
+        <!-- SideBar -->
+        <div class="relative self-end">
+          <div tabindex="0"
+            class="fixed bottom-0 bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(255,255,255,1)_100%)] shadow-xl text-[#B70404] h-[92vh] md:w-[25%] flex flex-col translate-x-[-25vw] origin-left duration-300"
+            id="menu1">
+            <a href="index.html"
+              class="relative p-8 before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Home
+            </a>
+            <a href="#committee"
+              class="relative p-8 before:bg-[#B70404] text-white before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%]">Committee
+            </a>
+            <a href="index.html"
+              class="relative p-8 before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">For
+              Author
+            </a>
+            <div id="prev-conf-cont"
+              class="relative py-6 px-8 flex items-center justify-between before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500 h-[min-content]">
+              Previous Conferences <img src="asset/back-arrow.png" alt="" class="rotate-180 invert scale-75">
+              <div id="prev-conf-links"
+                class="translate-x-[-100%] absolute z-[-10] w-[50%] top-0 left-[100%] text-[#B70404] flex flex-col justify-center h-[192px] origin-left duration-500 before:absolute before:w-[100%] before:h-[100%] before:top-0 before:bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(255,255,255,1)_100%)] before:z-[1]">
+                <a href="https://ieeexplore.ieee.org/xpl/conhome/9573501/proceeding" target="_blank"
+                  class="relative p-2 h-[100%] flex items-center before:bg-[#B70404] hover:text-white before:w-[100%] before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500"><span
+                    class="pl-4">2021</span></a>
+                <a href="https://ieeexplore.ieee.org/xpl/conhome/9230460/proceeding" target="_blank"
+                  class="relative p-2 h-[100%] flex items-center before:bg-[#B70404] hover:text-white before:w-[100%] before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500"><span
+                    class="pl-4">2020</span></a>
+                <a href="https://ieeexplore.ieee.org/xpl/conhome/8933293/proceeding" target="_blank"
+                  class="relative p-2 h-[100%] flex items-center before:bg-[#B70404] hover:text-white before:w-[100%] before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500"><span
+                    class="pl-4">2019</span></a>
+                <a href="https://ieeexplore.ieee.org/xpl/conhome/8671767/proceeding" target="_blank"
+                  class="relative p-2 h-[100%] flex items-center before:bg-[#B70404] hover:text-white before:w-[100%] before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500"><span
+                    class="pl-4">2018</span></a>
+              </div>
+            </div>
+            <a href="index.html"
+              class="relative p-8 before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Programs
+            </a>
+            <a onclick="open_modal2()"
+              class="cursor-pointer relative p-8 before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Registration
+            </a>
+            <a onclick="open_modal()"
+              class="cursor-pointer relative p-8 before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Contact
+            </a>
+            <a href="#"
+              class="relative p-8 before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Submission
+            </a>
+          </div>
+        </div>
+
+        <!-- Burger-Icon -->
+        <label tabindex="0" class="btn btn-ghost btn-circle h-[100%] hover:bg-transparent" id="menu1_btn">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+          </svg>
+        </label>
+      </div>
+
+      <!-- Screen-Smaller-than-768px -->
+      <div class="md:hidden navbar-start h-[100%]">
+        <div class="h-[100%]">
+
+          <!-- Burger-Icon -->
+          <label tabindex="0" class="btn btn-ghost btn-circle h-[100%] hover:bg-transparent" id="menu_btn">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+            </svg>
+          </label>
+
+          <!-- Top-MenuBar -->
+          <ul tabindex="0"
+            class="absolute scale-y-0 menu menu-compact p-2 bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(226,226,240,1)_85%,rgba(211,242,255,1)_100%)] text-[#B70404] font-[600] rounded-b-lg w-[95vw] origin-top duration-500 shadow-xl transition-all"
+            id="menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#committes">Committes</a></li>
+            <li><a href="#author">For Author</a></li>
+            <li><a href="http://www.iccsai.in/" target="_blank">Previous Conferences</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a class="cursor-pointer" onclick="open_modal2()">Registration</a></li>
+            <li><a onclick="open_modal()" class="cursor-pointer">Contact</a></li>
+            <li><a href="#">Submission</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Logo -->
+      <div class="navbar-center">
+        <img class="w-64 md:w-80" src="asset/galgotias-logo-1.png" alt="">
+      </div>
+
+      <!-- Search-Bar -->
+      <div class="navbar-end h-[100%] mr-4">
+        <div
+          class="hidden w-12 h-[75%] sm:flex justify-end items-center bg-[#B70404] transition-all origin-right duration-300 rounded-full border-0"
+          id="search-cont">
+          <input type="text" placeholder="Search"
+            class="h-[100%] w-[100%] placeholder:text-white bg-transparent text-white focus:outline-none scale-x-0 text-black rounded-l-full"
+            id="search-bar">
+          <button
+            class="btn w-12 h-12 rounded-full bg-transparent focus:outline-none border-0 text-white hover:animate-pulse duration-500 origin-right transition-all"
+            id="search-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="w-[100vw] h-[83vh] sm:h-[94vh] flex items-center justify-center bg-[#B70404] mt-12">
+    <div class="carousel shadow-[2px_2px_10px_#000] text-[#B70404] rounded">
+      <div class="carousel__nav">
+        <span id="moveLeft" class="carousel__arrow">
+          <svg class="carousel__icon" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
+          </svg>
+        </span>
+        <span id="moveRight" class="carousel__arrow">
+          <svg class="carousel__icon" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
+          </svg>
+        </span>
+      </div>
+      <div class="carousel-item carousel-item--1">
+        <div class="carousel-item__image"></div>
+        <div class="carousel-item__info">
+          <div class="carousel-item__container">
+            <h2 class="carousel-item__subtitle">Galgotias University</h2>
+            <h1 class="carousel-item__title">Conference Committee</h1>
+            <p class="carousel-item__description">The Conference Committee of ICCSAI-2023 aims to create an
+              intellectually stimulating and rewarding experience for participants, fostering academic growth,
+              networking opportunities, and the exchange of knowledge indiverse fields of study. This committee plays a
+              pivotal role in ensuring the success and smooth execution of conferences across different academic
+              disciplines. One of the primary objectives of the Galgotias University Conference Committee is to create a
+              platform that fosters intellectual growth, encourages research dissemination, and promotes
+              interdisciplinary interactions among participants. They meticulously plan the schedule, manage
+              registrations, arrange accommodations, and oversee the technical aspects of the conference, ensuring that
+              both presenters and attendees have a seamless and enriching experience.</p>
+            <a href="#details" class="carousel-item__btn">Explore the Committee</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item carousel-item--2">
+        <div class="carousel-item__image"></div>
+        <div class="carousel-item__info">
+          <div class="carousel-item__container">
+            <h2 class="carousel-item__subtitle">Galgotias University</h2>
+            <h1 class="carousel-item__title">Conference Committee</h1>
+            <p class="carousel-item__description">The Conference Committee of ICCSAI-2023 aims to create an
+              intellectually stimulating and rewarding experience for participants, fostering academic growth,
+              networking opportunities, and the exchange of knowledge indiverse fields of study. This committee plays a
+              pivotal role in ensuring the success and smooth execution of conferences across different academic
+              disciplines. One of the primary objectives of the Galgotias University Conference Committee is to create a
+              platform that fosters intellectual growth, encourages research dissemination, and promotes
+              interdisciplinary interactions among participants. They meticulously plan the schedule, manage
+              registrations, arrange accommodations, and oversee the technical aspects of the conference, ensuring that
+              both presenters and attendees have a seamless and enriching experience.</p>
+            <a href="#details" class="carousel-item__btn">Explore the Committee</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item carousel-item--3">
+        <div class="carousel-item__image"></div>
+        <div class="carousel-item__info">
+          <div class="carousel-item__container">
+            <h2 class="carousel-item__subtitle">Galgotias University</h2>
+            <h1 class="carousel-item__title">Conference Committee</h1>
+            <p class="carousel-item__description">The Conference Committee of ICCSAI-2023 aims to create an
+              intellectually stimulating and rewarding experience for participants, fostering academic growth,
+              networking opportunities, and the exchange of knowledge indiverse fields of study. This committee plays a
+              pivotal role in ensuring the success and smooth execution of conferences across different academic
+              disciplines. One of the primary objectives of the Galgotias University Conference Committee is to create a
+              platform that fosters intellectual growth, encourages research dissemination, and promotes
+              interdisciplinary interactions among participants. They meticulously plan the schedule, manage
+              registrations, arrange accommodations, and oversee the technical aspects of the conference, ensuring that
+              both presenters and attendees have a seamless and enriching experience.</p>
+            <a href="#details" class="carousel-item__btn">Explore the Committee</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Details -->
+  <section class="bg-[rgba(255,255,255,1)] flex flex-col text-justify items-center text-black text-sm md:text-lg pb-12"
+    id="details">
+    <div class="flex flex-col text-justify items-center w-[50%]">
+      <h1 class="text-2xl sm:text-5xl font-black text-[#B70404] p-12">Committee Details</h1>
+      <ul class="accordion">
+        <li>
+          <a>Chief Patrons</a>
+          <p>Shri Suneel Galgotia
+            Chancellor, Galgotias University, Greater Noida
+            , India</p>
+        </li>
+        <li>
+          <a>Patrons</a>
+          <p>Dr. Dhruv Galgotia
+            CEO, Galgotias University,Greater Noida,
+            , India</p>
+          <p>Prof. (Dr). Mallikharjuna Babu Kayala
+            Vice Chancellor,Galgotias University, Greater Noida
+            , India</p>
+          <p>Prof. S. N. Singh
+            Director, IIITM, Gwalior
+            , India</p>
+        </li>
+        <li>
+          <a>Conference General Chair</a>
+          <p>Prof. Avadhesh Kumar, Pro-VC
+            Galgotias University, Greater Noida
+            , India</p>
+          <p>Prof. Pawan Kumar Singh Nain
+            Galgotias University, Greater Noida
+            , India</p>
+          <p>Prof. Asheesh Kumar Singh
+            MNNIT, Allahabad
+            , India</p>
+        </li>
+        <li>
+          <a>Conference Chair</a>
+          <p>Prof. Prashant Johri
+            Galgotias University, Greater Noida
+            , India</p>
+          <p>Prof. Satish Kumar Singh
+            IIIT, Allahabad
+            , India</p>
+          <p>Prof. Prabhat Kumar
+            NIT, Patna
+            , India</p>
+        </li>
+        <li>
+          <a>Conference Organizing Chairs</a>
+          <p>Prof. A. K. Jain
+            Galgotias University, Greater Noida
+            , India</p>
+          <p>Prof. VDS Baghela
+            Galgotias University, Greater Noida
+            , India</p>
+        </li>
+        <li>
+          <a>Conference Organizing Co-Chair</a>
+          <p>Prof. R. Swaminathan
+            Galgotias University, Greater Noida
+            , India</p>
+          <p>Prof. Aanjey Mani Tripathi
+            Galgotias University, Greater Noida
+            , India</p>
+          <p>Prof. Vipul Narayan
+            Galgotias University, Greater Noida
+            , India</p>
+        </li>
+        <li>
+          <a>Conference Technical Chairs</a>
+          <p>Prof. Kuldeep Singh Kaswan
+            Galgotias University, Greater Noida
+            , India</p>
+          <p>Prof. Shailendra Pratap Singh
+            Galgotias University, Greater Noida
+            , India</p>
+          <p>Prof. T. Poongodi
+            Galgotias University
+            Greater Noida
+            , India</p>
+        </li>
+        <li>
+          <a>Conference Technical Co-Chair</a>
+          <p>Prof. Vimal Kumar
+            Galgotias University, Greater Noida
+            , India</p>
+        </li>
+        <li>
+          <a>Conference Secretaries</a>
+          <p>Prof. Deependra Rastogi
+            Galgotias University, Greater Noida
+            , India</p>
+          <p>Prof. Tarun Kumar
+            Galgotias University, Greater Noida
+            , India</p>
+          <p>Prof. Hradesh Kumar
+            Galgotias University, Greater Noida
+            , India</p>
+        </li>
+        <li>
+          <a>Conference Joint Secretaries</a>
+          <p>Prof. Vanita Garg
+            Galgotias University, Greater Noida
+            , India</p>
+          <p>Prof. Urvashi Sugandh
+            Galgotias University, Greater Noida
+            , India</p>
+          <p>Prof. Swati Sharma
+            Galgotias University, Greater Noida
+            , India</p>
+          <p>Prof. Kiran Singh
+            Galgotias University, Greater Noida
+            , India</p>
+        </li>
+        <li>
+          <a>International Advisory Chairs</a>
+          <p>Prof. Sanjeev Kumar Singh
+            Galgotias University, Greater Noida
+            , India</p>
+          <p>Prof. Ali Wagdy Mohamed
+            Cairo University
+            Egypt</p>
+          <p>Prof. Mario Jose Divan
+            Sr. Solution Architect and Service Lead at Software Service Monetization NEX OCTO with Intel
+            Corporation,
+            Oregon
+            USA</p>
+        </li>
+        <li>
+          <a>International Advisory Co-Chair</a>
+          <p>Prof. Jagjit Singh Dhatterwal
+            KL University, Guntur, Andhara Pradesh
+            , India</p>
+        </li>
+        <li>
+          <a>National Advisory Chairs</a>
+          <p>Prof. Deepak Soni
+            Galgotias University, Greater Noida
+            , India</p>
+          <p>Prof. Sunil Kumar Bharti
+            GCET
+            , India</p>
+          <p>Prof. Namita Singh Malik
+            Galgotias University, Greater Noida
+            , India</p>
+        </li>
+        <li>
+          <a>Conference Technical Co-Chair</a>
+          <p>Prof. Vimal Kumar
+            Galgotias University, Greater Noida
+            , India</p>
+        </li>
+        <li>
+          <a>National Advisory Chairs</a>
+          <p>Prof. Deepak L. Waikar
+            Singapore</p>
+          <p>Prof. Ajay Shankar Singh
+            Galgotias University, Greater Noida
+            , India</p>
+        </li>
+        <li>
+          <a>International Industry Academia Co-Chairs</a>
+          <p>Prof. Ajay Shankar
+            Galgotias University, Greater Noida
+            , India</p>
+        </li>
+        <li>
+          <a>Industry Academia Secretary</a>
+          <p>Prof. Kaushalendra Kumar Dubey
+            Galgotias University, Greater Noida
+            , India</p>
+        </li>
+        <li>
+          <a>Publication Chairs</a>
+          <p>Prof. Shrddha Sagar
+            Galgotias University, Greater Noida
+            , India</p>
+          <p>Prof. Ashok Kumar Yadav
+            Galgotias University, Greater Noida
+            , India</p>
+          <p>Prof. Sampath Kumar K
+            Galgotias University, Greater Noida
+            , India</p>
+        </li>
+        <li>
+          <a>Publicity Chairs</a>
+          <p>Prof. Avneesh Kumar
+            Galgotias University, Greater Noida
+            , India</p>
+          <p>Prof. Sudeept Singh Yadav
+            Galgotias University, Greater Noida
+            , India</p>
+        </li>
+        <li>
+          <a>Sponsorship & Industry Chair</a>
+          <p>Prof. Anamika Panday
+            Galgotias University, Greater Noida
+            , India</p>
+          <p>Prof. Ghambir
+            Galgotias University, Greater Noida
+            , India</p>
+        </li>
+        <li>
+          <a>Cultural Program Chairs</a>
+          <p>Prof. Satyendra Gupta
+            Galgotias University, Greater Noida
+            , India</p>
+          <p>Prof. Vinny Sharma
+            Galgotias University, Greater Noida
+            , India</p>
+          <p>Prof. Anachal Vij
+            Galgotias University, Greater Noida
+            , India</p>
+        </li>
+        <li>
+          <a>Finance Chairs</a>
+          <p>Prof. Vipin Rai
+            Galgotias University, Greater Noida
+            , India</p>
+          <p>Prof. Alok Katiyar
+            Galgotias University, Greater Noida
+            , India</p>
+          <p>Prof. Raju Ranjan
+            Galgotias University, Greater Noida
+            , India</p>
+        </li>
+        <li>
+          <a>Transport Chairs</a>
+          <p>Prof. L. Vetrivindan
+            Galgotias University, Greater Noida
+            , India</p>
+          <p>Prof. Lalit Kumar
+            Galgotias University, Greater Noida
+            , India</p>
+        </li>
+        <li>
+          <a>Website Committee</a>
+          <p>Prof. T. Ganesh
+            Galgotias University, Greater Noida
+            , India</p>
+        </li>
+        <li>
+          <a>Media Chair</a>
+          <p>Prof. AR Pandey
+            Galgotias University, Greater Noida
+            , India</p>
+        </li>
+        <li>
+          <a>Hospitability Chair</a>
+          <p>Prof. Rajiv Mishra
+            Galgotias University, Greater Noida
+            , India</p>
+          <p>Prof. Monalisa
+            Galgotias University, Greater Noida
+            , India</p>
+        </li>
+        <li>
+          <a>International Advisory Committee</a>
+          <p>Dimitrios A. Karras, National & Kapodistrian University of Athens (NKUA), Greece</p>
+          <p>Prof. Achyut Shankar, University of Warwick, UK</p>
+          <p>Prof. Achyut Shankar, WMG, University of Warwick, United Kingdom</p>
+          <p>Prof. Adrian Will,Director, National Technological University,Argentina</p>
+          <p>Prof. Afaq Ahmad, Sultan Qaboos University, Masqaţ, Oman</p>
+          <p>Prof. Ahmad T Al Taan, Yarmouk University, Jordan</p>
+          <p>Prof. Ahmed A. Elngar, Beni-Suef University,Egypt</p>
+          <p>Prof. Ahmer Khan,Dhofar University,Oman</p>
+          <p>Prof. Alex khang, Global Research Institute of Technology and Engineering, North Carolina, US</p>
+          <p>Prof. Anand Nayyar,Duy Tan University, Da Nang, Viet Nam</p>
+          <p>Prof. Andres Navarro-Newball, Pontificia Universidad Javeriana, Cali, Colombia</p>
+          <p>Prof. Arijit Karati, National Sun Yat-Sen University (NSYSU), Kaohsiung, Taiwan</p>
+          <p>Prof. Daniel Romero, Universidad Comunera, Paraguay</p>
+          <p>Prof. Deepti Thakur, College of Applied Sciences Suhar, Oman</p>
+          <p>Prof. G. K. Singh, Adama Science and Technology University, Ethiopia</p>
+          <p>Prof. Gert Kanter, Tallinn University of Technology, Estonia</p>
+          <p>Prof. Ghaida Muttashar Abdulsahib, University of Technology, Baghdad, Iraq</p>
+          <p>Prof. Gyanendra Kumar Singh, Adama Science & Technology University, Adama, Ethiopia</p>
+          <p>Prof. Jüri Vain, Tallinn University of Technology, Estonia, EU</p>
+          <p>Prof. Liudong Xing, University of Massachusetts, Dartmouth</p>
+          <p>Prof. M.S.Saleem Basha,Mazoon University College , Muscat, Oman</p>
+          <p>Prof. Mahmoud Moh’d Mahmoud Al Shawabkeh, Guangxi Minzu Normal University, Jordan</p>
+          <p>Prof. Marcelo Marciszack, National Technological University, Cordoba, Argentina</p>
+          <p>Prof. Marcelo Martin Marciszack, National Technological University, Argentina</p>
+          <p>Prof. Masood Alam, Department of Math and Computing, CPS, Sultan Qaboosb University,Muscat, Oman</p>
+          <p>Prof. Masoud Mohammadian, University of Canberra,Australia</p>
+          <p>Prof. Md Atiqur Rahman Ahad, University of East London, UK</p>
+          <p>Prof. Mohammad Israr, Maryam Abacha American University of Nigeria</p>
+          <p>Prof. Mohammad Nurul Alam, Lincoln Universiy, Malaysia</p>
+          <p>Prof. Mohd. Zalisham Jali, Faculty of Science & Technology,Universiti Sains Islam Malaysia,Negeri
+            Sembilan, Malaysia</p>
+          <p>Prof. Mussab Z. Aswad, De Montfort University, Oman</p>
+          <p>Prof. Nestor Barraza, Universidad Nacional De Tres De Febrero, Argentina</p>
+          <p>Prof. Omprakash kaiwartya, Nottingham Trent University (NTU), UK</p>
+          <p>Prof. Osamah Ibrahim Khalaf, Profesor,Al-Nahrain University,College of Information Engineering,
+            Baghdad,
+            Iraq</p>
+          <p>Prof. Pascal Lorenz, University of Haute-Alsace, France</p>
+          <p>Prof. Rabiul Islam, University of Wollongong, Australia</p>
+          <p>Prof. Rajander Sharma, College Of Applied Sciences Suhar,Oman</p>
+          <p>Prof. S. B. Goyal, City University, Malaysia</p>
+          <p>Prof. Selwyn Piramuthu, University of Florida, Department of Information Systems and Operations
+            Management, USA</p>
+          <p>Prof. Shakeel Ahmed,King Faisal University, Kingdom of Saudi Arabia</p>
+          <p>Prof. Siti Nuurul Huda Binti Mohammad Azmin, Universiti Malaysia,</p>
+          <p>Prof. Sugam Sharma, Lowa State University, USA</p>
+          <p>Prof. Sunil K Khatri, Amity University, Noida</p>
+          <p>Prof. Syed Hamid Hasan, King Abdulaziz University, Kingdom of Saudi Arabi</p>
+          <p>Prof. Umar Muhammad Modibbo, Adama University Yola-Nigeria</p>
+          <p>Prof. V S S Yadavalli, University of Pretoria, South Africa</p>
+          <p>Prof. Ved P Mishra, Amity University, Dubai</p>
+          <p>Prof. Victor C.M. Leung, The University of British Columbia</p>
+          <p>Prof. Vinod Khadkikar, Abu Dhabi, Khalifa University of Science and Technology, UAE</p>
+          <p>Prof. Xiao Zhi Gao, University of Eastern Finland, Finland</p>
+          <p>Prof. Yu-Chen Hu, Providence University, Taiwan</p>
+        </li>
+        <li>
+          <a>National Advisory Committee</a>
+          <p>Prof. Adarsh Anand, University Of Delhi, Delhi, India</p>
+          <p>Prof. Anil Kumar Sagar, Sharda University, Greater Noida, India</p>
+          <p>Prof. Anil Sagar, Sharda University, Greater Noida, India</p>
+          <p>Prof. Anoop Kumar Patel, NIT Kurukshetra, India</p>
+          <p>Prof. Anurag Dixit, Rayat Bahar University, India</p>
+          <p>Prof. Arun Agarwal, University of Delhi, Delhi, India</p>
+          <p>Prof. Arun Sharma, Indira Gandhi Delhi Technical University for Women (IGDTUW), Delhi</p>
+          <p>Prof. B. K. Sharma, AKG, Ghaziabad, India</p>
+          <p>Prof. Brijesh Kumar, University School Of Information & Communication Technology, GGS Indraprastha
+            University, Delhi, India</p>
+          <p>Prof. Chitra Desai, NDA, Kh adakwasla,Pune, India</p>
+          <p>Prof. Chitra Desai, NDA, Khadakwasla, Pune, India</p>
+          <p>Prof. D. N. Goswami, Jiwaji University, India</p>
+          <p>Prof. Dilip Kumar Sharma, GLA Mathura, Mathura, India</p>
+          <p>Prof. Durgesh K Mishra, Sri Aurobindo Institute of Technology, Indore, MP, India</p>
+          <p>Prof. Durgesh K Mishra, Sri Aurobindo Institute of Technology, Indore, MP, India</p>
+          <p>Prof. K Muralidharan, MS University of Baroda, Vadodara, India</p>
+          <p>Prof. K.Jaggi , University Of Delhi, Delhi, India</p>
+          <p>Prof. M. N. Hoda, Bharati Vidyapeeth’s Institute of Computer Applications & Management (BVICAM), New
+            Delhi, India</p>
+          <p>Prof. M. N. Hoda, Bharati Vidyapeeth’s Institute of Computer Applications & Management (BVICAM), New
+            Delhi, India</p>
+          <p>Prof. Mandeep Mittal, Amity University Uttar Pradesh, India</p>
+          <p>Prof. Naveen Rajpal, GGSIP University, New Delhi, India</p>
+          <p>Prof. Naveen Rajpal, GGSIP University, New Delhi, India</p>
+          <p>Prof. Ompal, University Of Delhi, Delhi, India</p>
+          <p>Prof. P. Mohamed Fathimal, Department of Computer Science and Engineering, Vadapalani Campus, SRM
+            Institute of Science and Technology, Vadapalani, Chennai</p>
+          <p>Prof. P. S. Grover, Member NBA Core Team, former Director, Dean & HOD, Department of Computer
+            Science,
+            Delhi University, Delhi, India</p>
+          <p>Prof. P.S. Grover, KIIT Group of Colleges, Gurgaon, India</p>
+          <p>Prof. Parmanand Astya, Dean Engineering, Sharda University, Greater Noida, India</p>
+          <p>Prof. Parmanand Astya, Sharda University, Greater Noida, India</p>
+          <p>Prof. Partha Pratim Sarkar, University of Kalyani, West Bengal, India</p>
+          <p>Prof. Prashant Singh, JSS, India</p>
+          <p>Prof. R P Ojha, G. L. Bajaj, Greater Noida, India</p>
+          <p>Prof. Rajesh Kumar, Thapar Institute of Engineering & Technology, Patiala, Punjab, India</p>
+          <p>Prof. S. Gavaskar, Bharityar University, India</p>
+          <p>Prof. Sanjoy Das, IGNTU, Manipur, India</p>
+          <p>Prof. Sanjoy km Parida, IIT-Patna, India</p>
+          <p>Prof. Shrivani Mathur, Oriental College of Technology, Bhopal, India</p>
+          <p>Prof. Sudhir Kumar Sharma, JNU, Jaipur, India</p>
+          <p>Prof. Tanupriya Choudhury, UPES University, Dehradun, India</p>
+          <p>Prof. V Srivastava, IIT Kanpur, Kanpur, India</p>
+          <p>Prof. Vishal Bhatnagar, Netaji Subhas University of Technology (East Campus), New Delhi, India</p>
+        </li>
+        <li>
+          <a>Technical Program Committee</a>
+          <p>Prof. Alok Katiyar, SCSE, Galgotias University, Greater Noida , India</p>
+          <p>Prof. Amba Mishra, NIET, Greater Noida, India</p>
+          <p>Prof. Aradhna saini, NIET, Greater Noida, India</p>
+          <p>Prof. Arvind kumar, SCSE, Galgotias University, Greater Noida , India</p>
+          <p>Prof. Chandru Vignesh, VIT University, Vellore, India</p>
+          <p>Prof. Divya Sharma, NIET, Greater Noida, India</p>
+          <p>Prof. Garima Nahar, Deptartment of Computer Science, S. S. Jain Subodh P.G. Mahila Mahavidyalaya,
+            Rambagh
+            Circle, Jaipur, India</p>
+          <p>Prof. Garima Shukla, NIET, Greater Noida, India</p>
+          <p>Prof. Gaurav Dhuria, NIET, Greater Noida, India</p>
+          <p>Prof. J. Ramprasath, Dr.Mahalingam College of engineering and technology, Pollachi, Coimbatore, India
+          </p>
+          <p>Prof. Jagvinder Singh, Department of Operational Research, University of Delhi, Delhi, India</p>
+          <p>Prof. Janarthan S, SCSE, Galgotias University, Greater Noida , India</p>
+          <p>Prof. Jaswinder Singh, Maharaja Ranjit Singh Punjab Technical University, Punjab, India</p>
+          <p>Prof. Kamal Gulati, Amity University, Noida, India</p>
+          <p>Prof. Kavita, SCSE, Galgotias University, Greater Noida , India</p>
+          <p>Prof. Kiran Singh, SCSE, Galgotias University, Greater Noida , India</p>
+          <p>Prof. Kushal Kanwar, JUIT Solan, HP, India</p>
+          <p>Prof. Mayank Kumar Goyal, Sharda University, Greater Noida, India</p>
+          <p>Prof. Mohd. Izhar, Bosco Technical Training Society, Don Bosco Technical School, Okhla Road, New
+            Delhi,
+            Inida</p>
+          <p>Prof. N.Krishnaraj, Vellore Institute of Technology, Vellore, India</p>
+          <p>Prof. P. Sampath, SCSE, Galgotias University, Greater Noida , India</p>
+          <p>Prof. Pankaj Dadheech,Department of Computer Science & Engineering, Swami Keshvanand Institute of
+            Technology, Management & Gramothan (SKIT), Jaipur, Rajasthan, India</p>
+          <p>Prof. Prabha Nair, NIET, Greater Noida</p>
+          <p>Prof. Praveen Shukla, Manipal University, Jaipur, India</p>
+          <p>Prof. Priyanka Tyagi, IMS, Ghaziabad, India</p>
+          <p>Prof. Puneet Gupta, Manipal University, Jaipur</p>
+          <p>Prof. R. Karthick, Department of CSE, Sri Krishna College of Technology, Coimbatore, India</p>
+          <p>Prof. R.Sathiyaraj, Department of CSE, School of Engineering and Technology, CMR University,
+            Bangalore,
+            , India</p>
+          <p>Prof. Rajit Nair, VIT, Bhopal University, Bhopal, India</p>
+          <p>Prof. Ramkumar KR, Chitkara University, Punjab, India</p>
+          <p>Prof. Rashmi Aggarwal, MREI, Faridabad, India</p>
+          <p>Prof. Rashmi Priyadarshini, Sharda University, Greater Noida, India</p>
+          <p>Prof. Ritu Dewan, GCET, Greater Noida, India</p>
+          <p>Prof. Rohit Bansal, Department of Management Studies, Vaish College of Engineering, Rohtak, India</p>
+          <p>Prof. Rohit Bansal, Vaish College of Engineering, India</p>
+          <p>Prof. Sandhaya Katiyar, GCET, Greater Noida, India</p>
+          <p>Prof. Satnam Kaur, Thapar University, Patiala, Punjab</p>
+          <p>Prof. Shalu Tandon, Bosco Technical Training Society, Don Bosco Technical School, Okhla Road, New
+            Delhi,
+            , India</p>
+          <p>Prof. Shivani Goel, Bennett University, India</p>
+          <p>Prof. Shobha Tyagi, Manav Rachna International Institute of Research Studies, Faridabad, India</p>
+          <p>Prof. Siddhartha Sankar Biswas, Department of Computer Science and Engineering, School of Engineering
+            Sciences and Technology, Jamia Hamdard, New Delhi</p>
+          <p>Prof. Sikhvir Kaur, Lovely Professional University, Punjab, India</p>
+          <p>Prof. Sofia Pillai, NIET, Greater Noida, India</p>
+          <p>Prof. SPS Chauhan, SCSE, Galgotias University, Greater Noida , India</p>
+          <p>Prof. Sridhar, VIT University, Vellore, India</p>
+          <p>Prof. Subrata Sahana, Sharda University, Greater Noida, India</p>
+          <p>Prof. Sudeshna Chkraborty, SCSE, Galgotias University, Greater Noida , India</p>
+          <p>Prof. Supriya Khaitan, SCSE, Galgotias University, Greater Noida , India</p>
+          <p>Prof. T Ganesh Kumar, SCSE, Galgotias University, Greater Noida , India</p>
+          <p>Prof. T. Rajeshkumar, Department of IT, Sri Krishna College of Technology, Coimbatore, India</p>
+          <p>Prof. Tapsi Nagpal, Lingayas University, Inida</p>
+          <p>Prof. Usha Chauhan, Galgotias University, Greater Noida , India</p>
+          <p>Prof. Vandana Sharma, Amity Institute of Information Technology, Amity University, India</p>
+          <p>Prof. Varun Tiwari, Bosco Technical Training Society, Don Bosco Technical School, Okhla Road, New
+            Delhi,
+            , India</p>
+          <p>Prof. Varuna Gupta, CHRIST (Deemed to be University), Delhi NCR, India</p>
+          <p>Prof. Vinny Sharma, Galgotias University, Greater Noida , India</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- registration -->
+  <section
+    class="translate-x-[100vw] duration-700 fixed top-0 h-[100vh] w-[100vw] bg-[rgba(0,0,0,0.8)] flex justify-center text-justify text-black text-sm md:text-lg z-20"
+    id="registration">
+    <button
+      class="btn btn-circle btn-outline absolute md:left-[2%] top-8 md:top-[2%] m-2 bg-white text-black border-0 hover:bg-black hover:text-white drop-shadow-[0_0_10px_rgba(0,0,0,0.2)] z-[99]"
+      onclick="close_modal2()">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    <div class="w-[80%] text-white flex flex-col justify-center items-center">
+      <h1 class=" text-2xl md:text-4xl text-center text-white font-bold mt-8 mb-4">Registration</h1>
+      <div
+        class="w-[100%] grid grid-rows-[max-content_max-content] grid-cols-1 text-[#B70404] bg-[rgba(255,255,255,0.9)] rounded-md">
+
+        <!-- Prices -->
+        <div class="p-2 sm:p-4">
+          <div class="grid grid-cols-4 items-center border-black border-y-2 text-xs sm:text-sm md:text-lg">
+            <h1 class="text-center md:border-black border-x-2 h-[max-content]">Registration Type</h1>
+            <h1 class="text-center md:border-black border-r-2 h-[max-content]">Country of registration</h1>
+            <h1 class="text-center md:border-black border-r-2 h-[max-content]">IEEE Member</h1>
+            <h1 class="text-center md:border-black border-r-2">Non-IEEE Member</h1>
+          </div>
+          <div class="grid grid-cols-4 border-black border-b-2 text-xs sm:text-sm md:text-lg">
+            <p class="pl-1 sm:pl-4 border-black border-x-2 h-[100%] flex items-center">Regular Author</p>
+            <p class="pl-1 sm:pl-4 border-black border-r-2 h-[100%]">Indian<br>Foreigner</p>
+            <p class="pl-1 sm:pl-4 border-black border-r-2 h-[100%]">7,000 INR<br>350 USD</p>
+            <p class="pl-1 border-black border-r-2 sm:pl-4">9,000 INR<br>400 USD</p>
+          </div>
+          <div class="grid grid-cols-4 border-black border-b-2 text-xs sm:text-sm md:text-lg">
+            <p class="pl-1 sm:pl-4 border-black border-x-2 h-[100%] flex items-center">Student Author</p>
+            <p class="pl-1 sm:pl-4 border-black border-r-2 h-[100%]">Indian<br>Foreigner</p>
+            <p class="pl-1 sm:pl-4 border-black border-r-2 h-[100%]">5,000 INR<br>300 USD</p>
+            <p class="pl-1 border-black border-r-2 sm:pl-4">4,000 INR<br>200 USD</p>
+          </div>
+          <div class="grid grid-cols-4 border-black border-b-2 text-xs sm:text-sm md:text-lg">
+            <p class="pl-1 sm:pl-4 border-black border-x-2 h-[100%] flex items-center">Industry</p>
+            <p class="pl-1 sm:pl-4 border-black border-r-2 h-[100%]">Indian<br>Foreigner</p>
+            <p class="pl-1 sm:pl-4 border-black border-r-2 h-[100%]">8,000 INR<br>350 USD</p>
+            <p class="pl-1 border-black border-r-2 sm:pl-4">10,000 INR<br>400 USD</p>
+          </div>
+          <div class="grid grid-cols-4 border-black border-b-2 text-xs sm:text-sm md:text-lg h-[max-content]">
+            <p class="pl-1 sm:pl-4 border-black border-x-2 h-[100%] flex items-center">Attendee</p>
+            <p class="pl-1 sm:pl-4 border-black border-r-2 h-[100%]">Indian<br>Foreigner</p>
+            <p class="pl-1 sm:pl-4 border-black border-r-2 h-[100%]">6,500 INR<br>350 USD</p>
+            <p class="pl-1 border-black border-r-2 sm:pl-4">4,000 INR<br>200 USD</p>
+          </div>
+          <p class="text-xs md:text-sm p-2 text-black border-b-2 border-black">* Extra page charge of ₹ 1000/- INR per
+            page Indian author and $ 50 per page International author will be chargeable to the author's during
+            registration process.</p>
+        </div>
+
+        <!-- Account-Info -->
+        <div
+          class="grid grid-cols-[max-content_1fr] grid-rows-[max-content_1fr] text-left mx-4 my-4 text-xs sm:text-sm md:text-lg">
+          <h1 class="text-2xl text-black col-span-2">Account Details</h1>
+          <div class="row-start-2 border-2 border-black p-2 sm:p-4 w-[max-content]">
+            <p class="border-b-2 border-black">Name of Account</p>
+            <p class="border-b-2 border-black">Account Number</p>
+            <p class="border-b-2 border-black">IFSC Code</p>
+            <p class="border-b-2 border-black">Bank Name</p>
+          </div>
+          <div class="row-start-2 border-2 border-black p-2 sm:p-4 ml-1 w-[100%]">
+            <p class="border-b-2 border-black">GU Conferences</p>
+            <p class="border-b-2 border-black">6717000100025845</p>
+            <p class="border-b-2 border-black">PUNB0671700</p>
+            <p class="border-b-2 border-black">Punjab National Bank</p>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section
+    class="translate-y-[-100vh] duration-700 fixed top-0 bg-[rgba(0,0,0,.8)] h-[100vh] w-[100vw] flex justify-center text-justify text-black text-sm md:text-lg overflow-hidden drop-shadow-none z-20"
+    id="contact">
+    <button
+      class="btn btn-circle btn-outline absolute md:right-[25%] top-12 md:top-[12%] m-2 bg-white text-black border-0 hover:bg-black hover:text-white drop-shadow-[0_0_10px_rgba(0,0,0,0.2)] z-[99]"
+      onclick="close_modal()">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+
+    <!-- Form -->
+    <div class="w-[100%] sm:w-[80%] flex flex-col justify-center">
+      <h1 class="text-2xl md:text-5xl text-center text-white font-bold mt-8 md:mb-12">Contact Us</h1>
+      <div class="w-[100%] flex items-center justify-center font-semibold">
+        <form method="" autocomplete="off" name=""
+          class="flex flex-col px-8 w-[100%] md:w-[45%] rounded-md shadow-[0_0_10px_rgba(255,255,255,0.3)] scale-75 md:scale-100"
+          id="formCont" data-theme="light">
+          <label for="Name"
+            class="my-8 border-0 text-left relative before:absolute before:bg-black before:bottom-0 before:w-[100%] before:h-[2px] before:scale-x-0 before:focus-within:scale-x-100 before:origin-right before:duration-500">
+            Full Name
+            <input type="text" name="Name" class="focus:outline-none bg-inherit w-[100%] p-2 border-2 rounded-sm"
+              required />
+          </label>
+          <label for="Email"
+            class="border-0 relative before:absolute before:bg-black before:bottom-0 before:w-[100%] before:h-[2px] before:scale-x-0 before:focus-within:scale-x-100 before:origin-right before:duration-500">
+            Email
+            <input type="email" placeholder="you@example.com" name="Email"
+              class="focus:outline-none bg-inherit border-2 w-[100%] p-2 rounded-sm" required />
+          </label>
+          <label for="Message"
+            class="my-8 border-0 relative before:absolute before:bg-black before:bottom-0 before:w-[100%] before:h-[2px] before:scale-x-0 before:focus-within:scale-x-100 before:origin-right before:duration-500">
+            Message
+            <textarea type="text" name="Message"
+              class="focus:outline-none bg-inherit w-[100%] p-2 border-2 h-[100px] rounded-sm"></textarea>
+          </label>
+          <button type="submit" name="submit"
+            class="mb-8 w-[50%] self-center hover:drop-shadow-[5px_5px_5px_rgba(0,0,0,0.3)] btn border-0 hover:border-0 hover:bg-black bg-[#B70404] text-white hover:text-white">Submit</button>
+        </form>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer
+    class="grid grid-rows-[max-content_max-content_max-content_max-content_max-content_max-content] grid-cols-1 sm:grid-cols-[40%_20%_40%] sm:grid-rows-[max-content_auto] bg-[linear-gradient(150deg,rgba(0,0,0,0.8)_40%,rgba(255,255,255,.9)_100%)] sm:p-2 md:p-8 text-white">
+
+    <!-- Logo -->
+    <img src="asset/galgotias-logo-3.png" alt="Galgotias University" class="w-80 row-start-1">
+
+    <!-- Contact -->
+    <div class="row-start-2 sm:col-start-1 grid ml-6">
+      <h1 class="text-lg md:text-2xl font-bold">Contact Us</h1>
+      <address class="text-[12px] md:text-sm ">
+        Plot No. 2, Yamuna Expy, opposite Buddha International Circuit, Sector 17A, Greater Noida, Uttar
+        Pradesh 203201
+        <span class="block">Phone: +91 9807978299</span>
+        <a class="" href="mailto:IC2pct@galgotiasuniversity.edu.in">Email: IC2pct@galgotiasuniversity.edu.in</a>
+      </address>
+    </div>
+
+    <!-- Social-Links -->
+    <div
+      class="flex sm:flex-col justify-center items-center gap-4 row-start-4 sm:row-start-1 sm:col-start-2 sm:row-span-2 pb-4 sm:pb-0">
+      <a href="#"><i
+          class="invert hover:invert-0 before:w-[100%] relative before:absolute before:top-0 before:z-[-1] before:h-[100%] before:bg-[#fff] before:scale-x-0 hover:before:scale-x-100 before:rounded origin-left duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 50 50">
+            <path
+              d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M37,19h-2c-2.14,0-3,0.5-3,2 v3h5l-1,5h-4v15h-5V29h-4v-5h4v-3c0-4,2-7,6-7c2.9,0,4,1,4,1V19z">
+            </path>
+          </svg>
+        </i>
+      </a>
+      <a href="#"><i
+          class="invert hover:invert-0 before:w-[100%] relative before:absolute before:top-0 before:z-[-1] before:h-[100%] before:bg-[#fff] before:scale-x-0 hover:before:scale-x-100 before:rounded origin-left duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 50 50">
+            <path
+              d="M 11 4 C 7.134 4 4 7.134 4 11 L 4 39 C 4 42.866 7.134 46 11 46 L 39 46 C 42.866 46 46 42.866 46 39 L 46 11 C 46 7.134 42.866 4 39 4 L 11 4 z M 13.085938 13 L 21.023438 13 L 26.660156 21.009766 L 33.5 13 L 36 13 L 27.789062 22.613281 L 37.914062 37 L 29.978516 37 L 23.4375 27.707031 L 15.5 37 L 13 37 L 22.308594 26.103516 L 13.085938 13 z M 16.914062 15 L 31.021484 35 L 34.085938 35 L 19.978516 15 L 16.914062 15 z">
+            </path>
+          </svg>
+        </i>
+      </a>
+      <a href="#"><i
+          class="invert hover:invert-0 before:w-[100%] relative before:absolute before:top-0 before:z-[-1] before:h-[100%] before:bg-[#fff] before:scale-x-0 hover:before:scale-x-100 before:rounded origin-left duration-300"
+          aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 50 50">
+            <path
+              d="M 44.898438 14.5 C 44.5 12.300781 42.601563 10.699219 40.398438 10.199219 C 37.101563 9.5 31 9 24.398438 9 C 17.800781 9 11.601563 9.5 8.300781 10.199219 C 6.101563 10.699219 4.199219 12.199219 3.800781 14.5 C 3.398438 17 3 20.5 3 25 C 3 29.5 3.398438 33 3.898438 35.5 C 4.300781 37.699219 6.199219 39.300781 8.398438 39.800781 C 11.898438 40.5 17.898438 41 24.5 41 C 31.101563 41 37.101563 40.5 40.601563 39.800781 C 42.800781 39.300781 44.699219 37.800781 45.101563 35.5 C 45.5 33 46 29.398438 46.101563 25 C 45.898438 20.5 45.398438 17 44.898438 14.5 Z M 19 32 L 19 18 L 31.199219 25 Z">
+            </path>
+          </svg>
+        </i>
+      </a>
+      <a href="#"><i
+          class="invert hover:invert-0 before:w-[100%] relative before:absolute before:top-0 before:z-[-1] before:h-[100%] before:bg-[#fff] before:scale-x-0 hover:before:scale-x-100 before:rounded origin-left duration-300"
+          aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 50 50">
+            <path
+              d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z">
+            </path>
+          </svg>
+        </i>
+      </a>
+    </div>
+
+    <!-- Other-Logo -->
+    <div
+      class="sm:col-start-3 sm:row-start-1 sm:row-span-2 grid grid-cols-[max-content_max-content_max-content] sm:grid-cols-1 sm:grid-rows-[max-content_max-content_max-content_max-content] justify-center sm:justify-start gap-6 sm:justify-items-center py-4 sm:py-0">
+      <img class="w-20 sm:w-36" src="asset/logo-ieee.svg" alt="IEEE">
+      <img class="w-20 sm:w-36" src="asset/g20-logo.png" alt="G20">
+      <img class="w-20 sm:w-36" src="asset/iiclogo.png" alt="IIC">
+    </div>
+
+    <!-- Screen-Smaller-than-768px -->
+    <div class="sm:hidden block text-sm font-bold text-center">Copyright &#169; 2023 IC2PCT
+      <h1 class="mt-2 text-[12px] sm:hidden">Made with <span class="text-red-700">❤</span> by Sankalp</h1>
+    </div>
+
+  </footer>
+  <div
+    class="bg-[rgba(0,0,0,0.8)] text-white text-sm font-[500] h-[10vh] w-[100%] flex px-14 items-center justify-between">
+    <p class="text-md">Copyright &#169; 2023 IC2PCT</p>
+    <h1 class="hidden sm:block">Made with <span class="text-red-700">❤</span> by Sankalp</h1>
+  </div>
+</body>
+
+<!-- Top-Menu-Script -->
+<script>
+  window.addEventListener('click', function (e) {
+    if (document.getElementById('menu_btn').contains(e.target)) {
+      document.getElementById("menu").classList.remove("scale-y-0")
+      document.getElementById("nav_cont").classList.remove("rounded-lg")
+      document.getElementById("nav_cont").classList.add("rounded-t-lg")
+    } else {
+      document.getElementById("menu").classList.add("scale-y-0")
+      setTimeout(() => {
+        document.getElementById("nav_cont").classList.add("rounded-lg")
+        document.getElementById("nav_cont").classList.remove("rounded-t-lg")
+      }, 400);
+    }
+  });
+</script>
+
+<!-- Side-Bar-Script -->
+<script>
+  window.addEventListener('click', function (e) {
+    if (document.getElementById('menu1_btn').contains(e.target)) {
+      document.getElementById("menu1").classList.remove("translate-x-[-25vw]")
+    } else {
+      document.getElementById("menu1").classList.add("translate-x-[-25vw]")
+    }
+  });
+  // Previous-Conference-Links-Container
+  const el = document.getElementById('prev-conf-cont');
+  const hiddenDiv = document.getElementById('prev-conf-links');
+  el.addEventListener('mouseover', function handleMouseOver() {
+    hiddenDiv.classList.remove('translate-x-[-100%]')
+    hiddenDiv.classList.add('translate-x-0')
+    hiddenDiv.classList.remove('before:z-[1]')
+    hiddenDiv.classList.add('before:z-[-1]')
+    hiddenDiv.classList.add('shadow-xl')
+  });
+  el.addEventListener('mouseout', function handleMouseOut() {
+    hiddenDiv.classList.add('translate-x-[-100%]')
+    hiddenDiv.classList.remove('translate-x-0')
+    hiddenDiv.classList.add('before:z-[1]')
+    hiddenDiv.classList.remove('before:z-[-1]')
+    hiddenDiv.classList.remove('shadow-xl')
+  })
+</script>
+
+<!-- Search-Bar-Script -->
+<script>
+  window.addEventListener('click', function (e) {
+    if (window.innerWidth > 767) {
+      if (document.getElementById('search-btn').contains(e.target) || document.getElementById("search-bar").contains(e.target)) {
+        document.getElementById("search-bar").classList.remove("scale-x-0")
+        document.getElementById("search-bar").classList.add("p-2")
+        document.getElementById("search-bar").classList.add("pl-4")
+        document.getElementById("search-btn").classList.remove("rounded-full")
+        document.getElementById("search-btn").classList.add("rounded-r-full")
+        document.getElementById("search-cont").classList.remove("w-12")
+        document.getElementById("search-cont").classList.add("w-[80%]")
+        document.getElementById("search-btn").classList.remove("bg-transparent")
+        document.getElementById("search-btn").classList.add("bg-black")
+      } else {
+        document.getElementById("search-bar").classList.add("scale-x-0")
+        document.getElementById("search-bar").classList.remove("p-2")
+        document.getElementById("search-bar").classList.remove("pl-4")
+        document.getElementById("search-btn").classList.add("rounded-full")
+        document.getElementById("search-btn").classList.remove("rounded-r-full")
+        document.getElementById("search-cont").classList.add("w-12")
+        document.getElementById("search-cont").classList.remove("w-[80%]")
+        document.getElementById("search-btn").classList.add("bg-transparent")
+        document.getElementById("search-btn").classList.remove("bg-black")
+      }
+    }
+  });
+</script>
+
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+  crossorigin="anonymous"></script>
+
+<!-- Carousel-Script -->
+<script>
+  $(function () {
+    $('.carousel-item').eq(0).addClass('active');
+    var total = $('.carousel-item').length;
+    var current = 0;
+    $('#moveRight').on('click', function () {
+      var next = current;
+      current = current + 1;
+      setSlide(next, current);
+    });
+    $('#moveLeft').on('click', function () {
+      var prev = current;
+      current = current - 1;
+      setSlide(prev, current);
+    });
+    function setSlide(prev, next) {
+      var slide = current;
+      if (next > total - 1) {
+        slide = 0;
+        current = 0;
+      }
+      if (next < 0) {
+        slide = total - 1;
+        current = total - 1;
+      }
+      $('.carousel-item').eq(prev).removeClass('active');
+      $('.carousel-item').eq(slide).addClass('active');
+      setTimeout(function () {
+      }, 800);
+      console.log('current ' + current);
+      console.log('prev ' + prev);
+    }
+  });
+
+  // Accordion-Script
+  (function ($) {
+    $('.accordion > li:eq(0) a').addClass('active').next().slideDown();
+    $('.accordion a').click(function (j) {
+      var dropDown = $(this).closest('li').find('p');
+      $(this).closest('.accordion').find('p').not(dropDown).slideUp();
+      if ($(this).hasClass('active')) {
+        $(this).removeClass('active');
+      } else {
+        $(this).closest('.accordion').find('a.active').removeClass('active');
+        $(this).addClass('active');
+      }
+      dropDown.stop(false, true).slideToggle();
+      j.preventDefault();
+    });
+  })(jQuery);
+</script>
+
+<!-- Contact-Script -->
+<script>
+  function open_modal() {
+    document.getElementById("body").classList.add("overflow-hidden");
+    document.getElementById("contact").classList.remove("translate-y-[-100vh]");
+  }
+  function close_modal() {
+    document.getElementById("contact").classList.add("translate-y-[-100vh]");
+    document.getElementById("body").classList.remove("overflow-hidden");
+  }
+</script>
+
+<!-- registration-Script -->
+<script>
+  function open_modal2() {
+    document.getElementById("body").classList.add("overflow-hidden");
+    document.getElementById("registration").classList.remove("translate-x-[100vw]");
+  }
+  function close_modal2() {
+    document.getElementById("registration").classList.add("translate-x-[100vw]");
+    document.getElementById("body").classList.remove("overflow-hidden");
+  }
+</script>
