@@ -10,6 +10,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick-theme.css">
+
   <title>IC2PCT 2023</title>
 </head>
 <style>
@@ -42,14 +45,68 @@
   }
 </style>
 
-<body class="font-['poppins'] scroll-smooth" id="body">
+<body class="font-['poppins'] scroll-smooth overflow-x-hidden" id="body">
 
-  <!-- Background-Image -->
-  <img class="hidden md:block fixed h-[100vh] w-[100vw] blur-[2px] z-[-1]" src="asset/Galgotias_bg.jpg"
-    alt="background-image">
+  <!-- Heading-Container -->
+  <div class="hidden sm:flex sm:flex-col justify-center h-[83vh] sm:h-[91vh] w-[100vw] relative">
+
+    <!-- Slideshow -->
+    <div class="w-[100%] h-[100%] fixed z-[-1]">
+      <div class="carousel">
+        <div class="">
+          <div class="fixed left-12 top-[30%] z-[2]">
+            <h3 class="text-6xl font-['poppins'] text-white" style="text-shadow: 2px 2px #000;">2024 5th International
+              Conference</h3>
+            <div class="text-2xl flex flex-col text-white"><span style="text-shadow: 2px 2px #000;">on Computing, Power,
+                and
+                Communication Technologies (IC2PCT)</span><span
+                class="header mt-4 w-[max-content] text-6xl relative text-red-700 before:absolute before:w-[620px] before:h-[70px] before:bg-white before:right-[-10px] before:z-[-1]">Galgotias
+                University</span></div>
+          </div>
+          <img class="w-[100vw] h-[96vh] relative blur-[2px]" src="asset/Galgotias_bg2.jpg">
+        </div>
+        <div class="">
+          <div class="fixed left-12 top-[30%] z-[2]">
+            <h3 class="text-8xl font-['poppins'] text-red-700" style="text-shadow: 2px 2px #000;">IC2PCT</h3>
+            <div class="text-6xl flex flex-col text-white" style="text-shadow: 2px 2px #000;">International
+              Conference<span
+                class="header mt-4 w-[max-content] text-6xl relative text-red-700 before:absolute before:w-[620px] before:h-[70px] before:bg-white before:right-[-10px] before:z-[-1]">Galgotias
+                University</span></div>
+          </div>
+          <img class="w-[100vw] h-[96vh] relative blur-[2px]" src="asset/Galgotias_bg1.jpg">
+        </div>
+        <div class="">
+          <!-- <div class="fixed left-12 top-[30%] z-[2]">
+            <h3 class="text-8xl font-['poppins'] text-red-700">IC2PCT</h3>
+            <div class="text-6xl flex flex-col text-white">International Conference<span
+                class="header mt-4 w-[max-content] text-6xl relative text-red-700 before:absolute before:w-[620px] before:h-[70px] before:bg-white before:right-[-10px] before:z-[-1]">Galgotias
+                University</span></div>
+          </div> -->
+          <img class="w-[100vw] h-[100vh] relative" src="asset/Galgotias_bg5.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- CountDown -->
+  <section class="fixed bottom-48 sm:bottom-20 flex justify-center w-[100%]">
+    <div id="timer" class="w-[95vw] sm:w-[65vw] h-[22vh] sm:h-[25vh] p-4 flex gap-1 sm:gap-4 justify-center">
+      <div
+        class="w-[25%] h-[100%] text-4xl md:text-[72px] font-['poppins_extrabold'] backdrop-blur-[5px] bg-[rgba(255,255,255,0.5)] text-black flex flex-col items-center justify-center gap-2"
+        id="days"></div>
+      <div
+        class="w-[25%] h-[100%] text-4xl md:text-[72px] font-['poppins_extrabold'] backdrop-blur-[5px] bg-[rgba(255,255,255,0.5)] text-black flex flex-col items-center justify-center gap-2"
+        id="hours"></div>
+      <div
+        class="w-[25%] h-[100%] text-4xl md:text-[72px] font-['poppins_extrabold'] backdrop-blur-[5px] bg-[rgba(255,255,255,0.5)] text-black flex flex-col items-center justify-center gap-2"
+        id="minutes"></div>
+      <div
+        class="w-[25%] h-[100%] text-4xl md:text-[72px] font-['poppins_extrabold'] backdrop-blur-[5px] bg-[rgba(255,255,255,0.5)] text-black flex flex-col items-center justify-center gap-2"
+        id="seconds"></div>
+    </div>
+  </section>
 
   <!-- Navbar -->
-  <nav class="w-[100vw] h-[max-content] flex justify-center fixed z-10">
+  <nav class="w-[100vw] h-[max-content] flex justify-center fixed top-0 z-10">
     <div
       class="navbar w-[95%] md:w-[100%] bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(226,226,240,1)_85%,rgba(211,242,255,1)_100%)] transition-all rounded-lg md:rounded-none shadow-xl mt-4 md:mt-0 p-0"
       id="nav_cont">
@@ -168,36 +225,9 @@
     </div>
   </nav>
 
-  <!-- Heading-Container -->
-  <div class="h-[83vh] sm:h-[91vh] flex items-center justify-center">
-    <div class="fixed h-[50%] w-[81%] text-8xl font-['poppins'] p-6 rounded-lg text-red-700 z-[-1] mb-24 sm:mb-0" id="">
-      <div class="text-white">IC2PCT</div>
-      <div class="text-6xl flex flex-col">International Conference<span
-          class="header mt-4 text-6xl relative before:absolute before:w-[620px] before:h-[70px] before:bg-white before:z-[-1] before:left-[-5px]">Galgotias
-          University</span></div>
-    </div>
-
-    <!-- CountDown -->
-    <section class="fixed bottom-48 sm:bottom-20 z-[-1]">
-      <div id="timer" class="w-[95vw] sm:w-[65vw] h-[22vh] sm:h-[25vh] p-4 flex gap-1 sm:gap-4 justify-center">
-        <div
-          class="w-[25%] h-[100%] text-4xl md:text-[72px] font-['poppins_extrabold'] backdrop-blur-[5px] bg-[rgba(255,255,255,0.5)] text-black flex flex-col items-center justify-center gap-2"
-          id="days"></div>
-        <div
-          class="w-[25%] h-[100%] text-4xl md:text-[72px] font-['poppins_extrabold'] backdrop-blur-[5px] bg-[rgba(255,255,255,0.5)] text-black flex flex-col items-center justify-center gap-2"
-          id="hours"></div>
-        <div
-          class="w-[25%] h-[100%] text-4xl md:text-[72px] font-['poppins_extrabold'] backdrop-blur-[5px] bg-[rgba(255,255,255,0.5)] text-black flex flex-col items-center justify-center gap-2"
-          id="minutes"></div>
-        <div
-          class="w-[25%] h-[100%] text-4xl md:text-[72px] font-['poppins_extrabold'] backdrop-blur-[5px] bg-[rgba(255,255,255,0.5)] text-black flex flex-col items-center justify-center gap-2"
-          id="seconds"></div>
-      </div>
-    </section>
-  </div>
-
   <!-- About-Section -->
-  <section class="bg-[rgba(255,255,255,1)] flex justify-center text-justify text-black text-sm md:text-lg pb-12"
+  <section
+    class="relative bg-[rgba(255,255,255,1)] flex justify-center text-justify text-black text-sm md:text-lg pb-12"
     id="about">
     <div class="w-[80%]">
       <h1
@@ -205,16 +235,31 @@
         DETAILS
         WILL BE PUBLISHED SOON HERE</h1>
       <h1 class="text-2xl md:text-4xl text-center text-blue-700 font-bold mt-8 mb-4">About</h1>
-      <p class="">2024 IEEE International Conference on Computing, Power and Communication Technologies (IC2PCT) is
-        being organized on FEB 8-9, 2024 at Galgotias University, Greater Noida, India with Financial and Technical
-        Sponsorship of IEEE Uttar Pradesh Section.</p>
-      <p class="mt-4 mb-8">
-        IC2PCT will provide an opportunity to the practicing engineers, academicians and researchers to meet in a
-        forum to discuss various issues and its future direction of various Emerging Technologies. The
+      <p class="mt-4">The 5th International Conference on Computing, Power, and Communication Technologies (IC2PCT)
+        earlier known as GUCON is scheduled to take place on February 9-10, 2024 at Galgotias University in Greater
+        Noida, India. This prestigious event is being organized with the financial and technical sponsorship of the IEEE
+        Uttar Pradesh Section.</p=>
+      <p class="mt-4">IC2PCT offers a valuable opportunity for practicing engineers, academicians, and researchers to
+        convene and engage in discussions regarding various issues and the future direction of emerging technologies.
+        The conference aims to bring together experts from relevant fields to share their knowledge and experiences,
+        contributing to the advancement of future research.</p>
+      <p class="mt-4">With 10 tracks covering a wide range of areas, the conference encompasses nearly all aspects
+        related to computing, power, and communication technologies. Attendees can expect in-depth discussions,
+        insightful presentations, and interactive sessions that delve into the latest advancements and explore the
+        potential of these fields.</p>
+      <p class="mt-4">IC2PCT serves as a platform for fostering collaborations and networking among professionals from
+        diverse backgrounds. It encourages the exchange of ideas, promotes interdisciplinary approaches, and cultivates
+        an environment conducive to innovation and technological progress.</p>
+      <p class="mt-4">By facilitating the dissemination of knowledge and expertise, IC2PCT plays a crucial role in
+        shaping the future of research in computing, power, and communication technologies. It serves as a catalyst for
+        exploring new frontiers, addressing challenges, and unlocking the transformative potential of emerging
+        technologies in various industries and sectors.</p>
+      <p class="mt-4 mb-8">IC2PCT will provide an opportunity to the practicing engineers, academicians and researchers
+        to
+        meet in a forum to discuss various issues and its future direction of various Emerging Technologies. The
         conference aims to put together the experts from the relevant areas to disseminate their knowledge and
-        experience for the relevant future research scope. There are 10 tracks in the conference covering almost
-        all areas related to.
-      </p>
+        experience for the relevant future research scope. There are 10 tracks in the conference covering almost all
+        areas related to.</p>
       <h1 class="text-lg md:text-2xl font-bold my-4">Conference Tracks:</h1>
       <ul class="mb-8">
         <li>Track I. Smart Cities & Technologies for sustainable development</li>
@@ -257,28 +302,9 @@
     </div>
   </section>
 
-  <!-- Committes-Section -->
-  <section class="bg-[rgba(255,255,255,1)] flex justify-center text-justify text-black text-sm md:text-lg pb-12"
-    id="committes">
-    <div class="w-[80%] sm:w-[60%]">
-      <h1 class="text-2xl md:text-4xl text-center text-blue-700 font-bold mt-8 mb-4">IEEE IC2PCT 2024 ORGANIZING
-        COMMITTEES</h1>
-      <div class="flex flex-col items-center">
-        <p class="">Shri Suneel Galgotias, Chancellor, Galgotias University, India</p>
-        <p class="">Shri Dhruv Galgotias, CEO, Galgotias University, India</p>
-        <p class="">Prof. Mallikharjuna Babu Kayala, Vice Chancellor, Galgotias University,India</p>
-        <p class="">Prof. S.N. Singh, Director, IIITM Gwalior, India</p>
-        <h1 class="my-2 font-black">Conference General Chair</h1>
-        <p class="">Prof. Avadhesh Kumar, Galgotias University, India</p>
-        <h1 class="my-2 font-black">Conference Chair</h1>
-        <p class="">Prof. Aanjey Mani Tripathi, Galgotias University, India</p>
-        <p class="">Prof. Prashant Johri, Galgotias University, India</p>
-      </div>
-    </div>
-  </section>
-
   <!-- Authors -->
-  <section class="bg-[rgba(255,255,255,1)] flex justify-center text-justify text-black text-sm md:text-lg pb-12"
+  <section
+    class="relative bg-[rgba(255,255,255,1)] flex justify-center text-justify text-black text-sm md:text-lg pb-12"
     id="author">
     <div class="w-[80%]">
       <h1 class="text-2xl md:text-4xl text-center text-blue-700 font-bold mt-8 mb-4">FOR AUTHOR</h1>
@@ -290,10 +316,10 @@
         Google Scholar.
       </p>
       <div class="flex justify-center gap-2 sm:gap-52 mt-12">
-        <a href="#"
+        <a href="https://www.ieee.org/conferences/publishing/templates.html" target="_blank"
           class="btn btn-round bg-[#B70404] text-white hover:bg-black hover:shadow-3xl border-0 shadow-xl scale-75 sm:scale-100">PAPER
           TEMPLATE</a>
-        <a href="#"
+        <a href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2F" target="_blank"
           class="btn btn-round bg-[#B70404] text-white hover:bg-black hover:shadow-3xl border-0 shadow-xl scale-75 sm:scale-100">SUBMIT
           YOUR
           PAPER</a>
@@ -302,12 +328,13 @@
   </section>
 
   <!-- Programs -->
-  <section class="bg-[rgba(255,255,255,1)] flex justify-center text-justify text-black text-sm md:text-lg pb-12"
+  <!-- <section
+    class="relative bg-[rgba(255,255,255,1)] flex justify-center text-justify text-black text-sm md:text-lg pb-12"
     id="programs">
     <div class="w-[80%]">
       <h1 class="text-2xl md:text-4xl text-center text-blue-700 font-bold mt-8 mb-4">Programs</h1>
     </div>
-  </section>
+  </section> -->
 
   <!-- registration -->
   <section
@@ -431,27 +458,27 @@
 
   <!-- Footer -->
   <footer
-    class="grid grid-rows-[max-content_max-content_max-content_max-content_max-content] grid-cols-1 sm:grid-cols-[40%_20%_40%] sm:grid-rows-[max-content_auto] bg-[linear-gradient(90deg,rgba(210,210,221,1)_0%,rgba(165,184,205,1)_100%)] sm:p-2 md:p-8 text-black">
+    class="relative grid grid-rows-[max-content_max-content_max-content_max-content_max-content_max-content] grid-cols-1 sm:grid-cols-[40%_20%_40%] sm:grid-rows-[max-content_auto] bg-[linear-gradient(150deg,rgba(0,0,0,1)_40%,rgba(255,255,255,1)_100%)] sm:p-2 md:p-8 text-white">
 
     <!-- Logo -->
-    <img src="asset/galgotias-logo-2.png" alt="Galgotias University" class="w-56 row-start-1">
+    <img src="asset/galgotias-logo-3.png" alt="Galgotias University" class="w-80 row-start-1">
 
     <!-- Contact -->
-    <div class="row-start-2 sm:col-start-1 grid">
+    <div class="row-start-2 sm:col-start-1 grid ml-6">
       <h1 class="text-lg md:text-2xl font-bold">Contact Us</h1>
-      <address class="text-[12px] md:text-sm font-semibold">
+      <address class="text-[12px] md:text-sm ">
         Plot No. 2, Yamuna Expy, opposite Buddha International Circuit, Sector 17A, Greater Noida, Uttar
         Pradesh 203201
         <span class="block">Phone: +91 9807978299</span>
         <a class="" href="mailto:IC2pct@galgotiasuniversity.edu.in">Email: IC2pct@galgotiasuniversity.edu.in</a>
       </address>
-      <div class="hidden sm:block text-sm font-bold">Copyright &#169; 2023 IC2PCT</div>
     </div>
 
     <!-- Social-Links -->
     <div
-      class="flex sm:flex-col justify-center items-center gap-4  row-start-4 sm:row-start-1 sm:col-start-2 sm:row-span-2 pb-4 sm:pb-0">
-      <a href="#"><i class="hover:invert">
+      class="flex sm:flex-col justify-center items-center gap-4 row-start-4 sm:row-start-1 sm:col-start-2 sm:row-span-2 pb-4 sm:pb-0">
+      <a href="#"><i
+          class="invert hover:invert-0 before:w-[100%] relative before:absolute before:top-0 before:z-[-1] before:h-[100%] before:bg-[#fff] before:scale-x-0 hover:before:scale-x-100 before:rounded origin-left duration-300">
           <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 50 50">
             <path
               d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M37,19h-2c-2.14,0-3,0.5-3,2 v3h5l-1,5h-4v15h-5V29h-4v-5h4v-3c0-4,2-7,6-7c2.9,0,4,1,4,1V19z">
@@ -459,15 +486,18 @@
           </svg>
         </i>
       </a>
-      <a href="#"><i class="hover:invert">
+      <a href="#"><i
+          class="invert hover:invert-0 before:w-[100%] relative before:absolute before:top-0 before:z-[-1] before:h-[100%] before:bg-[#fff] before:scale-x-0 hover:before:scale-x-100 before:rounded origin-left duration-300">
           <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 50 50">
             <path
-              d="M 50.0625 10.4375 C 48.214844 11.257813 46.234375 11.808594 44.152344 12.058594 C 46.277344 10.785156 47.910156 8.769531 48.675781 6.371094 C 46.691406 7.546875 44.484375 8.402344 42.144531 8.863281 C 40.269531 6.863281 37.597656 5.617188 34.640625 5.617188 C 28.960938 5.617188 24.355469 10.21875 24.355469 15.898438 C 24.355469 16.703125 24.449219 17.488281 24.625 18.242188 C 16.078125 17.8125 8.503906 13.71875 3.429688 7.496094 C 2.542969 9.019531 2.039063 10.785156 2.039063 12.667969 C 2.039063 16.234375 3.851563 19.382813 6.613281 21.230469 C 4.925781 21.175781 3.339844 20.710938 1.953125 19.941406 C 1.953125 19.984375 1.953125 20.027344 1.953125 20.070313 C 1.953125 25.054688 5.5 29.207031 10.199219 30.15625 C 9.339844 30.390625 8.429688 30.515625 7.492188 30.515625 C 6.828125 30.515625 6.183594 30.453125 5.554688 30.328125 C 6.867188 34.410156 10.664063 37.390625 15.160156 37.472656 C 11.644531 40.230469 7.210938 41.871094 2.390625 41.871094 C 1.558594 41.871094 0.742188 41.824219 -0.0585938 41.726563 C 4.488281 44.648438 9.894531 46.347656 15.703125 46.347656 C 34.617188 46.347656 44.960938 30.679688 44.960938 17.09375 C 44.960938 16.648438 44.949219 16.199219 44.933594 15.761719 C 46.941406 14.3125 48.683594 12.5 50.0625 10.4375 Z">
+              d="M 11 4 C 7.134 4 4 7.134 4 11 L 4 39 C 4 42.866 7.134 46 11 46 L 39 46 C 42.866 46 46 42.866 46 39 L 46 11 C 46 7.134 42.866 4 39 4 L 11 4 z M 13.085938 13 L 21.023438 13 L 26.660156 21.009766 L 33.5 13 L 36 13 L 27.789062 22.613281 L 37.914062 37 L 29.978516 37 L 23.4375 27.707031 L 15.5 37 L 13 37 L 22.308594 26.103516 L 13.085938 13 z M 16.914062 15 L 31.021484 35 L 34.085938 35 L 19.978516 15 L 16.914062 15 z">
             </path>
           </svg>
         </i>
       </a>
-      <a href="#"><i class="hover:invert" aria-hidden="true">
+      <a href="#"><i
+          class="invert hover:invert-0 before:w-[100%] relative before:absolute before:top-0 before:z-[-1] before:h-[100%] before:bg-[#fff] before:scale-x-0 hover:before:scale-x-100 before:rounded origin-left duration-300"
+          aria-hidden="true">
           <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 50 50">
             <path
               d="M 44.898438 14.5 C 44.5 12.300781 42.601563 10.699219 40.398438 10.199219 C 37.101563 9.5 31 9 24.398438 9 C 17.800781 9 11.601563 9.5 8.300781 10.199219 C 6.101563 10.699219 4.199219 12.199219 3.800781 14.5 C 3.398438 17 3 20.5 3 25 C 3 29.5 3.398438 33 3.898438 35.5 C 4.300781 37.699219 6.199219 39.300781 8.398438 39.800781 C 11.898438 40.5 17.898438 41 24.5 41 C 31.101563 41 37.101563 40.5 40.601563 39.800781 C 42.800781 39.300781 44.699219 37.800781 45.101563 35.5 C 45.5 33 46 29.398438 46.101563 25 C 45.898438 20.5 45.398438 17 44.898438 14.5 Z M 19 32 L 19 18 L 31.199219 25 Z">
@@ -475,7 +505,9 @@
           </svg>
         </i>
       </a>
-      <a href="#"><i class="hover:invert" aria-hidden="true">
+      <a href="#"><i
+          class="invert hover:invert-0 before:w-[100%] relative before:absolute before:top-0 before:z-[-1] before:h-[100%] before:bg-[#fff] before:scale-x-0 hover:before:scale-x-100 before:rounded origin-left duration-300"
+          aria-hidden="true">
           <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 50 50">
             <path
               d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z">
@@ -488,17 +520,22 @@
     <!-- Other-Logo -->
     <div
       class="sm:col-start-3 sm:row-start-1 sm:row-span-2 grid grid-cols-[max-content_max-content_max-content] sm:grid-cols-1 sm:grid-rows-[max-content_max-content_max-content_max-content] justify-center sm:justify-start gap-6 sm:justify-items-center py-4 sm:py-0">
-      <img class="w-20 sm:w-36" src="asset/logo-ieee.svg" alt="IEEE">
+      <img class="w-20 sm:w-36" src="asset/logo-ieee.png" alt="IEEE">
       <img class="w-20 sm:w-36" src="asset/g20-logo.png" alt="G20">
       <img class="w-20 sm:w-36" src="asset/iiclogo.png" alt="IIC">
-      <h1 class="hidden sm:block">Made with <span class="text-red-700">❤</span> by Sankalp</h1>
     </div>
 
     <!-- Screen-Smaller-than-768px -->
     <div class="sm:hidden block text-sm font-bold text-center">Copyright &#169; 2023 IC2PCT
       <h1 class="mt-2 text-[12px] sm:hidden">Made with <span class="text-red-700">❤</span> by Sankalp</h1>
     </div>
+
   </footer>
+  <div
+    class="bg-[rgba(0,0,0,1)] text-white text-sm font-[500] h-[10vh] w-[100%] flex px-14 items-center justify-between">
+    <p class="text-md">Copyright &#169; 2023 IC2PCT</p>
+    <h1 class="hidden sm:block">Made with <span class="text-red-700">❤</span> by Sankalp</h1>
+  </div>
 </body>
 
 <!-- Top-Menu-Script -->
@@ -590,7 +627,7 @@
       mm = String(today.getMonth() + 1).padStart(2, "0"),
       yyyy = today.getFullYear(),
       nextYear = yyyy + 1,
-      dayMonth = "09/30/",
+      dayMonth = "02/09/",
       birthday = dayMonth + yyyy;
 
     today = mm + "/" + dd + "/" + yyyy;
@@ -609,6 +646,24 @@
           document.getElementById("seconds").innerHTML = Math.floor((distance % (minute)) / second) + `<span class="text-sm md:text-2xl">seconds</span>`;
       }, 0)
   }());
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
+<!-- Carousel-Script -->
+<script>
+  $(document).ready(function () {
+    $('.carousel').slick({
+      autoplay: true,
+      autoplaySpeed: 2000,
+      fade: true,
+      cssEase: 'linear',
+      // pauseOnHover: true,
+      // pauseOnFocus: true,
+      // arrows: true,
+      // dots: true
+    });
+  });
 </script>
 
 <!-- Contact-Script -->
