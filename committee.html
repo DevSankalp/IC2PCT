@@ -10,11 +10,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="asset/Galgotias-logo-4.png">
   <link rel="stylesheet" href="committee.css">
   <title>IC2PCT 2023</title>
 </head>
 
-<body class="font-['poppins'] scroll-smooth overflow-x-hidden" id="body">
+<body class="font-['poppins'] overflow-x-hidden" id="body">
 
   <!-- Navbar -->
   <nav class="w-[100vw] flex justify-center fixed z-10 top-0">
@@ -26,20 +27,26 @@
         <!-- SideBar -->
         <div class="relative self-end">
           <div tabindex="0"
-            class="fixed bottom-0 bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(255,255,255,1)_100%)] shadow-xl text-[#B70404] h-[92vh] md:w-[25%] flex flex-col translate-x-[-25vw] origin-left duration-300"
+            class="fixed bottom-0 bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(255,255,255,1)_100%)] text-[#B70404] h-[92vh] md:w-[25%] flex flex-col translate-x-[-25vw] origin-left duration-300"
             id="menu1">
             <a href="index.html"
-              class="relative p-8 before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Home
+              class="relative p-[27.3px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Home
             </a>
-            <a href="#committee"
-              class="relative p-8 before:bg-[#B70404] text-white before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%]">Committee
+            <a href="call.html"
+              class="relative p-[27.21px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Call
+              for Paper
             </a>
-            <a href="index.html"
-              class="relative p-8 before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">For
+            <a href="committee.html"
+              class="relative p-[27.3px] before:bg-[#B70404] text-white before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Committee
+            </a>
+            <a href="author.html"
+              class="relative py-7 px-[27.3px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">For
               Author
             </a>
+
+            <!-- Previous Conferences -->
             <div id="prev-conf-cont"
-              class="relative py-6 px-8 flex items-center justify-between before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500 h-[min-content]">
+              class="relative py-6 px-[27.3px] flex items-center justify-between before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500 h-[min-content]">
               Previous Conferences <img src="asset/back-arrow.png" alt="" class="rotate-180 invert scale-75">
               <div id="prev-conf-links"
                 class="translate-x-[-100%] absolute z-[-10] w-[50%] top-0 left-[100%] text-[#B70404] flex flex-col justify-center h-[192px] origin-left duration-500 before:absolute before:w-[100%] before:h-[100%] before:top-0 before:bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(255,255,255,1)_100%)] before:z-[1]">
@@ -57,27 +64,29 @@
                     class="pl-4">2018</span></a>
               </div>
             </div>
-            <a href="index.html"
-              class="relative p-8 before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Programs
+            <a href="#programs"
+              class="relative p-[27.21px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Programs
             </a>
             <a onclick="open_modal2()"
-              class="cursor-pointer relative p-8 before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Registration
+              class="cursor-pointer relative p-[27.21px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Registration
             </a>
             <a onclick="open_modal()"
-              class="cursor-pointer relative p-8 before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Contact
+              class="cursor-pointer relative p-[27.21px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Contact
             </a>
-            <a href="#"
-              class="relative p-8 before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Submission
-            </a>
+            <!-- <a href="author.html"
+              class="relative p-[27.3px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Submission
+            </a> -->
           </div>
         </div>
 
         <!-- Burger-Icon -->
-        <label tabindex="0" class="btn btn-ghost btn-circle h-[100%] hover:bg-transparent" id="menu1_btn">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor">
+        <label tabindex="0"
+          class="btn btn-ghost bg-[#B70404] h-[max-content] hover:bg-black flex-row gap-2 w-[max-content] ml-2 text-white"
+          id="menu1_btn">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
           </svg>
+          <span>menu</span>
         </label>
       </div>
 
@@ -98,9 +107,10 @@
             class="absolute scale-y-0 menu menu-compact p-2 bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(226,226,240,1)_85%,rgba(211,242,255,1)_100%)] text-[#B70404] font-[600] rounded-b-lg w-[95vw] origin-top duration-500 shadow-xl transition-all"
             id="menu">
             <li><a href="#about">About</a></li>
+            <li><a href="#call">Call for Paper</a></li>
             <li><a href="#committes">Committes</a></li>
             <li><a href="#author">For Author</a></li>
-            <li><a href="http://www.iccsai.in/" target="_blank">Previous Conferences</a></li>
+            <li><a href="prev-conf-cont" target="_blank">Previous Conferences</a></li>
             <li><a href="#programs">Programs</a></li>
             <li><a class="cursor-pointer" onclick="open_modal2()">Registration</a></li>
             <li><a onclick="open_modal()" class="cursor-pointer">Contact</a></li>
@@ -111,27 +121,34 @@
 
       <!-- Logo -->
       <div class="navbar-center">
-        <img class="w-64 md:w-80" src="asset/galgotias-logo-1.png" alt="">
+        <img class="w-64 md:w-60" src="asset/galgotias-logo-2.png" alt="">
+        <img class="w-60 md:w-12 mx-2" src="asset/Galgotias-logo-4.png" alt="">
+        <img class="w-60 md:w-40" src="asset/logo-ieee.png" alt="">
       </div>
 
-      <!-- Search-Bar -->
+      <!-- Submission-Button -->
       <div class="navbar-end h-[100%] mr-4">
-        <div
-          class="hidden w-12 h-[75%] sm:flex justify-end items-center bg-[#B70404] transition-all origin-right duration-300 rounded-full border-0"
-          id="search-cont">
-          <input type="text" placeholder="Search"
-            class="h-[100%] w-[100%] placeholder:text-white bg-transparent text-white focus:outline-none scale-x-0 text-black rounded-l-full"
-            id="search-bar">
-          <button
-            class="btn w-12 h-12 rounded-full bg-transparent focus:outline-none border-0 text-white hover:animate-pulse duration-500 origin-right transition-all"
-            id="search-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-            </svg>
-          </button>
-        </div>
+        <a href=" https://cmt3.research.microsoft.com/IC2PCT2024" target="_blank"
+          class="btn btn-round bg-[#B70404] text-white hover:bg-black hover:shadow-3xl border-0 shadow-xl scale-75 sm:scale-100">SUBMIT
+          YOUR
+          PAPER</a>
+        <!-- Search-Bar -->
+        <!-- <div
+                class="hidden w-12 h-[75%] sm:flex justify-end items-center bg-[#B70404] transition-all origin-right duration-300 rounded-full border-0"
+                id="search-cont">
+                <input type="text" placeholder="Search"
+                  class="h-[100%] w-[100%] placeholder:text-white bg-transparent text-white focus:outline-none scale-x-0 text-black rounded-l-full"
+                  id="search-bar">
+                <button
+                  class="btn w-12 h-12 rounded-full bg-transparent focus:outline-none border-0 text-white hover:animate-pulse duration-500 origin-right transition-all"
+                  id="search-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                  </svg>
+                </button>
+              </div> -->
       </div>
     </div>
   </nav>
@@ -155,9 +172,9 @@
         <div class="carousel-item__image"></div>
         <div class="carousel-item__info">
           <div class="carousel-item__container">
-            <h2 class="carousel-item__subtitle">Galgotias University</h2>
+            <!-- <h2 class="carousel-item__subtitle">Galgotias University</h2> -->
             <h1 class="carousel-item__title">Conference Committee</h1>
-            <p class="carousel-item__description">The Conference Committee of ICCSAI-2023 aims to create an
+            <p class="carousel-item__description">The Conference Committee of IC2PCT-2024 aims to create an
               intellectually stimulating and rewarding experience for participants, fostering academic growth,
               networking opportunities, and the exchange of knowledge indiverse fields of study. This committee plays a
               pivotal role in ensuring the success and smooth execution of conferences across different academic
@@ -166,7 +183,7 @@
               interdisciplinary interactions among participants. They meticulously plan the schedule, manage
               registrations, arrange accommodations, and oversee the technical aspects of the conference, ensuring that
               both presenters and attendees have a seamless and enriching experience.</p>
-            <a href="#details" class="carousel-item__btn">Explore the Committee</a>
+            <a href="#details" class="carousel-item__btn underline">Explore the Committee</a>
           </div>
         </div>
       </div>
@@ -174,9 +191,9 @@
         <div class="carousel-item__image"></div>
         <div class="carousel-item__info">
           <div class="carousel-item__container">
-            <h2 class="carousel-item__subtitle">Galgotias University</h2>
+            <!-- <h2 class="carousel-item__subtitle">Galgotias University</h2> -->
             <h1 class="carousel-item__title">Conference Committee</h1>
-            <p class="carousel-item__description">The Conference Committee of ICCSAI-2023 aims to create an
+            <p class="carousel-item__description">The Conference Committee of IC2PCT-2024 aims to create an
               intellectually stimulating and rewarding experience for participants, fostering academic growth,
               networking opportunities, and the exchange of knowledge indiverse fields of study. This committee plays a
               pivotal role in ensuring the success and smooth execution of conferences across different academic
@@ -193,9 +210,9 @@
         <div class="carousel-item__image"></div>
         <div class="carousel-item__info">
           <div class="carousel-item__container">
-            <h2 class="carousel-item__subtitle">Galgotias University</h2>
+            <!-- <h2 class="carousel-item__subtitle">Galgotias University</h2> -->
             <h1 class="carousel-item__title">Conference Committee</h1>
-            <p class="carousel-item__description">The Conference Committee of ICCSAI-2023 aims to create an
+            <p class="carousel-item__description">The Conference Committee of IC2PCT-2024 aims to create an
               intellectually stimulating and rewarding experience for participants, fostering academic growth,
               networking opportunities, and the exchange of knowledge indiverse fields of study. This committee plays a
               pivotal role in ensuring the success and smooth execution of conferences across different academic
@@ -212,102 +229,189 @@
   </section>
 
   <!-- Details -->
-  <section class="bg-[rgba(255,255,255,1)] flex flex-col text-justify items-center text-black text-sm md:text-lg pb-12"
-    id="details">
-    <div class="flex flex-col text-justify items-center w-[50%]">
+  <section class="bg-[rgba(255,255,255,1)] flex flex-col items-center text-black text-sm md:text-lg pb-12" id="details">
+    <div class="w-[70%] text-center">
       <h1 class="text-2xl sm:text-5xl font-black text-[#B70404] p-12">Committee Details</h1>
-      <ul class="accordion w-[100%]">
+      <ul class="accordion">
         <li>
-          <a>Chief Patrons</a>
-          <p>Shri Suneel Galgotia
-            Chancellor, Galgotias University, Greater Noida
-            , India</p>
+          <a class="committee-toggle">Chief Patrons</a>
+          <div class="committee-details">
+            <div class="committee-member">
+              <img src="asset/SUNIL SIR.jpeg" alt="Shri Suneel Galgotia" class="w-[20%]">
+              <p class="member-name">Shri Suneel Galgotia</p>
+              <p class="member-description">Hon'ble Chancellor, Galgotias University, India</p>
+            </div>
+        </li>
+        <!-- Other committee members -->
+        <li>
+          <a class="committee-toggle">Patrons</a>
+          <div class="committee-details">
+            <div class="committee-members">
+              <div class="committee-member">
+                <img src="asset/S N SINGH SIR.jpeg" alt="Prof. S. N. Singh" class="w-[50%]">
+                <p class="member-name">Prof. (Dr.) S. N. Singh</p>
+                <p class="member-description">Director, IIITM, Gwalior, India</p>
+              </div>
+              <div class="committee-member">
+                <img src="asset/DHRUV SIR.jpeg" alt="Dr. Dhruv Galgotia" class="w-[50%]">
+                <p class="member-name">Dr. Dhruv Galgotia</p>
+                <p class="member-description">CEO, Galgotias University, India</p>
+              </div>
+              <div class="committee-member">
+                <img src="asset/vc sir.jpg" alt="Prof. (Dr). Mallikharjuna Babu Kayala" class="w-[50%]">
+                <p class="member-name">Prof. (Dr.) Mallikharjuna Babu Kayala</p>
+                <p class="member-description">Vice Chancellor, Galgotias University, India</p>
+              </div>
+              <div class="committee-member">
+                <img src="asset/Aradhana.jpg" alt=">Ms. Aradhana Galgotia" class="w-[50%]">
+                <p class="member-name">Ms. Aradhana Galgotia</p>
+                <p class="member-description">Director (Op.), Galgotias University, India</p>
+              </div>
+            </div>
+          </div>
         </li>
         <li>
-          <a>Patrons</a>
-          <p>Dr. Dhruv Galgotia
-            CEO, Galgotias University,Greater Noida,
-            , India</p>
-          <p>Prof. (Dr). Mallikharjuna Babu Kayala
-            Vice Chancellor,Galgotias University, Greater Noida
-            , India</p>
-          <p>Prof. S. N. Singh
-            Director, IIITM, Gwalior
-            , India</p>
+          <a class="committee-toggle">Co-Patrons</a>
+          <div class="committee-details">
+            <div class="committee-member">
+              <p class="member-img"><img src="asset/Sanajy_goel.jpeg" alt=">Prof. Sanjay Goel" class="w-[20%]"></p>
+              <p class="member-name">Prof. (Dr.) Sanjay Goel</p>
+              <p class="member-description">Dean, Galgotias University,India</p>
+            </div>
         </li>
         <li>
-          <a>Conference General Chair</a>
-          <p>Prof. Avadhesh Kumar, Pro-VC
-            Galgotias University, Greater Noida
-            , India</p>
-          <p>Prof. Pawan Kumar Singh Nain
-            Galgotias University, Greater Noida
-            , India</p>
-          <p>Prof. Asheesh Kumar Singh
-            MNNIT, Allahabad
-            , India</p>
+          <a class="committee-toggle">Conference General Chair</a>
+          <div class="committee-details">
+            <div class="committee-members">
+              <div class="committee-member">
+                <p class="member-img"><img src="asset/pvc_sir1.jpg" alt=">Prof. Avadhesh Kumar" class="w-[30%]"></p>
+                <p class="member-name">Prof. (Dr.) Avadhesh Kumar</p>
+                <p class="member-description">Pro-VC, Galgotias University, India</p>
+              </div>
+              <div class="committee-member">
+                <p class="member-img"><img src="asset/sksingh_2023.png" alt=">Prof. Satish Kumar Singh" class="w-[30%]">
+                </p>
+                <p class="member-name">Prof. (Dr.) Satish Kumar Singh</p>
+                <p class="member-description"> IIIT, Allahabad, India</p>
+              </div>
+            </div>
+          </div>
         </li>
         <li>
-          <a>Conference Chair</a>
-          <p>Prof. Prashant Johri
-            Galgotias University, Greater Noida
-            , India</p>
-          <p>Prof. Satish Kumar Singh
-            IIIT, Allahabad
-            , India</p>
-          <p>Prof. Prabhat Kumar
-            NIT, Patna
-            , India</p>
+          <a class="committee-toggle">Conference Chair</a>
+          <div class="committee-details">
+            <div class="committee-members">
+              <div class="committee-member">
+                <p class="member-img"><img src="asset/AKS_pic.jpg" alt=">Prof. Asheesh Kumar Singh" class="w-[30%]"></p>
+                <p class="member-name">Prof. (Dr.) Asheesh Kumar Singh</p>
+                <p class="member-description">MNNIT, Allahabad, India</p>
+              </div>
+              <div class="committee-member">
+                <p class="member-img"><img src="asset/Aanjey.jpeg" alt=">Prof. Aanjey Mani Tripathi" class="w-[30%]">
+                </p>
+                <p class="member-name">Prof. (Dr.) Aanjey Mani Tripathi</p>
+                <p class="member-description">Galgotias University, India</p>
+              </div>
+              <div class="committee-member">
+                <p class="member-img"><img src="asset/prashant ji.jpeg" alt=">Prof. Prashant Johri" class="w-[30%]"></p>
+                <p class="member-name">Prof. (Dr.) Prashant Johri</p>
+                <p class="member-description"> Galgotias University, India</p>
+              </div>
+            </div>
+          </div>
         </li>
         <li>
-          <a>Conference Organizing Chairs</a>
-          <p>Prof. A. K. Jain
-            Galgotias University, Greater Noida
-            , India</p>
-          <p>Prof. VDS Baghela
-            Galgotias University, Greater Noida
-            , India</p>
+          <a class="committee-toggle">Conference Organizing Chair</a>
+          <div class="committee-details">
+            <div class="committee-members">
+              <div class="committee-member">
+                <p class="member-img"><img src="asset/ak_jain.jpg" alt=">Prof. (Dr.) A. K. Jain" class="w-[30%]"></p>
+                <p class="member-name">Prof. (Dr.) A. K. Jain</p>
+                <p class="member-description">Galgotias University, India</p>
+              </div>
+              <div class="committee-member">
+                <p class="member-img"><img src="asset/blank.jpg" alt=">Prof. (Dr.) VDS Baghela" class="w-[30%]"></p>
+                <p class="member-name">Prof. (Dr.) VDS Baghela</p>
+                <p class="member-description"> Galgotias University, India</p>
+              </div>
+              <div class="committee-member">
+                <p class="member-img"><img src="asset/vimal.png" alt=">Prof. (Dr.) Vimal Kumar" class="w-[30%]"></p>
+                <p class="member-name">Prof. (Dr.) Vimal Kumar</p>
+                <p class="member-description">Galgotias University, India</p>
+              </div>
+            </div>
+          </div>
         </li>
+        <li>
+          <a class="committee-toggle">Conference Technical Chair</a>
+          <div class="committee-details">
+            <div class="committee-members">
+              <div class="committee-member">
+                <p class="member-img"><img src="asset/kuldeep.jpg" alt=">Prof.(Dr.) Kuldeep Singh Kaswan"
+                    class="w-[30%]"></p>
+                <p class="member-name">Prof.(Dr.) Kuldeep Singh Kaswan,</p>
+                <p class="member-description"> Galgotias University, India</p>
+              </div>
+              <div class="committee-member">
+                <p class="member-img"><img src="asset/Anurag Sir.jpg" alt=">Prof. (Dr.) Anurag Singh" class="w-[30%]">
+                </p>
+                <p class="member-name">Prof. (Dr.) Anurag Singh,</p>
+                <p class="member-description">National Institute of Technology,Delhi, India</p>
+              </div>
+              <div class="committee-member">
+                <p class="member-img"><img src="asset/sunita.jpeg" alt=">Prof. (Dr.)Suneeta Yadav" class="w-[30%]"></p>
+                <p class="member-name">Prof. (Dr.)Suneeta Yadav</p>
+                <p class="member-description">Galgotias University, India</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <!-- <li>-->
+        <!--  <a>Conference Technical Chairs</a>-->
+        <!--  <p>Prof. (Dr.) Anurag Singh,-->
+        <!--    National Institute of Technology,Delhi, India</p>-->
+        <!--  <p>Prof.(Dr.) Kuldeep Singh Kaswan,-->
+        <!--    Galgotias University, Greater Noida-->
+        <!--    , India</p>-->
+        <!--    <p>Prof. Pooja Singh-->
+        <!--      Galgotias University, Greater Noida-->
+        <!--      , India</p>-->
+        <!--       <p>Prof. Suneeta Yadav,-->
+        <!--        Galgotias University, Greater Noida-->
+        <!--        , India</p>-->
+        <!--</li>-->
         <li>
           <a>Conference Organizing Co-Chair</a>
-          <p>Prof. R. Swaminathan
+          <p>Prof. Deepak Soni,
             Galgotias University, Greater Noida
             , India</p>
-          <p>Prof. Aanjey Mani Tripathi
+          <p>Prof. Vipul Narayan,
             Galgotias University, Greater Noida
             , India</p>
-          <p>Prof. Vipul Narayan
+          <p>Prof. T. Ganesh Kumar,
+            Galgotias University, Greater Noida
+            , India</p>
+          <p>Prof. Desh Deepak Gautam,
             Galgotias University, Greater Noida
             , India</p>
         </li>
         <li>
-          <a>Conference Technical Chairs</a>
-          <p>Prof. Kuldeep Singh Kaswan
-            Galgotias University, Greater Noida
-            , India</p>
-          <p>Prof. Shailendra Pratap Singh
-            Galgotias University, Greater Noida
-            , India</p>
+          <a>Conference Technical Co-Chair</a>
           <p>Prof. T. Poongodi
+            Galgotias University
+            Greater Noida
+            , India</p>
+          <p>Prof. Ravi Sharma,
             Galgotias University
             Greater Noida
             , India</p>
         </li>
         <li>
-          <a>Conference Technical Co-Chair</a>
-          <p>Prof. Vimal Kumar
-            Galgotias University, Greater Noida
-            , India</p>
-        </li>
-        <li>
           <a>Conference Secretaries</a>
-          <p>Prof. Deependra Rastogi
-            Galgotias University, Greater Noida
-            , India</p>
           <p>Prof. Tarun Kumar
             Galgotias University, Greater Noida
             , India</p>
-          <p>Prof. Hradesh Kumar
+          <p>Prof. Arunendra Mani Tripathi,
             Galgotias University, Greater Noida
             , India</p>
         </li>
@@ -325,50 +429,46 @@
           <p>Prof. Kiran Singh
             Galgotias University, Greater Noida
             , India</p>
+          <p>Prof. Hradesh Kumar
+            Galgotias University, Greater Noida
+            , India</p>
         </li>
         <li>
           <a>International Advisory Chairs</a>
           <p>Prof. Sanjeev Kumar Singh
             Galgotias University, Greater Noida
             , India</p>
-          <p>Prof. Ali Wagdy Mohamed
-            Cairo University
-            Egypt</p>
-          <p>Prof. Mario Jose Divan
-            Sr. Solution Architect and Service Lead at Software Service Monetization NEX OCTO with Intel
-            Corporation,
-            Oregon
-            USA</p>
+          <!--<p>Prof. Ali Wagdy Mohamed-->
+          <!--  Cairo University-->
+          <!--  Egypt</p>-->
+          <!--<p>Prof. Mario Jose Divan-->
+          <!--  Sr. Solution Architect and Service Lead at Software Service Monetization NEX OCTO with Intel-->
+          <!--  Corporation,-->
+          <!--  Oregon-->
+          <!--  USA</p>-->
         </li>
         <li>
           <a>International Advisory Co-Chair</a>
-          <p>Prof. Jagjit Singh Dhatterwal
+          <p>Prof. Jagjit Singh Dhatterwal,
             KL University, Guntur, Andhara Pradesh
             , India</p>
         </li>
         <li>
           <a>National Advisory Chairs</a>
-          <p>Prof. Deepak Soni
-            Galgotias University, Greater Noida
-            , India</p>
-          <p>Prof. Sunil Kumar Bharti
+          <p>Prof. (Dr.) Chandra Prakash,
+            National Institute of Technology,Delhi, India</p>
+          <p>Prof. (Dr.) Sahil,
+            National Institute of Technology,Delhi, India</p>
+          <p>Prof. Sunil Kumar Bharti,
             GCET
             , India</p>
-          <p>Prof. Namita Singh Malik
+          <p>Prof. Namita Singh Malik,
             Galgotias University, Greater Noida
             , India</p>
-        </li>
-        <li>
-          <a>Conference Technical Co-Chair</a>
-          <p>Prof. Vimal Kumar
-            Galgotias University, Greater Noida
-            , India</p>
-        </li>
-        <li>
-          <a>National Advisory Chairs</a>
-          <p>Prof. Deepak L. Waikar
+
+          <p>Prof. Deepak L. Waikar,
             Singapore</p>
-          <p>Prof. Ajay Shankar Singh
+          <p>Prof. Ajay Shankar Singh,
             Galgotias University, Greater Noida
             , India</p>
         </li>
@@ -392,9 +492,9 @@
           <p>Prof. Ashok Kumar Yadav
             Galgotias University, Greater Noida
             , India</p>
-          <p>Prof. Sampath Kumar K
-            Galgotias University, Greater Noida
-            , India</p>
+          <!--<p>Prof. Sampath Kumar K-->
+          <!--  Galgotias University, Greater Noida-->
+          <!--  , India</p>-->
         </li>
         <li>
           <a>Publicity Chairs</a>
@@ -431,7 +531,7 @@
           <p>Prof. Vipin Rai
             Galgotias University, Greater Noida
             , India</p>
-          <p>Prof. Alok Katiyar
+          <p>Prof. Arvind Dagur,
             Galgotias University, Greater Noida
             , India</p>
           <p>Prof. Raju Ranjan
@@ -440,18 +540,14 @@
         </li>
         <li>
           <a>Transport Chairs</a>
-          <p>Prof. L. Vetrivindan
-            Galgotias University, Greater Noida
-            , India</p>
+
           <p>Prof. Lalit Kumar
             Galgotias University, Greater Noida
             , India</p>
         </li>
         <li>
           <a>Website Committee</a>
-          <p>Prof. T. Ganesh
-            Galgotias University, Greater Noida
-            , India</p>
+
         </li>
         <li>
           <a>Media Chair</a>
@@ -470,182 +566,186 @@
         </li>
         <li>
           <a>International Advisory Committee</a>
-          <p>Dimitrios A. Karras, National & Kapodistrian University of Athens (NKUA), Greece</p>
-          <p>Prof. Achyut Shankar, University of Warwick, UK</p>
-          <p>Prof. Achyut Shankar, WMG, University of Warwick, United Kingdom</p>
-          <p>Prof. Adrian Will,Director, National Technological University,Argentina</p>
-          <p>Prof. Afaq Ahmad, Sultan Qaboos University, Masqaţ, Oman</p>
-          <p>Prof. Ahmad T Al Taan, Yarmouk University, Jordan</p>
-          <p>Prof. Ahmed A. Elngar, Beni-Suef University,Egypt</p>
-          <p>Prof. Ahmer Khan,Dhofar University,Oman</p>
-          <p>Prof. Alex khang, Global Research Institute of Technology and Engineering, North Carolina, US</p>
-          <p>Prof. Anand Nayyar,Duy Tan University, Da Nang, Viet Nam</p>
-          <p>Prof. Andres Navarro-Newball, Pontificia Universidad Javeriana, Cali, Colombia</p>
-          <p>Prof. Arijit Karati, National Sun Yat-Sen University (NSYSU), Kaohsiung, Taiwan</p>
-          <p>Prof. Daniel Romero, Universidad Comunera, Paraguay</p>
-          <p>Prof. Deepti Thakur, College of Applied Sciences Suhar, Oman</p>
-          <p>Prof. G. K. Singh, Adama Science and Technology University, Ethiopia</p>
-          <p>Prof. Gert Kanter, Tallinn University of Technology, Estonia</p>
-          <p>Prof. Ghaida Muttashar Abdulsahib, University of Technology, Baghdad, Iraq</p>
-          <p>Prof. Gyanendra Kumar Singh, Adama Science & Technology University, Adama, Ethiopia</p>
-          <p>Prof. Jüri Vain, Tallinn University of Technology, Estonia, EU</p>
-          <p>Prof. Liudong Xing, University of Massachusetts, Dartmouth</p>
-          <p>Prof. M.S.Saleem Basha,Mazoon University College , Muscat, Oman</p>
-          <p>Prof. Mahmoud Moh’d Mahmoud Al Shawabkeh, Guangxi Minzu Normal University, Jordan</p>
-          <p>Prof. Marcelo Marciszack, National Technological University, Cordoba, Argentina</p>
-          <p>Prof. Marcelo Martin Marciszack, National Technological University, Argentina</p>
-          <p>Prof. Masood Alam, Department of Math and Computing, CPS, Sultan Qaboosb University,Muscat, Oman</p>
-          <p>Prof. Masoud Mohammadian, University of Canberra,Australia</p>
-          <p>Prof. Md Atiqur Rahman Ahad, University of East London, UK</p>
-          <p>Prof. Mohammad Israr, Maryam Abacha American University of Nigeria</p>
-          <p>Prof. Mohammad Nurul Alam, Lincoln Universiy, Malaysia</p>
-          <p>Prof. Mohd. Zalisham Jali, Faculty of Science & Technology,Universiti Sains Islam Malaysia,Negeri
-            Sembilan, Malaysia</p>
-          <p>Prof. Mussab Z. Aswad, De Montfort University, Oman</p>
-          <p>Prof. Nestor Barraza, Universidad Nacional De Tres De Febrero, Argentina</p>
-          <p>Prof. Omprakash kaiwartya, Nottingham Trent University (NTU), UK</p>
-          <p>Prof. Osamah Ibrahim Khalaf, Profesor,Al-Nahrain University,College of Information Engineering,
-            Baghdad,
-            Iraq</p>
-          <p>Prof. Pascal Lorenz, University of Haute-Alsace, France</p>
-          <p>Prof. Rabiul Islam, University of Wollongong, Australia</p>
-          <p>Prof. Rajander Sharma, College Of Applied Sciences Suhar,Oman</p>
-          <p>Prof. S. B. Goyal, City University, Malaysia</p>
-          <p>Prof. Selwyn Piramuthu, University of Florida, Department of Information Systems and Operations
-            Management, USA</p>
-          <p>Prof. Shakeel Ahmed,King Faisal University, Kingdom of Saudi Arabia</p>
-          <p>Prof. Siti Nuurul Huda Binti Mohammad Azmin, Universiti Malaysia,</p>
-          <p>Prof. Sugam Sharma, Lowa State University, USA</p>
-          <p>Prof. Sunil K Khatri, Amity University, Noida</p>
-          <p>Prof. Syed Hamid Hasan, King Abdulaziz University, Kingdom of Saudi Arabi</p>
-          <p>Prof. Umar Muhammad Modibbo, Adama University Yola-Nigeria</p>
-          <p>Prof. V S S Yadavalli, University of Pretoria, South Africa</p>
-          <p>Prof. Ved P Mishra, Amity University, Dubai</p>
-          <p>Prof. Victor C.M. Leung, The University of British Columbia</p>
-          <p>Prof. Vinod Khadkikar, Abu Dhabi, Khalifa University of Science and Technology, UAE</p>
-          <p>Prof. Xiao Zhi Gao, University of Eastern Finland, Finland</p>
-          <p>Prof. Yu-Chen Hu, Providence University, Taiwan</p>
+
+          <!--<p>Dimitrios A. Karras, National & Kapodistrian University of Athens (NKUA), Greece</p>-->
+          <!--<p>Prof. Achyut Shankar, University of Warwick, UK</p>-->
+          <!--<p>Prof. Achyut Shankar, WMG, University of Warwick, United Kingdom</p>-->
+          <!--<p>Prof. Adrian Will,Director, National Technological University,Argentina</p>-->
+          <!--<p>Prof. Afaq Ahmad, Sultan Qaboos University, Masqaţ, Oman</p>-->
+          <!--<p>Prof. Ahmad T Al Taan, Yarmouk University, Jordan</p>-->
+          <!--<p>Prof. Ahmed A. Elngar, Beni-Suef University,Egypt</p>-->
+          <!--<p>Prof. Ahmer Khan,Dhofar University,Oman</p>-->
+          <!--<p>Prof. Alex khang, Global Research Institute of Technology and Engineering, North Carolina, US</p>-->
+          <!--<p>Prof. Anand Nayyar,Duy Tan University, Da Nang, Viet Nam</p>-->
+          <!--<p>Prof. Andres Navarro-Newball, Pontificia Universidad Javeriana, Cali, Colombia</p>-->
+          <!--<p>Prof. Arijit Karati, National Sun Yat-Sen University (NSYSU), Kaohsiung, Taiwan</p>-->
+          <!--<p>Prof. Daniel Romero, Universidad Comunera, Paraguay</p>-->
+          <!--<p>Prof. Deepti Thakur, College of Applied Sciences Suhar, Oman</p>-->
+          <!--<p>Prof. G. K. Singh, Adama Science and Technology University, Ethiopia</p>-->
+          <!--<p>Prof. Gert Kanter, Tallinn University of Technology, Estonia</p>-->
+          <!--<p>Prof. Ghaida Muttashar Abdulsahib, University of Technology, Baghdad, Iraq</p>-->
+          <!--<p>Prof. Gyanendra Kumar Singh, Adama Science & Technology University, Adama, Ethiopia</p>-->
+          <!--<p>Prof. Jüri Vain, Tallinn University of Technology, Estonia, EU</p>-->
+          <!--<p>Prof. Liudong Xing, University of Massachusetts, Dartmouth</p>-->
+          <!--<p>Prof. M.S.Saleem Basha,Mazoon University College , Muscat, Oman</p>-->
+          <!--<p>Prof. Mahmoud Moh’d Mahmoud Al Shawabkeh, Guangxi Minzu Normal University, Jordan</p>-->
+          <!--<p>Prof. Marcelo Marciszack, National Technological University, Cordoba, Argentina</p>-->
+          <!--<p>Prof. Marcelo Martin Marciszack, National Technological University, Argentina</p>-->
+          <!--<p>Prof. Masood Alam, Department of Math and Computing, CPS, Sultan Qaboosb University,Muscat, Oman</p>-->
+          <!--<p>Prof. Masoud Mohammadian, University of Canberra,Australia</p>-->
+          <!--<p>Prof. Md Atiqur Rahman Ahad, University of East London, UK</p>-->
+          <!--<p>Prof. Mohammad Israr, Maryam Abacha American University of Nigeria</p>-->
+          <!--<p>Prof. Mohammad Nurul Alam, Lincoln Universiy, Malaysia</p>-->
+          <!--<p>Prof. Mohd. Zalisham Jali, Faculty of Science & Technology,Universiti Sains Islam Malaysia,Negeri-->
+          <!--  Sembilan, Malaysia</p>-->
+          <!--<p>Prof. Mussab Z. Aswad, De Montfort University, Oman</p>-->
+          <!--<p>Prof. Nestor Barraza, Universidad Nacional De Tres De Febrero, Argentina</p>-->
+          <!--<p>Prof. Omprakash kaiwartya, Nottingham Trent University (NTU), UK</p>-->
+          <!--<p>Prof. Osamah Ibrahim Khalaf, Profesor,Al-Nahrain University,College of Information Engineering,-->
+          <!--  Baghdad,-->
+          <!--  Iraq</p>-->
+          <!--<p>Prof. Pascal Lorenz, University of Haute-Alsace, France</p>-->
+          <!--<p>Prof. Rabiul Islam, University of Wollongong, Australia</p>-->
+          <!--<p>Prof. Rajander Sharma, College Of Applied Sciences Suhar,Oman</p>-->
+          <!--<p>Prof. S. B. Goyal, City University, Malaysia</p>-->
+          <!--<p>Prof. Selwyn Piramuthu, University of Florida, Department of Information Systems and Operations-->
+          <!--  Management, USA</p>-->
+          <!--<p>Prof. Shakeel Ahmed,King Faisal University, Kingdom of Saudi Arabia</p>-->
+          <!--<p>Prof. Siti Nuurul Huda Binti Mohammad Azmin, Universiti Malaysia,</p>-->
+          <!--<p>Prof. Sugam Sharma, Lowa State University, USA</p>-->
+          <!--<p>Prof. Sunil K Khatri, Amity University, Noida</p>-->
+          <!--<p>Prof. Syed Hamid Hasan, King Abdulaziz University, Kingdom of Saudi Arabi</p>-->
+          <!--<p>Prof. Umar Muhammad Modibbo, Adama University Yola-Nigeria</p>-->
+          <!--<p>Prof. V S S Yadavalli, University of Pretoria, South Africa</p>-->
+          <!--<p>Prof. Ved P Mishra, Amity University, Dubai</p>-->
+          <!--<p>Prof. Victor C.M. Leung, The University of British Columbia</p>-->
+          <!--<p>Prof. Vinod Khadkikar, Abu Dhabi, Khalifa University of Science and Technology, UAE</p>-->
+          <!--<p>Prof. Xiao Zhi Gao, University of Eastern Finland, Finland</p>-->
+          <!--<p>Prof. Yu-Chen Hu, Providence University, Taiwan</p>-->
         </li>
         <li>
           <a>National Advisory Committee</a>
-          <p>Prof. Adarsh Anand, University Of Delhi, Delhi, India</p>
-          <p>Prof. Anil Kumar Sagar, Sharda University, Greater Noida, India</p>
-          <p>Prof. Anil Sagar, Sharda University, Greater Noida, India</p>
-          <p>Prof. Anoop Kumar Patel, NIT Kurukshetra, India</p>
-          <p>Prof. Anurag Dixit, Rayat Bahar University, India</p>
-          <p>Prof. Arun Agarwal, University of Delhi, Delhi, India</p>
-          <p>Prof. Arun Sharma, Indira Gandhi Delhi Technical University for Women (IGDTUW), Delhi</p>
-          <p>Prof. B. K. Sharma, AKG, Ghaziabad, India</p>
-          <p>Prof. Brijesh Kumar, University School Of Information & Communication Technology, GGS Indraprastha
-            University, Delhi, India</p>
-          <p>Prof. Chitra Desai, NDA, Kh adakwasla,Pune, India</p>
-          <p>Prof. Chitra Desai, NDA, Khadakwasla, Pune, India</p>
-          <p>Prof. D. N. Goswami, Jiwaji University, India</p>
-          <p>Prof. Dilip Kumar Sharma, GLA Mathura, Mathura, India</p>
-          <p>Prof. Durgesh K Mishra, Sri Aurobindo Institute of Technology, Indore, MP, India</p>
-          <p>Prof. Durgesh K Mishra, Sri Aurobindo Institute of Technology, Indore, MP, India</p>
-          <p>Prof. K Muralidharan, MS University of Baroda, Vadodara, India</p>
-          <p>Prof. K.Jaggi , University Of Delhi, Delhi, India</p>
-          <p>Prof. M. N. Hoda, Bharati Vidyapeeth’s Institute of Computer Applications & Management (BVICAM), New
-            Delhi, India</p>
-          <p>Prof. M. N. Hoda, Bharati Vidyapeeth’s Institute of Computer Applications & Management (BVICAM), New
-            Delhi, India</p>
-          <p>Prof. Mandeep Mittal, Amity University Uttar Pradesh, India</p>
-          <p>Prof. Naveen Rajpal, GGSIP University, New Delhi, India</p>
-          <p>Prof. Naveen Rajpal, GGSIP University, New Delhi, India</p>
-          <p>Prof. Ompal, University Of Delhi, Delhi, India</p>
-          <p>Prof. P. Mohamed Fathimal, Department of Computer Science and Engineering, Vadapalani Campus, SRM
-            Institute of Science and Technology, Vadapalani, Chennai</p>
-          <p>Prof. P. S. Grover, Member NBA Core Team, former Director, Dean & HOD, Department of Computer
-            Science,
-            Delhi University, Delhi, India</p>
-          <p>Prof. P.S. Grover, KIIT Group of Colleges, Gurgaon, India</p>
-          <p>Prof. Parmanand Astya, Dean Engineering, Sharda University, Greater Noida, India</p>
-          <p>Prof. Parmanand Astya, Sharda University, Greater Noida, India</p>
-          <p>Prof. Partha Pratim Sarkar, University of Kalyani, West Bengal, India</p>
-          <p>Prof. Prashant Singh, JSS, India</p>
-          <p>Prof. R P Ojha, G. L. Bajaj, Greater Noida, India</p>
-          <p>Prof. Rajesh Kumar, Thapar Institute of Engineering & Technology, Patiala, Punjab, India</p>
-          <p>Prof. S. Gavaskar, Bharityar University, India</p>
-          <p>Prof. Sanjoy Das, IGNTU, Manipur, India</p>
-          <p>Prof. Sanjoy km Parida, IIT-Patna, India</p>
-          <p>Prof. Shrivani Mathur, Oriental College of Technology, Bhopal, India</p>
-          <p>Prof. Sudhir Kumar Sharma, JNU, Jaipur, India</p>
-          <p>Prof. Tanupriya Choudhury, UPES University, Dehradun, India</p>
-          <p>Prof. V Srivastava, IIT Kanpur, Kanpur, India</p>
-          <p>Prof. Vishal Bhatnagar, Netaji Subhas University of Technology (East Campus), New Delhi, India</p>
+          <p>Prof. L. Vetrivindan
+            Galgotias University, Greater Noida
+            , India</p>
+          <!--<p>Prof. Adarsh Anand, University Of Delhi, Delhi, India</p>-->
+          <!--<p>Prof. Anil Kumar Sagar, Sharda University, Greater Noida, India</p>-->
+          <!--<p>Prof. Anil Sagar, Sharda University, Greater Noida, India</p>-->
+          <!--<p>Prof. Anoop Kumar Patel, NIT Kurukshetra, India</p>-->
+          <!--<p>Prof. Anurag Dixit, Rayat Bahar University, India</p>-->
+          <!--<p>Prof. Arun Agarwal, University of Delhi, Delhi, India</p>-->
+          <!--<p>Prof. Arun Sharma, Indira Gandhi Delhi Technical University for Women (IGDTUW), Delhi</p>-->
+          <!--<p>Prof. B. K. Sharma, AKG, Ghaziabad, India</p>-->
+          <!--<p>Prof. Brijesh Kumar, University School Of Information & Communication Technology, GGS Indraprastha-->
+          <!--  University, Delhi, India</p>-->
+          <!--<p>Prof. Chitra Desai, NDA, Kh adakwasla,Pune, India</p>-->
+          <!--<p>Prof. Chitra Desai, NDA, Khadakwasla, Pune, India</p>-->
+          <!--<p>Prof. D. N. Goswami, Jiwaji University, India</p>-->
+          <!--<p>Prof. Dilip Kumar Sharma, GLA Mathura, Mathura, India</p>-->
+          <!--<p>Prof. Durgesh K Mishra, Sri Aurobindo Institute of Technology, Indore, MP, India</p>-->
+          <!--<p>Prof. Durgesh K Mishra, Sri Aurobindo Institute of Technology, Indore, MP, India</p>-->
+          <!--<p>Prof. K Muralidharan, MS University of Baroda, Vadodara, India</p>-->
+          <!--<p>Prof. K.Jaggi , University Of Delhi, Delhi, India</p>-->
+          <!--<p>Prof. M. N. Hoda, Bharati Vidyapeeth’s Institute of Computer Applications & Management (BVICAM), New-->
+          <!--  Delhi, India</p>-->
+          <!--<p>Prof. M. N. Hoda, Bharati Vidyapeeth’s Institute of Computer Applications & Management (BVICAM), New-->
+          <!--  Delhi, India</p>-->
+          <!--<p>Prof. Mandeep Mittal, Amity University Uttar Pradesh, India</p>-->
+          <!--<p>Prof. Naveen Rajpal, GGSIP University, New Delhi, India</p>-->
+          <!--<p>Prof. Naveen Rajpal, GGSIP University, New Delhi, India</p>-->
+          <!--<p>Prof. Ompal, University Of Delhi, Delhi, India</p>-->
+          <!--<p>Prof. P. Mohamed Fathimal, Department of Computer Science and Engineering, Vadapalani Campus, SRM-->
+          <!--  Institute of Science and Technology, Vadapalani, Chennai</p>-->
+          <!--<p>Prof. P. S. Grover, Member NBA Core Team, former Director, Dean & HOD, Department of Computer-->
+          <!--  Science,-->
+          <!--  Delhi University, Delhi, India</p>-->
+          <!--<p>Prof. P.S. Grover, KIIT Group of Colleges, Gurgaon, India</p>-->
+          <!--<p>Prof. Parmanand Astya, Dean Engineering, Sharda University, Greater Noida, India</p>-->
+          <!--<p>Prof. Parmanand Astya, Sharda University, Greater Noida, India</p>-->
+          <!--<p>Prof. Partha Pratim Sarkar, University of Kalyani, West Bengal, India</p>-->
+          <!--<p>Prof. Prashant Singh, JSS, India</p>-->
+          <!--<p>Prof. R P Ojha, G. L. Bajaj, Greater Noida, India</p>-->
+          <!--<p>Prof. Rajesh Kumar, Thapar Institute of Engineering & Technology, Patiala, Punjab, India</p>-->
+          <!--<p>Prof. S. Gavaskar, Bharityar University, India</p>-->
+          <!--<p>Prof. Sanjoy Das, IGNTU, Manipur, India</p>-->
+          <!--<p>Prof. Sanjoy km Parida, IIT-Patna, India</p>-->
+          <!--<p>Prof. Shrivani Mathur, Oriental College of Technology, Bhopal, India</p>-->
+          <!--<p>Prof. Sudhir Kumar Sharma, JNU, Jaipur, India</p>-->
+          <!--<p>Prof. Tanupriya Choudhury, UPES University, Dehradun, India</p>-->
+          <!--<p>Prof. V Srivastava, IIT Kanpur, Kanpur, India</p>-->
+          <!--<p>Prof. Vishal Bhatnagar, Netaji Subhas University of Technology (East Campus), New Delhi, India</p>-->
         </li>
         <li>
           <a>Technical Program Committee</a>
           <p>Prof. Alok Katiyar, SCSE, Galgotias University, Greater Noida , India</p>
-          <p>Prof. Amba Mishra, NIET, Greater Noida, India</p>
-          <p>Prof. Aradhna saini, NIET, Greater Noida, India</p>
-          <p>Prof. Arvind kumar, SCSE, Galgotias University, Greater Noida , India</p>
-          <p>Prof. Chandru Vignesh, VIT University, Vellore, India</p>
-          <p>Prof. Divya Sharma, NIET, Greater Noida, India</p>
-          <p>Prof. Garima Nahar, Deptartment of Computer Science, S. S. Jain Subodh P.G. Mahila Mahavidyalaya,
-            Rambagh
-            Circle, Jaipur, India</p>
-          <p>Prof. Garima Shukla, NIET, Greater Noida, India</p>
-          <p>Prof. Gaurav Dhuria, NIET, Greater Noida, India</p>
-          <p>Prof. J. Ramprasath, Dr.Mahalingam College of engineering and technology, Pollachi, Coimbatore, India
-          </p>
-          <p>Prof. Jagvinder Singh, Department of Operational Research, University of Delhi, Delhi, India</p>
-          <p>Prof. Janarthan S, SCSE, Galgotias University, Greater Noida , India</p>
-          <p>Prof. Jaswinder Singh, Maharaja Ranjit Singh Punjab Technical University, Punjab, India</p>
-          <p>Prof. Kamal Gulati, Amity University, Noida, India</p>
-          <p>Prof. Kavita, SCSE, Galgotias University, Greater Noida , India</p>
-          <p>Prof. Kiran Singh, SCSE, Galgotias University, Greater Noida , India</p>
-          <p>Prof. Kushal Kanwar, JUIT Solan, HP, India</p>
-          <p>Prof. Mayank Kumar Goyal, Sharda University, Greater Noida, India</p>
-          <p>Prof. Mohd. Izhar, Bosco Technical Training Society, Don Bosco Technical School, Okhla Road, New
-            Delhi,
-            Inida</p>
-          <p>Prof. N.Krishnaraj, Vellore Institute of Technology, Vellore, India</p>
-          <p>Prof. P. Sampath, SCSE, Galgotias University, Greater Noida , India</p>
-          <p>Prof. Pankaj Dadheech,Department of Computer Science & Engineering, Swami Keshvanand Institute of
-            Technology, Management & Gramothan (SKIT), Jaipur, Rajasthan, India</p>
-          <p>Prof. Prabha Nair, NIET, Greater Noida</p>
-          <p>Prof. Praveen Shukla, Manipal University, Jaipur, India</p>
-          <p>Prof. Priyanka Tyagi, IMS, Ghaziabad, India</p>
-          <p>Prof. Puneet Gupta, Manipal University, Jaipur</p>
-          <p>Prof. R. Karthick, Department of CSE, Sri Krishna College of Technology, Coimbatore, India</p>
-          <p>Prof. R.Sathiyaraj, Department of CSE, School of Engineering and Technology, CMR University,
-            Bangalore,
-            , India</p>
-          <p>Prof. Rajit Nair, VIT, Bhopal University, Bhopal, India</p>
-          <p>Prof. Ramkumar KR, Chitkara University, Punjab, India</p>
-          <p>Prof. Rashmi Aggarwal, MREI, Faridabad, India</p>
-          <p>Prof. Rashmi Priyadarshini, Sharda University, Greater Noida, India</p>
-          <p>Prof. Ritu Dewan, GCET, Greater Noida, India</p>
-          <p>Prof. Rohit Bansal, Department of Management Studies, Vaish College of Engineering, Rohtak, India</p>
-          <p>Prof. Rohit Bansal, Vaish College of Engineering, India</p>
-          <p>Prof. Sandhaya Katiyar, GCET, Greater Noida, India</p>
-          <p>Prof. Satnam Kaur, Thapar University, Patiala, Punjab</p>
-          <p>Prof. Shalu Tandon, Bosco Technical Training Society, Don Bosco Technical School, Okhla Road, New
-            Delhi,
-            , India</p>
-          <p>Prof. Shivani Goel, Bennett University, India</p>
-          <p>Prof. Shobha Tyagi, Manav Rachna International Institute of Research Studies, Faridabad, India</p>
-          <p>Prof. Siddhartha Sankar Biswas, Department of Computer Science and Engineering, School of Engineering
-            Sciences and Technology, Jamia Hamdard, New Delhi</p>
-          <p>Prof. Sikhvir Kaur, Lovely Professional University, Punjab, India</p>
-          <p>Prof. Sofia Pillai, NIET, Greater Noida, India</p>
-          <p>Prof. SPS Chauhan, SCSE, Galgotias University, Greater Noida , India</p>
-          <p>Prof. Sridhar, VIT University, Vellore, India</p>
-          <p>Prof. Subrata Sahana, Sharda University, Greater Noida, India</p>
-          <p>Prof. Sudeshna Chkraborty, SCSE, Galgotias University, Greater Noida , India</p>
-          <p>Prof. Supriya Khaitan, SCSE, Galgotias University, Greater Noida , India</p>
-          <p>Prof. T Ganesh Kumar, SCSE, Galgotias University, Greater Noida , India</p>
-          <p>Prof. T. Rajeshkumar, Department of IT, Sri Krishna College of Technology, Coimbatore, India</p>
-          <p>Prof. Tapsi Nagpal, Lingayas University, Inida</p>
-          <p>Prof. Usha Chauhan, Galgotias University, Greater Noida , India</p>
-          <p>Prof. Vandana Sharma, Amity Institute of Information Technology, Amity University, India</p>
-          <p>Prof. Varun Tiwari, Bosco Technical Training Society, Don Bosco Technical School, Okhla Road, New
-            Delhi,
-            , India</p>
-          <p>Prof. Varuna Gupta, CHRIST (Deemed to be University), Delhi NCR, India</p>
-          <p>Prof. Vinny Sharma, Galgotias University, Greater Noida , India</p>
+          <!--<p>Prof. Amba Mishra, NIET, Greater Noida, India</p>-->
+          <!--<p>Prof. Aradhna saini, NIET, Greater Noida, India</p>-->
+          <!--<p>Prof. Arvind kumar, SCSE, Galgotias University, Greater Noida , India</p>-->
+          <!--<p>Prof. Chandru Vignesh, VIT University, Vellore, India</p>-->
+          <!--<p>Prof. Divya Sharma, NIET, Greater Noida, India</p>-->
+          <!--<p>Prof. Garima Nahar, Deptartment of Computer Science, S. S. Jain Subodh P.G. Mahila Mahavidyalaya,-->
+          <!--  Rambagh-->
+          <!--  Circle, Jaipur, India</p>-->
+          <!--<p>Prof. Garima Shukla, NIET, Greater Noida, India</p>-->
+          <!--<p>Prof. Gaurav Dhuria, NIET, Greater Noida, India</p>-->
+          <!--<p>Prof. J. Ramprasath, Dr.Mahalingam College of engineering and technology, Pollachi, Coimbatore, India-->
+          <!--</p>-->
+          <!--<p>Prof. Jagvinder Singh, Department of Operational Research, University of Delhi, Delhi, India</p>-->
+          <!--<p>Prof. Janarthan S, SCSE, Galgotias University, Greater Noida , India</p>-->
+          <!--<p>Prof. Jaswinder Singh, Maharaja Ranjit Singh Punjab Technical University, Punjab, India</p>-->
+          <!--<p>Prof. Kamal Gulati, Amity University, Noida, India</p>-->
+          <!--<p>Prof. Kavita, SCSE, Galgotias University, Greater Noida , India</p>-->
+          <!--<p>Prof. Kiran Singh, SCSE, Galgotias University, Greater Noida , India</p>-->
+          <!--<p>Prof. Kushal Kanwar, JUIT Solan, HP, India</p>-->
+          <!--<p>Prof. Mayank Kumar Goyal, Sharda University, Greater Noida, India</p>-->
+          <!--<p>Prof. Mohd. Izhar, Bosco Technical Training Society, Don Bosco Technical School, Okhla Road, New-->
+          <!--  Delhi,-->
+          <!--  Inida</p>-->
+          <!--<p>Prof. N.Krishnaraj, Vellore Institute of Technology, Vellore, India</p>-->
+          <!--<p>Prof. P. Sampath, SCSE, Galgotias University, Greater Noida , India</p>-->
+          <!--<p>Prof. Pankaj Dadheech,Department of Computer Science & Engineering, Swami Keshvanand Institute of-->
+          <!--  Technology, Management & Gramothan (SKIT), Jaipur, Rajasthan, India</p>-->
+          <!--<p>Prof. Prabha Nair, NIET, Greater Noida</p>-->
+          <!--<p>Prof. Praveen Shukla, Manipal University, Jaipur, India</p>-->
+          <!--<p>Prof. Priyanka Tyagi, IMS, Ghaziabad, India</p>-->
+          <!--<p>Prof. Puneet Gupta, Manipal University, Jaipur</p>-->
+          <!--<p>Prof. R. Karthick, Department of CSE, Sri Krishna College of Technology, Coimbatore, India</p>-->
+          <!--<p>Prof. R.Sathiyaraj, Department of CSE, School of Engineering and Technology, CMR University,-->
+          <!--  Bangalore,-->
+          <!--  , India</p>-->
+          <!--<p>Prof. Rajit Nair, VIT, Bhopal University, Bhopal, India</p>-->
+          <!--<p>Prof. Ramkumar KR, Chitkara University, Punjab, India</p>-->
+          <!--<p>Prof. Rashmi Aggarwal, MREI, Faridabad, India</p>-->
+          <!--<p>Prof. Rashmi Priyadarshini, Sharda University, Greater Noida, India</p>-->
+          <!--<p>Prof. Ritu Dewan, GCET, Greater Noida, India</p>-->
+          <!--<p>Prof. Rohit Bansal, Department of Management Studies, Vaish College of Engineering, Rohtak, India</p>-->
+          <!--<p>Prof. Rohit Bansal, Vaish College of Engineering, India</p>-->
+          <!--<p>Prof. Sandhaya Katiyar, GCET, Greater Noida, India</p>-->
+          <!--<p>Prof. Satnam Kaur, Thapar University, Patiala, Punjab</p>-->
+          <!--<p>Prof. Shalu Tandon, Bosco Technical Training Society, Don Bosco Technical School, Okhla Road, New-->
+          <!--  Delhi,-->
+          <!--  , India</p>-->
+          <!--<p>Prof. Shivani Goel, Bennett University, India</p>-->
+          <!--<p>Prof. Shobha Tyagi, Manav Rachna International Institute of Research Studies, Faridabad, India</p>-->
+          <!--<p>Prof. Siddhartha Sankar Biswas, Department of Computer Science and Engineering, School of Engineering-->
+          <!--  Sciences and Technology, Jamia Hamdard, New Delhi</p>-->
+          <!--<p>Prof. Sikhvir Kaur, Lovely Professional University, Punjab, India</p>-->
+          <!--<p>Prof. Sofia Pillai, NIET, Greater Noida, India</p>-->
+          <!--<p>Prof. SPS Chauhan, SCSE, Galgotias University, Greater Noida , India</p>-->
+          <!--<p>Prof. Sridhar, VIT University, Vellore, India</p>-->
+          <!--<p>Prof. Subrata Sahana, Sharda University, Greater Noida, India</p>-->
+          <!--<p>Prof. Sudeshna Chkraborty, SCSE, Galgotias University, Greater Noida , India</p>-->
+          <!--<p>Prof. Supriya Khaitan, SCSE, Galgotias University, Greater Noida , India</p>-->
+          <!--<p>Prof. T Ganesh Kumar, SCSE, Galgotias University, Greater Noida , India</p>-->
+          <!--<p>Prof. T. Rajeshkumar, Department of IT, Sri Krishna College of Technology, Coimbatore, India</p>-->
+          <!--<p>Prof. Tapsi Nagpal, Lingayas University, Inida</p>-->
+          <!--<p>Prof. Usha Chauhan, Galgotias University, Greater Noida , India</p>-->
+          <!--<p>Prof. Vandana Sharma, Amity Institute of Information Technology, Amity University, India</p>-->
+          <!--<p>Prof. Varun Tiwari, Bosco Technical Training Society, Don Bosco Technical School, Okhla Road, New-->
+          <!--  Delhi,-->
+          <!--  , India</p>-->
+          <!--<p>Prof. Varuna Gupta, CHRIST (Deemed to be University), Delhi NCR, India</p>-->
+          <!--<p>Prof. Vinny Sharma, Galgotias University, Greater Noida , India</p>-->
         </li>
       </ul>
     </div>
@@ -706,7 +806,7 @@
 
         <!-- Account-Info -->
         <div
-          class="grid grid-cols-[max-content_1fr] grid-rows-[max-content_1fr] text-left mx-4 my-4 text-xs sm:text-sm md:text-lg">
+          class="grid grid-cols-[max-content_1fr] grid-rows-[max-content_1fr] text-left mx-5 mt-4 pb-12 text-xs sm:text-sm md:text-lg relative">
           <h1 class="text-2xl text-black col-span-2">Account Details</h1>
           <div class="row-start-2 border-2 border-black p-2 sm:p-4 w-[max-content]">
             <p class="border-b-2 border-black">Name of Account</p>
@@ -721,6 +821,8 @@
             <p class="border-b-2 border-black">Punjab National Bank</p>
             </p>
           </div>
+          <a href="" class="text-base md:text-lg text-red absolute bottom-2">* Registration of paper
+            link will come very soon......</a>
         </div>
       </div>
     </div>
@@ -784,8 +886,9 @@
       <address class="text-[12px] md:text-sm ">
         Plot No. 2, Yamuna Expy, opposite Buddha International Circuit, Sector 17A, Greater Noida, Uttar
         Pradesh 203201
-        <span class="block">Phone: +91 9807978299</span>
-        <a class="" href="mailto:IC2pct@galgotiasuniversity.edu.in">Email: IC2pct@galgotiasuniversity.edu.in</a>
+        <span class="block"></span>
+        <a class="text-[#FF5733]" href="mailto:ic2pct@galgotiasuniversity.edu.in">Email:
+          ic2pct@galgotiasuniversity.edu.in</a>
       </address>
     </div>
 
@@ -835,7 +938,7 @@
     <!-- Other-Logo -->
     <div
       class="sm:col-start-3 sm:row-start-1 sm:row-span-2 grid grid-cols-[max-content_max-content_max-content] sm:grid-cols-1 sm:grid-rows-[max-content_max-content_max-content_max-content] justify-center sm:justify-start gap-6 sm:justify-items-center py-4 sm:py-0">
-      <img class="w-20 sm:w-36" src="asset/logo-ieee.png" alt="IEEE">
+      <!-- <img class="w-20 sm:w-36" src="asset/logo-ieee.png" alt="IEEE"> -->
       <img class="w-20 sm:w-36" src="asset/g20-logo.png" alt="G20">
       <img class="w-20 sm:w-36" src="asset/iiclogo.png" alt="IIC">
     </div>
@@ -964,8 +1067,10 @@
       console.log('prev ' + prev);
     }
   });
+</script>
 
-  // Accordion-Script
+<!-- Accordion-Script -->
+<script>
   (function ($) {
     $('.accordion > li:eq(0) a').addClass('active').next().slideDown();
     $('.accordion a').click(function (j) {

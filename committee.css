@@ -39,7 +39,7 @@
 .carousel-item {
   visibility: visible;
   display: flex;
-  width: 100%;
+  width: 130%;
   height: 100%;
   align-items: center;
   justify-content: flex-end;
@@ -75,11 +75,9 @@
   order: 2;
   align-self: flex-end;
   flex-basis: 60%;
-
   -webkit-order: 2;
   -webkit-align-self: flex-end;
   -webkit-flex-basis: 60%;
-
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -90,11 +88,10 @@
 
 .carousel-item__subtitle {
   letter-spacing: 3px;
-  font-size: 20px;
+  font-size: 30px;
   text-transform: uppercase;
   margin: 0;
   font-weight: 700;
-  transform: translateY(25%);
   opacity: 0;
   visibility: hidden;
   transition: 0.4s all ease-in-out;
@@ -106,7 +103,6 @@
   line-height: 45px;
   letter-spacing: 3px;
   font-weight: 700;
-  transform: translateY(25%);
   opacity: 0;
   visibility: hidden;
   transition: 0.6s all ease-in-out;
@@ -114,14 +110,13 @@
 
 .carousel-item__description {
   text-align: justify;
-  transform: translateY(25%);
   opacity: 0;
   visibility: hidden;
   transition: 0.6s all ease-in-out;
-  margin-top: 35px;
-  font-size: 13px;
-  color: #000;
-  line-height: 22px;
+  margin-top: 15px;
+  font-size: 18px;
+  color: #000000;
+  line-height: 25px;
   margin-bottom: 35px;
 }
 
@@ -136,11 +131,14 @@
 .carousel-item--3 .carousel-item__image {
   background-image: url("asset/bg-committee_3.jpeg");
 }
+.carousel-item--3 .carousel-item__image {
+  background-image: url("asset/11.jpeg");
+}
 
 .carousel-item__btn {
   width: 35%;
-  letter-spacing: 3px;
-  font-size: 11px;
+  letter-spacing: 2.5px;
+  font-size: 18px;
   text-transform: uppercase;
   margin: 0;
   width: 35%;
@@ -148,6 +146,7 @@
   text-decoration: none;
   transform: translateY(25%);
   opacity: 0;
+  color: #e20825;
   visibility: hidden;
   transition: 0.6s all ease-in-out;
 }
@@ -208,8 +207,10 @@
 
 /* Accordion */
 .accordion {
-  margin: 0 auto 100px;
+  margin: 0 auto 50px;
   border-top: 1px solid #d9e5e8;
+  width: 100%;
+  max-width: 100%;
 }
 
 .accordion li {
@@ -219,47 +220,71 @@
 
 .accordion li p {
   display: none;
-  padding: 10px 25px 10px;
-  color: #6b97a4;
+  color: #090de8;
+}
+
+.accordion li img {
+  /* display: none; */
+  transition: color 0.3s ease-in-out;
 }
 
 .accordion a {
   width: 100%;
   display: block;
   cursor: pointer;
-  font-weight: 600;
-  line-height: 3;
-  font-size: 14px;
-  font-size: 0.875rem;
-  text-indent: 15px;
+  font-weight: 500;
+  line-height: 2;
+  font-size: 1.2rem;
+  color: #11319a;
   user-select: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.accordion a:hover {
+  color: #ff6600;
 }
 
 .accordion a:after {
-  width: 8px;
-  height: 8px;
-  border-right: 1px solid #4a6e78;
-  border-bottom: 1px solid #4a6e78;
+  width: 15px;
+  height: 15px;
+  border-right: 2px solid #280218;
+  border-bottom: 2px solid #280218;
   position: absolute;
-  right: 10px;
+  right: 20px;
   content: "";
-  top: 17px;
+  top: 12px;
   transform: rotate(-45deg);
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
 .accordion p {
-  font-size: 13px;
-  font-size: 0.8125rem;
-  line-height: 2;
-  padding: 10px;
+  font-size: 1rem;
+  line-height: 1.3;
+  padding-top: 8px;
 }
+
+/* .active_1 {
+  display: block;
+} */
 
 a.active:after {
   transform: rotate(45deg);
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+}
+
+.committee-members {
+  display: flex;
+  justify-content: ;
+}
+
+.committee-member img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.committee-member {
+  text-align: center;
+  flex: 1;
 }
