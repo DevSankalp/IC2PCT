@@ -448,7 +448,7 @@
     <div class="w-[80%] text-white flex flex-col justify-center items-center">
       <h1 class=" text-2xl md:text-4xl text-center text-white font-bold mt-8 mb-4">Registration</h1>
       <div
-        class="w-[100%] grid grid-rows-[max-content_max-content] grid-cols-1 text-[#B70404] bg-[rgba(255,255,255,0.9)] rounded-md">
+        class="w-[100%] grid grid-rows-[max-content_max-content] grid-cols-1 text-[#B70404] bg-[rgba(255,255,255,1)] rounded-md">
 
         <!-- Prices -->
         <div class="p-2 sm:p-4">
@@ -527,29 +527,30 @@
     <div class="w-[100%] sm:w-[80%] flex flex-col justify-center">
       <h1 class="text-2xl md:text-5xl text-center text-white font-bold mt-8 md:mb-12">Contact Us</h1>
       <div class="w-[100%] flex items-center justify-center font-semibold">
-        <form method="" autocomplete="off" name=""
-          class="flex flex-col px-8 w-[100%] md:w-[45%] rounded-md shadow-[0_0_10px_rgba(255,255,255,0.3)] scale-75 md:scale-100"
+        <form method="post" autocomplete="off" name="google-sheet"
+          class="flex flex-col px-8 md:w-[40%] rounded-md shadow-[0_0_15px_rgba(0,0,0,0.3)] scale-75 md:scale-100"
           id="formCont" data-theme="light">
+          <input type="text" name="Time" class="hidden" id="time">
           <label for="Name"
             class="my-8 border-0 text-left relative before:absolute before:bg-black before:bottom-0 before:w-[100%] before:h-[2px] before:scale-x-0 before:focus-within:scale-x-100 before:origin-right before:duration-500">
             Full Name
-            <input type="text" name="Name" class="focus:outline-none bg-inherit w-[100%] p-2 border-2 rounded-sm"
-              required />
+            <input type="text" name="Name"
+              class="focus:outline-none bg-inherit w-[100%] p-2 border-2 rounded-sm font-[400]" required />
           </label>
           <label for="Email"
             class="border-0 relative before:absolute before:bg-black before:bottom-0 before:w-[100%] before:h-[2px] before:scale-x-0 before:focus-within:scale-x-100 before:origin-right before:duration-500">
             Email
             <input type="email" placeholder="you@example.com" name="Email"
-              class="focus:outline-none bg-inherit border-2 w-[100%] p-2 rounded-sm" required />
+              class="focus:outline-none bg-inherit border-2 w-[100%] p-2 rounded-sm font-[400]" required />
           </label>
           <label for="Message"
             class="my-8 border-0 relative before:absolute before:bg-black before:bottom-0 before:w-[100%] before:h-[2px] before:scale-x-0 before:focus-within:scale-x-100 before:origin-right before:duration-500">
             Message
             <textarea type="text" name="Message"
-              class="focus:outline-none bg-inherit w-[100%] p-2 border-2 h-[100px] rounded-sm"></textarea>
+              class="text-sm font-[200] focus:outline-none bg-inherit w-[100%] p-2 border-2 h-[100px] rounded-sm"></textarea>
           </label>
           <button type="submit" name="submit"
-            class="mb-8 w-[50%] self-center hover:drop-shadow-[5px_5px_5px_rgba(0,0,0,0.3)] btn border-0 hover:border-0 hover:bg-black bg-[#B70404] text-white hover:text-white">Submit</button>
+            class="mb-8 w-[50%] self-center hover:drop-shadow-[5px_5px_5px_rgba(0,0,0,0.3)] btn border-0 hover:border-0 hover:bg-cyan-400 bg-[#b70404] text-white hover:text-black">Submit</button>
         </form>
       </div>
     </div>
@@ -558,22 +559,25 @@
 
   <!-- Footer -->
   <footer
-    class="grid grid-rows-[max-content_max-content_max-content_max-content_max-content_max-content] grid-cols-1 sm:grid-cols-[40%_20%_40%] sm:grid-rows-[max-content_auto] bg-[linear-gradient(150deg,rgba(0,0,0,0.8)_40%,rgba(255,255,255,.9)_100%)] sm:p-2 md:p-8 text-white">
+    class="relative grid grid-rows-[max-content_max-content_max-content_max-content_max-content_max-content] grid-cols-1 sm:grid-cols-[40%_20%_40%] sm:grid-rows-[max-content_auto] bg-[linear-gradient(150deg,rgba(0,0,0,1)_40%,rgba(255,255,255,1)_100%)] sm:p-2 md:p-8 text-white">
 
     <!-- Logo -->
     <img src="asset/galgotias-logo-3.png" alt="Galgotias University" class="w-80 row-start-1">
 
     <!-- Contact -->
-    <div class="row-start-2 sm:col-start-1 grid ml-6">
+    <div class="row-start-2 sm:col-start-1 ml-6 mt-6">
       <h1 class="text-lg md:text-2xl font-bold">Contact Us</h1>
-      <address class="text-[12px] md:text-sm ">
-        Plot No. 2, Yamuna Expy, opposite Buddha International Circuit, Sector 17A, Greater Noida, Uttar
+      <address class="text-[12px] md:text-sm flex flex-col gap-4">
+        Plot No. 2, Yamuna Expy,<br>Opposite Buddha International Circuit, Sector 17A, Greater Noida,<br>Uttar
         Pradesh 203201
-        <span class="block"></span>
-        <a class="text-[#FF5733]" href="mailto:ic2pct@galgotiasuniversity.edu.in">Email:
+        <a class="text-[#FF5733] origin-left hover:underline transition-all duration-500 w-[max-content]"
+          href="mailto:ic2pct@galgotiasuniversity.edu.in">Email:
           ic2pct@galgotiasuniversity.edu.in</a>
       </address>
     </div>
+
+    <!-- Google-Map -->
+    <div id="map" class="h-[21vh] w-[60%] col-start-3 row-span-2 place-self-center"></div>
 
     <!-- Social-Links -->
     <div
@@ -619,23 +623,23 @@
     </div>
 
     <!-- Other-Logo -->
-    <div
-      class="sm:col-start-3 sm:row-start-1 sm:row-span-2 grid grid-cols-[max-content_max-content_max-content] sm:grid-cols-1 sm:grid-rows-[max-content_max-content_max-content_max-content] justify-center sm:justify-start gap-6 sm:justify-items-center py-4 sm:py-0">
-      <!-- <img class="w-20 sm:w-36" src="asset/logo-ieee.png" alt="IEEE"> -->
-      <img class="w-20 sm:w-36" src="asset/g20-logo.png" alt="G20">
-      <img class="w-20 sm:w-36" src="asset/iiclogo.png" alt="IIC">
-    </div>
+    <!-- <div
+        class="sm:col-start-3 sm:row-start-1 sm:row-span-2 grid grid-cols-[max-content_max-content_max-content] sm:grid-cols-1 sm:grid-rows-[max-content_max-content_max-content_max-content] justify-center sm:justify-start gap-6 sm:justify-items-center py-4 sm:py-0">
+        <img class="w-20 sm:w-36" src="asset/g20-logo.png" alt="G20">
+        <img class="w-20 sm:w-36" src="asset/iiclogo.png" alt="IIC">
+      </div> -->
 
     <!-- Screen-Smaller-than-768px -->
     <div class="sm:hidden block text-sm font-bold text-center">Copyright &#169; 2023 IC2PCT
-      <h1 class="mt-2 text-[12px] sm:hidden">Made with <span class="text-red-700">❤</span> by Sankalp</h1>
+      <h1 class="mt-2 text-[12px] sm:hidden">Made with <span class="text-red-700">❤</span><a
+          href="https://devsankalp.github.io/DeV_SaNkAlP-Portfolio/">by Sankalp</a></h1>
     </div>
-
   </footer>
   <div
-    class="bg-[rgba(0,0,0,0.8)] text-white text-sm font-[500] h-[10vh] w-[100%] flex px-14 items-center justify-between">
+    class="bg-[rgba(0,0,0,1)] text-white text-sm font-[500] h-[10vh] w-[100%] flex px-14 items-center justify-between">
     <p class="text-md">Copyright &#169; 2023 IC2PCT</p>
-    <h1 class="hidden sm:block">Made with <span class="text-red-700">❤</span> by Sankalp</h1>
+    <div class="hidden sm:block">Made with<span class="text-red-700"> ❤ </span><a
+        href="https://devsankalp.github.io/DeV_SaNkAlP-Portfolio/" class="hover:underline">by Sankalp</a></div>
   </div>
 </body>
 
@@ -684,38 +688,8 @@
   })
 </script>
 
-<!-- Search-Bar-Script -->
-<script>
-  window.addEventListener('click', function (e) {
-    if (window.innerWidth > 767) {
-      if (document.getElementById('search-btn').contains(e.target) || document.getElementById("search-bar").contains(e.target)) {
-        document.getElementById("search-bar").classList.remove("scale-x-0")
-        document.getElementById("search-bar").classList.add("p-2")
-        document.getElementById("search-bar").classList.add("pl-4")
-        document.getElementById("search-btn").classList.remove("rounded-full")
-        document.getElementById("search-btn").classList.add("rounded-r-full")
-        document.getElementById("search-cont").classList.remove("w-12")
-        document.getElementById("search-cont").classList.add("w-[80%]")
-        document.getElementById("search-btn").classList.remove("bg-transparent")
-        document.getElementById("search-btn").classList.add("bg-black")
-      } else {
-        document.getElementById("search-bar").classList.add("scale-x-0")
-        document.getElementById("search-bar").classList.remove("p-2")
-        document.getElementById("search-bar").classList.remove("pl-4")
-        document.getElementById("search-btn").classList.add("rounded-full")
-        document.getElementById("search-btn").classList.remove("rounded-r-full")
-        document.getElementById("search-cont").classList.add("w-12")
-        document.getElementById("search-cont").classList.remove("w-[80%]")
-        document.getElementById("search-btn").classList.add("bg-transparent")
-        document.getElementById("search-btn").classList.remove("bg-black")
-      }
-    }
-  });
-</script>
-
 <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
   crossorigin="anonymous"></script>
-
 <!-- Carousel-Script -->
 <script>
   $(function () {
@@ -780,6 +754,22 @@
     document.getElementById("body").classList.remove("overflow-hidden");
   }
 </script>
+<script>
+  const scriptURL = "https://script.google.com/macros/s/AKfycbzsPCd3EVQFC-ZC2PZpjwsVRagnJHkTiy4oC2MRl8rtbDKb1rcUgpMXnLcc29DlyelQ/exec";
+  const form = document.forms['google-sheet'];
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    var time = new Date().getHours() + ":" + new Date().getMinutes() + ":" + new Date().getSeconds();
+    var timestamp = document.getElementById("time");
+    timestamp.setAttribute("value", time);
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      .then(response => {
+        alert("Thanks for Contacting us..! We Will Contact You Soon...");
+        document.getElementById("formCont").reset();
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
 
 <!-- registration-Script -->
 <script>
@@ -816,7 +806,7 @@
   updateCounter();
 </script>
 
-<!-- Timeline -->
+<!-- Timeline-Script -->
 <script>
   const data = [
     { dateLabel: '22 Aug 2023', title: 'Call for Papers' },
@@ -858,3 +848,53 @@
   }
   document.addEventListener('DOMContentLoaded', initializeSwiper);
 </script>
+
+<!-- Maps-Script -->
+<script type="module">
+  let map;
+  async function initMap() {
+    const position = { lat: 28.367186, lng: 77.540582 };
+    const { Map } = await google.maps.importLibrary("maps");
+    const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+    map = new Map(document.getElementById("map"), {
+      zoom: 13,
+      center: position,
+      mapId: "Galgotias_Map_Id",
+    });
+    const marker = new AdvancedMarkerElement({
+      map: map,
+      position: position,
+      title: "Galgotias University",
+    });
+  }
+  initMap();
+</script>
+<script>
+  (g => {
+    var h, a, k, p = "The Google Maps JavaScript API",
+      c = "google",
+      l = "importLibrary",
+      q = "__ib__",
+      m = document,
+      b = window;
+    b = b[c] || (b[c] = {});
+    var d = b.maps || (b.maps = {}),
+      r = new Set
+    e = new URLSearchParams,
+      u = () => h || (h = new Promise(async (f, n) => {
+        await (a = m.createElement("script"));
+        e.set("libraries", [...r] + "");
+        for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]);
+        e.set("callback", c + ".maps." + q);
+        a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
+        d[q] = f;
+        a.onerror = () => h = n(Error(p + " could not load."));
+        a.nonce = m.querySelector("script[nonce]")?.nonce || "";
+        m.head.append(a)
+      }));
+    d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n))
+  })
+    ({ key: "AIzaSyCK_DcPNsy65WOA3CoVfw-yOJ0gQBl79jc", v: "beta" });
+</script>
+
+</html>
