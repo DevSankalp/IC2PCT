@@ -1,22 +1,39 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth" data-theme="autumn">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.2/dist/full.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick-theme.css">
   <link rel="icon" type="image/x-icon" href="asset/Galgotias-logo-4.png">
-  <link rel="stylesheet" href="call.css">
-  <title>IC2PCT 2023</title>
+  <title>IC2PCT 2024</title>
+
+  <style>
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .header::before {
+      filter: drop-shadow(20px 20px 0 #B70404);
+      animation: header 1.5s;
+    }
+  </style>
+
 </head>
 
 <body class="font-['poppins'] overflow-x-hidden" id="body">
-
   <!-- Navbar -->
   <nav class="w-[100vw] h-[max-content] flex justify-center fixed top-0 z-10">
     <div
@@ -30,23 +47,22 @@
             class="fixed bottom-0 bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(255,255,255,1)_100%)] text-[#B70404] h-[92vh] md:w-[25%] flex flex-col translate-x-[-25vw] origin-left duration-300"
             id="menu1">
             <a href="index.html"
-              class="relative p-[27.3px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Home
-            </a>
-            <p
-              class="relative p-[27.3px] before:bg-[#B70404] cursor-pointer text-white before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:duration-500">
-              Call
+              class="relative p-[27.3px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Home</a>
+            <a href="call.html"
+              class="relative p-[27.3px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Call
               for Paper
-            </p>
+            </a>
             <a href="committee.html"
-              class="relative p-[27.3px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Committee
+              class="relative p-[27.4px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Committee
             </a>
             <a href="author.html"
-              class="relative py-[28px] px-[27.3px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">For
+              class="relative py-[27.3px] px-[27.3px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">For
               Author
             </a>
-            <a href="sponsors.html"
-              class="relative py-[28px] px-[27.3px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Sponsors
-            </a>
+            <p
+              class="cursor-pointer relative p-[27.3px] before:bg-[#B70404] text-white before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:duration-500">
+              Sponsors
+            </p>
 
             <!-- Previous Conferences -->
             <div id="prev-conf-cont"
@@ -108,9 +124,9 @@
             class="absolute scale-y-0 menu menu-compact p-2 bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(226,226,240,1)_85%,rgba(211,242,255,1)_100%)] text-[#B70404] font-[600] rounded-b-lg w-[95vw] origin-top duration-500 shadow-xl transition-all"
             id="menu">
             <li><a href="index.html">Home</a></li>
+            <li><a href="call.html">Call for Paper</a></li>
             <li><a href="committee.html">Committes</a></li>
             <li><a href="author.html">For Author</a></li>
-            <li><a href="sponsors.html">Sponsors</a></li>
             <li><a href="Error.html">Programs</a></li>
             <li><a class="cursor-pointer" onclick="open_modal2()">Registration</a></li>
             <li><a onclick="open_modal()" class="cursor-pointer">Contact</a></li>
@@ -135,226 +151,125 @@
     </div>
   </nav>
 
-  <!-- Header -->
-  <section class="w-[100vw] h-[83vh] sm:h-[94vh] flex items-center justify-center bg-[#B70404] mt-12">
-    <div class="carousel shadow-[2px_2px_10px_#000] text-[#B70404] rounded">
-      <div class="carousel-item carousel-item--1">
-        <div class="carousel-item__image"></div>
-        <div class="carousel-item__info">
-          <div class="carousel-item__container">
-            <h1 class="carousel-item__title">Call for Paper</h1>
-            <p class="carousel-item__description">2024 5th International Conference on Computing, Power, and
-              Communication Technologies (IC2PCT) earlier known as GUCON invites original contributions based on the
-              results of research and developments. Prospective authors are requested to submit their papers in not more
-              than 6 pages, as PDF prepared in the two column IEEE format. Accepted papers will be submitted for
-              inclusion into IEEE Xplore subject to meeting IEEE Xplore’s scope and quality requirements Which indexed
-              with world’s leading Abstracting & Indexing (A&I) databases, including ISI / SCOPUS/ Google Scholar.
-              Authors interested in presenting manuscripts that demonstrate original unpublished research in the areas
-              of Informatics are invited to submit their Full Papers.</p>
-            <a href="#details" class="carousel-item__btn underline">Explore the Tracks</a>
+  <!-- Heading-Container -->
+  <div class="flex flex-col justify-center h-[75vh] w-[100vw] relative">
+
+    <!-- Slideshow -->
+    <div class="w-full h-full fixed z-[-1]">
+      <div class="carousel">
+        <div class="">
+          <div class="fixed left-24 top-[40%] z-[2]">
+            <h3 class="text-4xl font-['poppins'] text-red-700" style="text-shadow: 2px 2px rgb(255, 255, 255, 0.5)">2024
+              5th International Conference</h3>
+            <div class="text-3xl flex flex-col text-white" style="text-shadow: 2px 2px rgba(0 ,0, 0, 0.5);">on
+              Computing, Power, and Communication Technologies (IC2PCT)<span
+                class="header mt-4 w-[max-content] text-6xl relative text-red-700 before:absolute before:w-[420px] before:h-[70px] before:bg-white before:left-[-10px] before:z-[-1]">IC2PCT-2024</span>
+            </div>
           </div>
-          <div class="mt-8 flex justify-center">
-            <a href="https://www.ieee.org/conferences/publishing/templates.html"
-              class="inline-block px-6 py-3 text-lg font-semibold bg-blue-500 text-white rounded hover:bg-blue-600">Download
-              Conference Template</a>
+          <img class="w-full h-[96vh] relative" src="asset/Galgotias_bg2.jpg">
+        </div>
+        <div class="">
+          <div class="fixed left-24 top-[40%] z-[2]">
+            <h3 class="header text-4xl font-['poppins'] text-red-700" style="text-shadow: 1px 1px rgb(0, 0, 0, 0.5)">
+              IC2PCT-2024</h3>
+            <div
+              class="header text-4xl flex flex-col text-red-700 before:absolute before:w-[625px] before:h-[150px] before:bg-white before:right-[-10px] before:bottom-[-15px] before:z-[-1]"
+              style="text-shadow: 1px 1px rgb(0, 0, 0, 0.5);">Venue: Galgotias University, India
+              <span class="mt-2 w-[max-content] relative text-red-700">Feb 9-10, 2024</span>
+            </div>
           </div>
+          <img class="w-full h-[96vh] relative" src="asset/Galgotias_bg1.jpg">
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- Details -->
-  <section class="bg-[rgba(255,255,255,1)] flex flex-col text-justify items-center text-black text-lg md:text-lg pb-12"
-    id="details">
-    <div class="flex flex-col text-justify items-center w-[70%]">
-      <h1 class="text-3xl sm:text-4xl font-black text-[#B70404] p-12">Explore Our Conference Tracks</h1>
-      <ul class="accordion w-[100%]">
-        <li>
-          <a>Track 1: Smart Cities & Technologies for Sustainable Development</a>
-        </li>
+  <section class="bg-white flex flex-col items-center pb-24">
+    <h1
+      class="flex justify-center text-red-700 text-5xl py-12 mb-12 text-center border-b-2 w-[98%] relative before:absolute before:w-[10%] before:h-[2%] before:bg-red-700 before:bottom-6">
+      Sponsors</h1>
+    <div class="flex flex-col text-justify justify-center">
+      <p class="text-xl font-bold pl-8 text-black mb-6">Expected Gathering and Outcome:
+      </p>
+      <p class="text-lg text-black px-8">The conference expects a gathering of around 120-150 dignitaries in total. This
+        will include academician from GLA University Mathura and other technical Universities across the nation.
+        Government officials and other corporate professionals from all across the country are expected. So, it will be
+        a golden platform to showcase your business/ product/ services and shape the conference for our mutual benefit.
+      </p>
+    </div>
 
-        <li>
-          <a>Track 2: Renewable Energy Technologies Including Hydrogen</a>
+    <div class="flex flex-col w-2/3 items-center">
+      <table class="w-full table my-12 z-0">
+        <thead>
+          <tr class="divide-x-2">
+            <th>Sponsorship Rates Particulars</th>
+            <th>Amt. in Indian Rs</th>
+            <th>Remarks</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="divide-x-2">
+            <td>Platinum sponsor</td>
+            <td>2,00,000/-</td>
+            <td></td>
+          </tr>
+          <tr class="divide-x-2">
+            <td>Gold Sponsor</td>
+            <td>1,00,000/-</td>
+            <td></td>
+          </tr>
+          <tr class="divide-x-2">
+            <td>Silver sponsor</td>
+            <td>50,000/-</td>
+            <td></td>
+          </tr>
+          <tr class="divide-x-2">
+            <td>Technical Session Sponsorship</td>
+            <td>50,000/-</td>
+            <td>(per day)</td>
+          </tr>
+          <tr class="divide-x-2">
+            <td>Conference Banquet dinner</td>
+            <td>1,50,000/-</td>
+            <td></td>
+          </tr>
+          <tr class="divide-x-2">
+            <td>Delegate Kits</td>
+            <td>1,50,000/-</td>
+            <td></td>
+          </tr>
+          <tr class="divide-x-2">
+            <td>High tea Lunch</td>
+            <td>75,000/-</td>
+            <td>(per day)</td>
+          </tr>
+          </tr>
+        </tbody>
+      </table>
 
-        </li>
+      <h1 class="text-3xl font-bold self-start">Account Details:</h1>
 
-        <li>
-          <a>Track 3: Modern Power Electronics, Drives and Control,Electric Vehicles</a>
-
-        </li>
-
-        <li>
-          <a>Track 4: Big Data, Cloud Computing, and Quantum Computing</a>
-
-        </li>
-
-        <li>
-          <a>Track 5: Smart Manufacturing, Smart Tourism, and Industry 5.0</a>
-
-        </li>
-
-        <li>
-          <a>Track 6: 5G Applications, Emerging 6G Technologies, E-Commerce</a>
-
-        </li>
-
-        <li>
-          <a>Track 7: Robotics, UAV, and Unmanned Vehicle Technologies</a>
-
-        </li>
-
-        <li>
-          <a>Track 8: AI, AIoT, IIoT, Deep Learning, and Machine Learning</a>
-
-        </li>
-
-        <li>
-          <a>Track 9: Applications of Wide Bandgap Semiconductors</a>
-
-        </li>
-
-        <li>
-          <a>Track 10: Cyber Security and Humanitarian Technologies</a>
-
-        </li>
-
-        <li>
-          <a>Track 11: Blockchain Applications</a>
-
-        </li>
-
-        <li>
-          <a>Track 12: AR, VR, and Metaverse</a>
-
-        </li>
-
-        <li>
-          <a>Track 13: Healthcare Applications</a>
-
-        </li>
-
-        <li>
-          <a>Track 14: Human Computer Interface (HCI)</a>
-
-        </li>
-
-        <li>
-          <a>Track 15: Special/Financial Technologies</a>
-
-        </li>
-
-        <li>
-          <a>Track 16: Special/Sports Analytics and Technologies</a>
-
-        </li>
-
-        <li>
-          <a>Track 17: Special: Innovative and Disruptive Technologies</a>
-          <div>
-            <h1 class="text-[16px] text-red-600 font-bold underline">
-              Session Chair(s):
-            </h1>
-            <ol class="text-[14px] text-black accordion-content">
-              <li>Dr Amanpreet Kaur, Chitkara University, India</li>
-              <li>Dr Bhanu Sharma, Chitkara University, India</li>
-            </ol>
-            <h1 class="text-[16px] text-red-600 font-bold underline">
-              Topics of Interest:
-            </h1>
-            <ol class="text-[14px] text-black accordion-content">
-              <li>Augmented Reality</li>
-              <li>Virtual Reality</li>
-              <li>Mixed Reality</li>
-              <li>Brain Computer Interface</li>
-              <li>Human-Computer Interaction</li>
-              <li>Computer Vision</li>
-              <li>Internet of Things</li>
-              <li>Embedded System</li>
-              <li>IoT Hardware Security</li>
-              <li>Healthcare and Wireless Sensor Networks</li>
-            </ol>
-          </div>
-        </li>
-
-        <li>
-          <a>Track 18: Special:Intelligent System and Analytics</a>
-          <div>
-            <h1 class="text-[16px] text-red-600 font-bold underline">
-              Session Chair(s):
-            </h1>
-            <ol class="text-[14px] text-black accordion-content">
-              <li>Dr Manish T I, SCMS School of Engineering and Technology, Kerala, India.</li>
-              <li>Dr D Murugan, Manonmaniam Sundaranar University, Tirunelveli, Tamilnadu, India.</li>
-              <li>Dr T.Ganesh Kumar, Galgotias University, Greater Noida,India.</li>
-            </ol>
-          </div>
-        </li>
-
-        <li>
-          <a style="width: 90%; line-height: 1.5;">Track 19: Special:The Future of Internet of Things
-            (IoT) in Health Care: Emerging Trends, Challenges, and Security Issues</a>
-          <div>
-            <h1 class="text-[16px] text-red-600 font-bold underline">
-              Session Chair(s):
-            </h1>
-            <ol class="text-[14px] text-black accordion-content">
-              <li>Dr G. Vennira Selvi, Presidency University Yelahanka, Bangalore, India.</li>
-              <li>Dr T.Ganesh Kumar, Galgotias University, Greater Noida, India.</li>
-              <li>Dr Priti Rishi, SRM Institute of Science and Technology Vadapalani Campus, Chennai, India</li>
-            </ol>
-          </div>
-        </li>
-
-        <li>
-          <a>Track 20: Special:Artificial Intelligence for Environmental, Business and Industrial Sustainability</a>
-          <div>
-            <h1 class="text-[16px] text-red-600 font-bold underline">
-              Session Chair(s):
-            </h1>
-            <ol class="text-[14px] text-black accordion-content">
-              <li>Dr A. Daniel, Amity University, Gwalior, Madhya Pradesh, India.</li>
-              <li>Dr Balamurugan Balusamy, Shiv Nadar University, Delhi NCR, India.</li>
-              <li>Prof. M. K. Nallakaruppan, Vellore Institute of Technology, Vellore, India</li>
-              <li>Prof. E. Gangadevi, Loyola College, Chennai, India</li>
-            </ol>
-            <h1 class="text-[16px] text-red-600 font-bold underline">
-              Topics of Interest:
-            </h1>
-            <ol class="text-[14px] text-black accordion-content">
-              <li>Pervasive Computing and Artificial Intelligence.</li>
-              <li>IoMT Sensor integration for medical automation.</li>
-              <li>Cyborg Assisted Medical treatments and diagnosis using AI.</li>
-              <li>LLM for customer trend and behaviour analysis.</li>
-              <li>Evolution of Industry 5.0 with Explainable AI.</li>
-              <li>Federated Learning for multi terminal automation.</li>
-              <li>Artificial intelligence for smart cities.</li>
-              <li>Artificial intelligence for water and soil quality evaluation.</li>
-              <li>Artificial intelligence for robotics and high-end computing.</li>
-              <li>Business development prediction models of Artificial Intelligence.</li>
-              <li>Artificial intelligence of safety control applications.</li>
-              <li>Artificial intelligence for transportation and traffic management and smart cities.</li>
-              <li>Artificial intelligence for social media analysis and research.</li>
-              <li>rtificial intelligence on power grids and smart power conservation.</li>
-              <li>Artificial intelligence for agricultural automation.</li>
-            </ol>
-          </div>
-        </li>
-
-        <li>
-          <a>Track 21: Special:An Empirical System of Data Analytics, AI, IoT, and Its Applications</a>
-          <div>
-            <h1 class="text-[16px] text-red-600 font-bold underline">
-              Session Chair(s):
-            </h1>
-            <ol class="text-[14px] text-black accordion-content">
-              <li>Dr P. Privietha, Hindusthan College of Engineering and Technology Coimbatore, Tamilnadu, India.</li>
-              <li>Dr T. Ganesh Kumar, Galgotias University, Greater Noida, Delhi NCR, India.</li>
-              <li>Dr J. B. Shajilin Loret, Francis Xavier Engineering College, Tirunelveli, Tamilnadu, India.</li>
-              <li>Dr Anitha Julian, Saveetha Engineering College, Chennai, India.</li>
-            </ol>
-          </div>
-        </li>
-      </ul>
+      <!-- Account-Info -->
+      <table class="w-full table mt-6 z-0">
+        <tbody>
+          <tr class="divide-x-2">
+            <th>Name of Account</th>
+            <th>GU Conferences</th>
+          </tr>
+          <tr class="divide-x-2">
+            <th>Account Number</th>
+            <th>6717000100025845</th>
+          </tr>
+          <tr class="divide-x-2">
+            <th>IFSC Code</th>
+            <th>PUNB0671700</th>
+          </tr>
+          <tr class="divide-x-2">
+            <th>Bank Name</th>
+            <th>Punjab National Bank</th>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </section>
 
@@ -383,32 +298,32 @@
             <h1 class="text-center md:border-black border-r-2">Non-IEEE Member</h1>
           </div>
           <div class="grid grid-cols-4 border-black border-b-2 text-xs sm:text-sm md:text-lg">
-            <p class="pl-1 sm:pl-4 border-black border-x-2 h-[100%] flex items-center">Regular Author
-            <p class="pl-1 sm:pl-4 border-black border-r-2 h-[100%]">Indian<br>Foreigner
-            <p class="pl-1 sm:pl-4 border-black border-r-2 h-[100%]">7,000 INR<br>350 USD
-            <p class="pl-1 border-black border-r-2 sm:pl-4">9,000 INR<br>400 USD
+            <p class="pl-1 sm:pl-4 border-black border-x-2 h-[100%] flex items-center">Regular Author</p>
+            <p class="pl-1 sm:pl-4 border-black border-r-2 h-[100%]">Indian<br>Foreigner</p>
+            <p class="pl-1 sm:pl-4 border-black border-r-2 h-[100%]">7,000 INR<br>350 USD</p>
+            <p class="pl-1 border-black border-r-2 sm:pl-4">9,000 INR<br>400 USD</p>
           </div>
           <div class="grid grid-cols-4 border-black border-b-2 text-xs sm:text-sm md:text-lg">
-            <p class="pl-1 sm:pl-4 border-black border-x-2 h-[100%] flex items-center">Student Author
-            <p class="pl-1 sm:pl-4 border-black border-r-2 h-[100%]">Indian<br>Foreigner
-            <p class="pl-1 sm:pl-4 border-black border-r-2 h-[100%]">5,000 INR<br>300 USD
-            <p class="pl-1 border-black border-r-2 sm:pl-4">4,000 INR<br>200 USD
+            <p class="pl-1 sm:pl-4 border-black border-x-2 h-[100%] flex items-center">Student Author</p>
+            <p class="pl-1 sm:pl-4 border-black border-r-2 h-[100%]">Indian<br>Foreigner</p>
+            <p class="pl-1 sm:pl-4 border-black border-r-2 h-[100%]">5,000 INR<br>300 USD</p>
+            <p class="pl-1 border-black border-r-2 sm:pl-4">4,000 INR<br>200 USD</p>
           </div>
           <div class="grid grid-cols-4 border-black border-b-2 text-xs sm:text-sm md:text-lg">
-            <p class="pl-1 sm:pl-4 border-black border-x-2 h-[100%] flex items-center">Industry
-            <p class="pl-1 sm:pl-4 border-black border-r-2 h-[100%]">Indian<br>Foreigner
-            <p class="pl-1 sm:pl-4 border-black border-r-2 h-[100%]">8,000 INR<br>350 USD
-            <p class="pl-1 border-black border-r-2 sm:pl-4">10,000 INR<br>400 USD
+            <p class="pl-1 sm:pl-4 border-black border-x-2 h-[100%] flex items-center">Industry</p>
+            <p class="pl-1 sm:pl-4 border-black border-r-2 h-[100%]">Indian<br>Foreigner</p>
+            <p class="pl-1 sm:pl-4 border-black border-r-2 h-[100%]">8,000 INR<br>350 USD</p>
+            <p class="pl-1 border-black border-r-2 sm:pl-4">10,000 INR<br>400 USD</p>
           </div>
           <div class="grid grid-cols-4 border-black border-b-2 text-xs sm:text-sm md:text-lg h-[max-content]">
-            <p class="pl-1 sm:pl-4 border-black border-x-2 h-[100%] flex items-center">Attendee
-            <p class="pl-1 sm:pl-4 border-black border-r-2 h-[100%]">Indian<br>Foreigner
-            <p class="pl-1 sm:pl-4 border-black border-r-2 h-[100%]">6,500 INR<br>350 USD
-            <p class="pl-1 border-black border-r-2 sm:pl-4">4,000 INR<br>200 USD
+            <p class="pl-1 sm:pl-4 border-black border-x-2 h-[100%] flex items-center">Attendee</p>
+            <p class="pl-1 sm:pl-4 border-black border-r-2 h-[100%]">Indian<br>Foreigner</p>
+            <p class="pl-1 sm:pl-4 border-black border-r-2 h-[100%]">6,500 INR<br>350 USD</p>
+            <p class="pl-1 border-black border-r-2 sm:pl-4">4,000 INR<br>200 USD</p>
           </div>
           <p class="text-xs md:text-sm p-2 text-black border-b-2 border-black">* Extra page charge of ₹ 1000/- INR per
             page Indian author and $ 50 per page International author will be chargeable to the author's during
-            registration process.
+            registration process.</p>
         </div>
 
         <!-- Account-Info -->
@@ -416,26 +331,28 @@
           class="grid grid-cols-[max-content_1fr] grid-rows-[max-content_1fr] text-left mx-5 mt-4 pb-12 text-xs sm:text-sm md:text-lg relative">
           <h1 class="text-2xl text-black col-span-2">Account Details</h1>
           <div class="row-start-2 border-2 border-black p-2 sm:p-4 w-[max-content]">
-            <p class="border-b-2 border-black">Name of Account
-            <p class="border-b-2 border-black">Account Number
-            <p class="border-b-2 border-black">IFSC Code
-            <p class="border-b-2 border-black">Bank Name
+            <p class="border-b-2 border-black">Name of Account</p>
+            <p class="border-b-2 border-black">Account Number</p>
+            <p class="border-b-2 border-black">IFSC Code</p>
+            <p class="border-b-2 border-black">Bank Name</p>
           </div>
-          <div class="row-start-2 border-2 border-black p-2 sm:p-4 ml-1 w-[100%]">
-            <p class="border-b-2 border-black">GU Conferences
-            <p class="border-b-2 border-black">6717000100025845
-            <p class="border-b-2 border-black">PUNB0671700
-            <p class="border-b-2 border-black">Punjab National Bank
 
+          <div class="row-start-2 border-2 border-black p-2 sm:p-4 ml-1 w-[100%]">
+            <p class="border-b-2 border-black">GU Conferences</p>
+            <p class="border-b-2 border-black">6717000100025845</p>
+            <p class="border-b-2 border-black">PUNB0671700</p>
+            <p class="border-b-2 border-black">Punjab National Bank</p>
+            </p>
           </div>
           <a href="" class="text-sm md:text-lg text-red absolute bottom-2">* Registration of paper
             link will come very soon......</a>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- Contact-Page-->
   <section
     class="translate-y-[-100vh] duration-700 fixed top-0 bg-[rgba(0,0,0,.8)] h-[100vh] w-[100vw] flex justify-center text-justify text-black text-sm md:text-lg overflow-hidden drop-shadow-none z-20"
     id="contact">
@@ -580,7 +497,10 @@
         document.getElementById("menu1").classList.add("translate-x-[-25vw]")
       }
     });
-    // Previous-Conference-Links-Container
+  </script>
+
+  <!-- Previous-Conference-Links-Container -->
+  <script>
     const el = document.getElementById('prev-conf-cont');
     const hiddenDiv = document.getElementById('prev-conf-links');
     el.addEventListener('mouseover', function handleMouseOver() {
@@ -588,70 +508,13 @@
       hiddenDiv.classList.add('translate-x-0')
       hiddenDiv.classList.remove('before:z-[1]')
       hiddenDiv.classList.add('before:z-[-1]')
-      hiddenDiv.classList.add('shadow-xl')
     });
     el.addEventListener('mouseout', function handleMouseOut() {
       hiddenDiv.classList.add('translate-x-[-100%]')
       hiddenDiv.classList.remove('translate-x-0')
       hiddenDiv.classList.add('before:z-[1]')
       hiddenDiv.classList.remove('before:z-[-1]')
-      hiddenDiv.classList.remove('shadow-xl')
     })
-  </script>
-
-  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
-    crossorigin="anonymous"></script>
-  <!-- Carousel-Script -->
-  <script>
-    $(function () {
-      $('.carousel-item').eq(0).addClass('active');
-      var total = $('.carousel-item').length;
-      var current = 0;
-      $('#moveRight').on('click', function () {
-        var next = current;
-        current = current + 1;
-        setSlide(next, current);
-      });
-      $('#moveLeft').on('click', function () {
-        var prev = current;
-        current = current - 1;
-        setSlide(prev, current);
-      });
-      function setSlide(prev, next) {
-        var slide = current;
-        if (next > total - 1) {
-          slide = 0;
-          current = 0;
-        }
-        if (next < 0) {
-          slide = total - 1;
-          current = total - 1;
-        }
-        $('.carousel-item').eq(prev).removeClass('active');
-        $('.carousel-item').eq(slide).addClass('active');
-        setTimeout(function () {
-        }, 800);
-        console.log('current ' + current);
-        console.log('prev ' + prev);
-      }
-    });
-
-    // Accordion-Script
-    (function ($) {
-      $('.accordion > li:eq(0) a').addClass('active').next().slideDown();
-      $('.accordion a').click(function (j) {
-        var dropDown = $(this).closest('li').find('div');
-        $(this).closest('.accordion').find('p').not(dropDown).slideUp();
-        if ($(this).hasClass('active')) {
-          $(this).removeClass('active');
-        } else {
-          $(this).closest('.accordion').find('a.active').removeClass('active');
-          $(this).addClass('active');
-        }
-        dropDown.stop(false, true).slideToggle();
-        j.preventDefault();
-      });
-    })(jQuery);
   </script>
 
   <!-- Contact-Script -->
@@ -682,7 +545,7 @@
     })
   </script>
 
-  <!-- registration-Script -->
+  <!-- Registration-Script -->
   <script>
     function open_modal2() {
       document.getElementById("body").classList.add("overflow-hidden");
@@ -692,6 +555,24 @@
       document.getElementById("registration").classList.add("translate-x-[100vw]");
       document.getElementById("body").classList.remove("overflow-hidden");
     }
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
+  <!-- Carousel-Script -->
+  <script>
+    $(document).ready(function () {
+      $('.carousel').slick({
+        autoplay: true,
+        autoplaySpeed: 3000,
+        fade: true,
+        cssEase: 'linear',
+        // pauseOnHover: true,
+        // pauseOnFocus: true,
+        // arrows: true,
+        // dots: true
+      });
+    });
   </script>
 
   <!-- Maps-Script -->

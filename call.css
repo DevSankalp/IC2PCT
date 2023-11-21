@@ -26,6 +26,41 @@
   }
 }
 
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  animation: marquee 7s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(80%);
+  }
+
+  100% {
+    transform: translateX(-80%);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .marquee-content {
+    animation: marquee 6s linear infinite;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(120%);
+    }
+
+    100% {
+      transform: translateX(-220%);
+    }
+  }
+}
+
 /* Carousel */
 .carousel {
   width: 100%;
@@ -198,14 +233,23 @@
 }
 
 .accordion li {
-  border-bottom: 2px solid #deb10f;
   position: relative;
+  border-bottom: 2px solid #ff6600;
+  padding: 8px 0 8px 0;
 }
 
-.accordion li p {
+.accordion li div {
   display: none;
-  padding: 10px 25px 10px;
-  color: #090de8;
+}
+
+.accordion-content {
+  list-style: disc;
+  margin-left: 18px;
+}
+
+.accordion-content li {
+  border: 0 white;
+  padding: 0;
 }
 
 .accordion a {
@@ -214,15 +258,14 @@
   cursor: pointer;
   font-weight: 600;
   line-height: 3;
-  font-size: 18px; /* Increased font size */
-  text-indent: 10px;
-  color: #1e40af; /* Changed color for better contrast */
+  font-size: 18px;
+  color: #1e40af;
   user-select: none;
-  transition: color 0.3s ease-in-out; /* Adding a smooth color transition */
+  transition: color 0.3s ease-in-out;
 }
 
 .accordion a:hover {
-  color: #ff6600; /* Changing color on hover */
+  color: #ff6600;
 }
 
 .accordion a:after {
@@ -240,7 +283,7 @@
   transition: all 0.2s ease-in-out;
 }
 
-.accordion p {
+.accordion div {
   font-size: 13px;
   font-size: 1.25rem;
   line-height: 2;
@@ -328,4 +371,10 @@ a.active:after {
 
 .swiper-slide:nth-child(3n) {
   width: 20%;
+}
+
+@media screen and (max-width: 720px) {
+  .swiper-slide {
+    font-size: 12px;
+  }
 }

@@ -20,7 +20,7 @@
 <body class="font-['poppins'] overflow-x-hidden" id="body">
 
   <!-- Navbar -->
-  <nav class="w-[100vw] flex justify-center fixed z-10 top-0">
+  <nav class="w-[100vw] h-[max-content] flex justify-center fixed top-0 z-10">
     <div
       class="navbar w-[95%] md:w-[100%] bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(226,226,240,1)_85%,rgba(211,242,255,1)_100%)] transition-all rounded-lg md:rounded-none shadow-xl mt-4 md:mt-0 p-0"
       id="nav_cont">
@@ -37,14 +37,17 @@
             <a href="call.html"
               class="relative p-[27.3px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Call
               for Paper
-
             </a>
             <a href="committee.html"
               class="relative p-[27.4px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Committee
             </a>
-            <a href="author.html"
-              class="relative py-7 px-[27.3px] before:bg-[#B70404] text-white before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">For
+            <p
+              class="relative p-[27.3px] before:bg-[#B70404] cursor-pointer text-white before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:duration-500">
+              For
               Author
+            </p>
+            <a href="sponsors.html"
+              class="relative p-[27.4px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Sponsors
             </a>
 
             <!-- Previous Conferences -->
@@ -67,7 +70,7 @@
                     class="pl-4">2018</span></a>
               </div>
             </div>
-            <a href="#programs"
+            <a href="Error.html"
               class="relative p-[27.21px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Programs
             </a>
             <a onclick="open_modal2()"
@@ -76,9 +79,6 @@
             <a onclick="open_modal()"
               class="cursor-pointer relative p-[27.21px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Contact
             </a>
-            <!-- <a href="author.html"
-              class="relative p-[27.3px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Submission
-            </a> -->
           </div>
         </div>
 
@@ -109,49 +109,30 @@
           <ul tabindex="0"
             class="absolute scale-y-0 menu menu-compact p-2 bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(226,226,240,1)_85%,rgba(211,242,255,1)_100%)] text-[#B70404] font-[600] rounded-b-lg w-[95vw] origin-top duration-500 shadow-xl transition-all"
             id="menu">
-            <li><a href="#about">About</a></li>
-            <li><a href="#call">Call for Paper</a></li>
-            <li><a href="#committes">Committes</a></li>
-            <li><a href="#author">For Author</a></li>
-            <li><a href="prev-conf-cont" target="_blank">Previous Conferences</a></li>
-            <li><a href="#programs">Programs</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="call.html">Call for Paper</a></li>
+            <li><a href="committee.html">Committes</a></li>
+            <li><a href="sponsors.html">Sponsors</a></li>
+            <li><a href="Error.html">Programs</a></li>
             <li><a class="cursor-pointer" onclick="open_modal2()">Registration</a></li>
             <li><a onclick="open_modal()" class="cursor-pointer">Contact</a></li>
-            <li><a href="#">Submission</a></li>
+            <li><a href=" https://cmt3.research.microsoft.com/IC2PCT2024" target="_blank">Submit your paper</a></li>
           </ul>
         </div>
       </div>
 
       <!-- Logo -->
       <div class="navbar-center">
-        <img class="w-64 md:w-60 mr-2" src="asset/galgotias-logo-2.png" alt="">
-        <!-- <img class="w-60 md:w-12 mx-2" src="asset/Galgotias-logo-4.png" alt=""> -->
-        <img class="w-60 md:w-40" src="asset/logo-ieee.png" alt="">
+        <img class="w-32 md:w-60" src="asset/galgotias-logo-2.png" alt="">
+        <img class="w-12 md:w-12 mx-2" src="asset/Galgotias-logo-4.png" alt="">
+        <img class="w-20 md:w-40" src="asset/logo-ieee.png" alt="">
       </div>
 
       <!-- Submission-Button -->
       <div class="navbar-end h-[100%] mr-4">
         <a href=" https://cmt3.research.microsoft.com/IC2PCT2024" target="_blank"
-          class="btn btn-round bg-[#B70404] text-white hover:bg-black hover:shadow-3xl border-0 shadow-xl scale-75 sm:scale-100">SUBMIT
-          YOUR
-          PAPER</a>
-        <!-- Search-Bar -->
-        <!-- <div
-                class="hidden w-12 h-[75%] sm:flex justify-end items-center bg-[#B70404] transition-all origin-right duration-300 rounded-full border-0"
-                id="search-cont">
-                <input type="text" placeholder="Search"
-                  class="h-[100%] w-[100%] placeholder:text-white bg-transparent text-white focus:outline-none scale-x-0 text-black rounded-l-full"
-                  id="search-bar">
-                <button
-                  class="btn w-12 h-12 rounded-full bg-transparent focus:outline-none border-0 text-white hover:animate-pulse duration-500 origin-right transition-all"
-                  id="search-btn">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                  </svg>
-                </button>
-              </div> -->
+          class="hidden sm:flex btn btn-round bg-[#B70404] text-white hover:bg-black hover:shadow-3xl border-0 shadow-xl scale-75 sm:scale-100">SUBMIT
+          YOUR PAPER</a>
       </div>
     </div>
   </nav>
@@ -159,24 +140,10 @@
   <!-- Header -->
   <section class="w-[100vw] h-[83vh] sm:h-[94vh] flex items-center justify-center bg-[#B70404] mt-12">
     <div class="carousel shadow-[2px_2px_10px_#000] text-[#B70404] rounded">
-      <!-- <div class="carousel__nav">
-        <span id="moveLeft" class="carousel__arrow">
-          <svg class="carousel__icon" width="24" height="24" viewBox="0 0 24 24">
-            <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
-          </svg>
-        </span>
-        <span id="moveRight" class="carousel__arrow">
-          <svg class="carousel__icon" width="24" height="24" viewBox="0 0 24 24">
-            <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
-          </svg>
-        </span>
-      </div> -->
-
       <div class="carousel-item carousel-item--1">
         <div class="carousel-item__image"></div>
         <div class="carousel-item__info">
           <div class="carousel-item__container">
-            <!-- <h2 class="carousel-item__subtitle">Galgotias University</h2> -->
             <h1 class="carousel-item__title">Author’s Guidelines</h1>
             <p class="carousel-item__description">Submissions should be original, previously unpublished work not
               currently under review by other publications. All submissions must be done electronically through a
@@ -184,8 +151,7 @@
               service of EasyChair.All Papers should contain 6 pages maximum,
               must be written in English and use standard IEEE two-column conference templates that can be downloaded
               from below link.</p>
-            <!-- <a href="#details" class="carousel-item__btn">Explore the Tracks</a> -->
-            <a href="#about" class="carousel-item__btn underline">First check the Guidelines</a>
+            <a href="#about" class="carousel-item__btn underline">Check the Guidelines</a>
 
             <div class="flex justify-center gap-2 sm:gap-52 mt-12">
               <a href="https://www.ieee.org/conferences/publishing/templates.html" target="_blank"
@@ -199,9 +165,6 @@
           </div>
           <p class="py-8 text-blue-500 text-justify text-xl animate-pulse">Papers deemed to be of the required standard
             AND presented at the conference will be submitted to IEEE for possible inclusion in IEEE Xplore.</p>
-          <!-- <div class="mt-8 flex justify-center">
-        <a href="https://www.ieee.org/conferences/publishing/templates.html" class="inline-block px-6 py-3 text-lg font-semibold bg-blue-500 text-white rounded hover:bg-blue-600">Download Conference Template</a>
-    </div> -->
         </div>
       </div>
 
@@ -210,81 +173,69 @@
     </div>
   </section>
 
+  <!-- About -->
   <section
     class="relative bg-[rgba(255,255,255,1)] flex justify-center text-justify text-black text-sm md:text-lg pb-12"
     id="about">
-    <div class="w-[100%] flex flex-col items-center">
-      <div class="marquee-container bg-white p-4">
+    <div class="pt-[12vh] sm:p-0 w-[100%] flex flex-col items-center">
+      <div class="marquee-container w-2/3 bg-white p-4">
         <div class="marquee-content">
-          <h1 class=" font-semibold text-center text-blue-700 bg-white">
+          <h1 class="font-semibold text-center text-blue-700 bg-white">
             Last Date for Full Paper Submission: <span
-              class="text-base font-semibold text-center text-red-700 bg-white">21
-              Nov 2023</span>
+              class="text-sm sm:text-lg font-semibold text-center text-red-700 bg-white line-through ">21 Nov
+              2023</span><span class="ml-2 text-red-700">10 Dec 2023</span>
           </h1>
         </div>
       </div>
-      <div class="w-[80%] flex flex-col">
+      <div class="w-[90%] sm:w-[80%] flex flex-col">
+
+        <!-- Timeline -->
         <div id="app" class="container">
           <div class="swiper-container">
             <div class="swiper-wrapper timeline">
               <!-- Slides will be dynamically created here using JavaScript -->
             </div>
-            <!-- <div class="p-2 absolute right-0 bottom-0 flex border-2 border-black rounded-md">
-                  <div class="prev-slide cursor-pointer" id="prev-slide">
-                    <svg class="" width="24" height="24" viewBox="0 0 24 24">
-                      <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
-                    </svg>
-                  </div>
-                  <div class="next-slide cursor-pointer border-l-2 ml-2" id="next-slide">
-                    <svg class="ml-2" width="24" height="24" viewBox="0 0 24 24">
-                      <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
-                    </svg>
-                  </div>
-                </div> -->
           </div>
         </div>
-      </div>
 
-      <h1 class="text-2xl md:text-4xl text-center text-blue-700 font-bold mt-8 mb-4">Paper Formatting Guidelines</h1>
-      <ul style="list-style-type: disc; padding-left: 20px;">
-        <li>Paper Size: Use US Letter format (8.5" x 11") paper.</li>
-        <li>Paper Length:
-          <ul style="list-style-type: circle; padding-left: 20px;">
-            <li>Your paper should not exceed 6 pages, inclusive of figures, tables, and references.</li>
-            <li>You can add up to 2 additional pages, but each extra page will incur a charge.</li>
-            <li>For Indian authors, the charge is ₹1000 per extra page.</li>
-            <li>For International authors, the charge is $50 per extra page.</li>
-            <li>These charges should be paid during author registration.</li>
-          </ul>
-        </li>
-        <li>Paper Formatting:
-          <ul style="list-style-type: circle; padding-left: 20px;">
-            <li>Format your paper with double columns and single spacing.</li>
-            <li>Utilize a 10pt Times New Roman font.</li>
-          </ul>
-        </li>
-        <li>Margins:
-          <ul style="list-style-type: circle; padding-left: 20px;">
-            <li>Set margins as follows:</li>
-            <li>Left, Right, and Bottom: 0.75" (19mm).</li>
-            <li>The top margin must be 0.75" (19 mm) for all pages except the title page, where it should be 1"
-              (25 mm).</li>
-          </ul>
-        </li>
-        <li>File Size Limitation: Ensure your file size is no larger than 5.0MB.</li>
-        <li>Page Numbering: Do not include page numbers anywhere in the manuscript.</li>
-        <li>MS Word Template: You can download the MS Word Template from the provided link.</li>
-      </ul>
-      <div class="mt-8 flex justify-center">
-        <!-- <a href="https://www.ieee.org/conferences/publishing/templates.html" class="inline-block px-6 py-3 text-lg font-semibold bg-blue-500 text-white rounded hover:bg-blue-600">Download Conference Template</a> -->
-        <a href="https://www.ieee.org/conferences/publishing/templates.html" target="_blank"
-          class="btn btn-round bg-[#B70404] text-white hover:bg-black hover:shadow-3xl border-0 shadow-xl scale-75 sm:scale-100">CONFERENCE
-          PAPER
-          TEMPLATE</a>
+        <h1 class="text-2xl md:text-4xl text-center text-blue-700 font-bold mt-8 mb-4">Paper Formatting Guidelines</h1>
+        <ul style="list-style-type: disc; padding-left: 20px;">
+          <li>Paper Size: Use US Letter format (8.5" x 11") paper.</li>
+          <li>Paper Length:
+            <ul style="list-style-type: circle; padding-left: 20px;">
+              <li>Your paper should not exceed 6 pages, inclusive of figures, tables, and references.</li>
+              <li>You can add up to 2 additional pages, but each extra page will incur a charge.</li>
+              <li>For Indian authors, the charge is ₹1000 per extra page.</li>
+              <li>For International authors, the charge is $50 per extra page.</li>
+              <li>These charges should be paid during author registration.</li>
+            </ul>
+          </li>
+          <li>Paper Formatting:
+            <ul style="list-style-type: circle; padding-left: 20px;">
+              <li>Format your paper with double columns and single spacing.</li>
+              <li>Utilize a 10pt Times New Roman font.</li>
+            </ul>
+          </li>
+          <li>Margins:
+            <ul style="list-style-type: circle; padding-left: 20px;">
+              <li>Set margins as follows:</li>
+              <li>Left, Right, and Bottom: 0.75" (19mm).</li>
+              <li>The top margin must be 0.75" (19 mm) for all pages except the title page, where it should be 1"
+                (25 mm).</li>
+            </ul>
+          </li>
+          <li>File Size Limitation: Ensure your file size is no larger than 5.0MB.</li>
+          <li>Page Numbering: Do not include page numbers anywhere in the manuscript.</li>
+          <li>MS Word Template: You can download the MS Word Template from the provided link.</li>
+        </ul>
+        <div class="mt-8 flex justify-center">
+          <a href="https://www.ieee.org/conferences/publishing/templates.html" target="_blank"
+            class="btn btn-round bg-[#B70404] text-white hover:bg-black hover:shadow-3xl border-0 shadow-xl scale-75 sm:scale-100">CONFERENCE
+            PAPER TEMPLATE</a>
+        </div>
       </div>
     </div>
   </section>
-
   <section
     class="relative bg-[rgba(255,255,255,1)] flex justify-center text-justify text-black text-sm md:text-lg pb-12"
     id="about">
@@ -316,14 +267,12 @@
         <li>All papers must be submitted online through Microsoft CMT.</li>
       </ul>
       <div class="mt-8 flex justify-center">
-        <!-- <a href="https://www.ieee.org/conferences/publishing/templates.html" class="inline-block px-6 py-3 text-lg font-semibold bg-blue-500 text-white rounded hover:bg-blue-600">Download Conference Template</a> -->
         <a href=" https://cmt3.research.microsoft.com/IC2PCT2024" target="_blank"
           class="btn btn-round bg-[#B70404] text-white hover:bg-black hover:shadow-3xl border-0 shadow-xl scale-75 sm:scale-100">PAPER
           SUBMISSION</a>
       </div>
     </div>
   </section>
-
   <section
     class="relative bg-[rgba(255,255,255,1)] flex justify-center text-justify text-black text-sm md:text-lg pb-12"
     id="about">
@@ -341,98 +290,6 @@
         proceedings. Any paper not presented at the conference will be excluded from the conference proceedings.</p=>
     </div>
   </section>
-
-  <!-- Details
-  <section class="bg-[rgba(255,255,255,1)] flex flex-col text-justify items-center text-black text-sm md:text-lg pb-12"
-    id="details">
-    <div class="flex flex-col text-justify items-center w-[50%]">
-      <h1 class="text-3xl sm:text-4xl font-black text-[#B70404] p-12">Explore Our Conference Tracks</h1>
-      <ul class="accordion w-[100%]">
-        <li>
-          <a>Track 1: Smart Cities & Technologies for Sustainable Development</a>
-          <p></p>
-        </li>
-
-        <li>
-          <a>Track 2: Renewable Energy Technologies Including Hydrogen</a>
-          <p></p>
-        </li>
-
-        <li>
-          <a>Track 3: Modern Power Electronics, Drives and Control,Electric Vehicles</a>
-          <p></p>
-        </li>
-
-        <li>
-            <a>Track 4: Big Data, Cloud Computing, and Quantum Computing</a>
-            <p></p>
-          </li>
-
-          <li>
-            <a>Track 5: Smart Manufacturing, Smart Tourism, and Industry 5.0</a>
-            <p></p>
-          </li>
-
-          <li>
-            <a>Track 6: 5G Applications, Emerging 6G Technologies, E-Commerce</a>
-            <p></p>
-          </li>
-
-          <li>
-            <a>Track 7: Robotics, UAV, and Unmanned Vehicle Technologies</a>
-            <p></p>
-          </li>
-
-          <li>
-            <a>Track 8: AI, AIoT, IIoT, Deep Learning, and Machine Learning</a>
-            <p></p>
-          </li>
-
-          <li>
-            <a>Track 9: Applications of Wide Bandgap Semiconductors</a>
-            <p></p>
-          </li>
-
-          <li>
-            <a>Track 10: Cyber Security and Humanitarian Technologies</a>
-            <p></p>
-          </li>
-
-          <li>
-            <a>Track 11: Blockchain Applications</a>
-            <p></p>
-          </li>
-
-          <li>
-            <a>Track 12: AR, VR, and Metaverse</a>
-            <p></p>
-          </li>
-
-          <li>
-            <a>Track 13: 5Healthcare Applications</a>
-            <p></p>
-          </li>
-
-          <li>
-            <a>Track 14: Human Computer Interface (HCI)</a>
-            <p></p>
-          </li>
-
-          <li>
-            <a>Track 15: Special/Financial Technologies</a>
-            <p></p>
-          </li>
-
-          <li>
-            <a>Track 16: Special/Sports Analytics and Technologies</a>
-            <p></p>
-          </li>
-
-       
-        
-      </ul>
-    </div>
-  </section> -->
 
   <!-- registration -->
   <section
@@ -504,7 +361,7 @@
             <p class="border-b-2 border-black">Punjab National Bank</p>
             </p>
           </div>
-          <a href="" class="text-base md:text-lg text-red absolute bottom-2">* Registration of paper
+          <a href="" class="text-sm md:text-lg text-red absolute bottom-2">* Registration of paper
             link will come very soon......</a>
         </div>
       </div>
@@ -565,7 +422,7 @@
     <img src="asset/galgotias-logo-3.png" alt="Galgotias University" class="w-80 row-start-1">
 
     <!-- Contact -->
-    <div class="row-start-2 sm:col-start-1 ml-6 mt-6">
+    <div class="row-start-2 sm:col-start-1 ml-6 mt-2 md:mt-6">
       <h1 class="text-lg md:text-2xl font-bold">Contact Us</h1>
       <address class="text-[12px] md:text-sm flex flex-col gap-4">
         Plot No. 2, Yamuna Expy,<br>Opposite Buddha International Circuit, Sector 17A, Greater Noida,<br>Uttar
@@ -581,7 +438,7 @@
 
     <!-- Social-Links -->
     <div
-      class="flex sm:flex-col justify-center items-center gap-4 row-start-4 sm:row-start-1 sm:col-start-2 sm:row-span-2 pb-4 sm:pb-0">
+      class="flex sm:flex-col justify-center items-center gap-4 row-start-4 sm:row-start-1 sm:col-start-2 sm:row-span-2 py-4 sm:pb-0 col-span-2 md:col-span-1">
       <a href="#"><i
           class="invert hover:invert-0 before:w-[100%] relative before:absolute before:top-0 before:z-[-1] before:h-[100%] before:bg-[#fff] before:scale-x-0 hover:before:scale-x-100 before:rounded origin-left duration-300">
           <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 50 50">
@@ -622,203 +479,190 @@
       </a>
     </div>
 
-    <!-- Other-Logo -->
-    <!-- <div
-        class="sm:col-start-3 sm:row-start-1 sm:row-span-2 grid grid-cols-[max-content_max-content_max-content] sm:grid-cols-1 sm:grid-rows-[max-content_max-content_max-content_max-content] justify-center sm:justify-start gap-6 sm:justify-items-center py-4 sm:py-0">
-        <img class="w-20 sm:w-36" src="asset/g20-logo.png" alt="G20">
-        <img class="w-20 sm:w-36" src="asset/iiclogo.png" alt="IIC">
-      </div> -->
-
-    <!-- Screen-Smaller-than-768px -->
-    <div class="sm:hidden block text-sm font-bold text-center">Copyright &#169; 2023 IC2PCT
-      <h1 class="mt-2 text-[12px] sm:hidden">Made with <span class="text-red-700">❤</span><a
-          href="https://devsankalp.github.io/DeV_SaNkAlP-Portfolio/">by Sankalp</a></h1>
-    </div>
   </footer>
   <div
-    class="bg-[rgba(0,0,0,1)] text-white text-sm font-[500] h-[10vh] w-[100%] flex px-14 items-center justify-between">
+    class="bg-[rgba(0,0,0,1)] text-white text-sm font-[500] h-[9vh] w-[100%] flex flex-col sm:flex-row pt-2 sm:pt-0 sm:px-14 items-center gap-2 sm:gap-0 sm:justify-between">
     <p class="text-md">Copyright &#169; 2023 IC2PCT</p>
-    <div class="hidden sm:block">Made with<span class="text-red-700"> ❤ </span><a
+    <div class="">Made with<span class="text-red-700"> ❤ </span><a
         href="https://devsankalp.github.io/DeV_SaNkAlP-Portfolio/" class="hover:underline">by Sankalp</a></div>
   </div>
-</body>
 
-<!-- Top-Menu-Script -->
-<script>
-  window.addEventListener('click', function (e) {
-    if (document.getElementById('menu_btn').contains(e.target)) {
-      document.getElementById("menu").classList.remove("scale-y-0")
-      document.getElementById("nav_cont").classList.remove("rounded-lg")
-      document.getElementById("nav_cont").classList.add("rounded-t-lg")
-    } else {
-      document.getElementById("menu").classList.add("scale-y-0")
-      setTimeout(() => {
-        document.getElementById("nav_cont").classList.add("rounded-lg")
-        document.getElementById("nav_cont").classList.remove("rounded-t-lg")
-      }, 400);
-    }
-  });
-</script>
-
-<!-- Side-Bar-Script -->
-<script>
-  window.addEventListener('click', function (e) {
-    if (document.getElementById('menu1_btn').contains(e.target)) {
-      document.getElementById("menu1").classList.remove("translate-x-[-25vw]")
-    } else {
-      document.getElementById("menu1").classList.add("translate-x-[-25vw]")
-    }
-  });
-  // Previous-Conference-Links-Container
-  const el = document.getElementById('prev-conf-cont');
-  const hiddenDiv = document.getElementById('prev-conf-links');
-  el.addEventListener('mouseover', function handleMouseOver() {
-    hiddenDiv.classList.remove('translate-x-[-100%]')
-    hiddenDiv.classList.add('translate-x-0')
-    hiddenDiv.classList.remove('before:z-[1]')
-    hiddenDiv.classList.add('before:z-[-1]')
-    hiddenDiv.classList.add('shadow-xl')
-  });
-  el.addEventListener('mouseout', function handleMouseOut() {
-    hiddenDiv.classList.add('translate-x-[-100%]')
-    hiddenDiv.classList.remove('translate-x-0')
-    hiddenDiv.classList.add('before:z-[1]')
-    hiddenDiv.classList.remove('before:z-[-1]')
-    hiddenDiv.classList.remove('shadow-xl')
-  })
-</script>
-
-<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
-  crossorigin="anonymous"></script>
-<!-- Carousel-Script -->
-<script>
-  $(function () {
-    $('.carousel-item').eq(0).addClass('active');
-    var total = $('.carousel-item').length;
-    var current = 0;
-    $('#moveRight').on('click', function () {
-      var next = current;
-      current = current + 1;
-      setSlide(next, current);
-    });
-    $('#moveLeft').on('click', function () {
-      var prev = current;
-      current = current - 1;
-      setSlide(prev, current);
-    });
-    function setSlide(prev, next) {
-      var slide = current;
-      if (next > total - 1) {
-        slide = 0;
-        current = 0;
-      }
-      if (next < 0) {
-        slide = total - 1;
-        current = total - 1;
-      }
-      $('.carousel-item').eq(prev).removeClass('active');
-      $('.carousel-item').eq(slide).addClass('active');
-      setTimeout(function () {
-      }, 800);
-      console.log('current ' + current);
-      console.log('prev ' + prev);
-    }
-  });
-
-  // Accordion-Script
-  (function ($) {
-    $('.accordion > li:eq(0) a').addClass('active').next().slideDown();
-    $('.accordion a').click(function (j) {
-      var dropDown = $(this).closest('li').find('p');
-      $(this).closest('.accordion').find('p').not(dropDown).slideUp();
-      if ($(this).hasClass('active')) {
-        $(this).removeClass('active');
+  <!-- Top-Menu-Script -->
+  <script>
+    window.addEventListener('click', function (e) {
+      if (document.getElementById('menu_btn').contains(e.target)) {
+        document.getElementById("menu").classList.remove("scale-y-0")
+        document.getElementById("nav_cont").classList.remove("rounded-lg")
+        document.getElementById("nav_cont").classList.add("rounded-t-lg")
       } else {
-        $(this).closest('.accordion').find('a.active').removeClass('active');
-        $(this).addClass('active');
+        document.getElementById("menu").classList.add("scale-y-0")
+        setTimeout(() => {
+          document.getElementById("nav_cont").classList.add("rounded-lg")
+          document.getElementById("nav_cont").classList.remove("rounded-t-lg")
+        }, 400);
       }
-      dropDown.stop(false, true).slideToggle();
-      j.preventDefault();
     });
-  })(jQuery);
-</script>
+  </script>
 
-<!-- Contact-Script -->
-<script>
-  function open_modal() {
-    document.getElementById("body").classList.add("overflow-hidden");
-    document.getElementById("contact").classList.remove("translate-y-[-100vh]");
-  }
-  function close_modal() {
-    document.getElementById("contact").classList.add("translate-y-[-100vh]");
-    document.getElementById("body").classList.remove("overflow-hidden");
-  }
-</script>
-<script>
-  const scriptURL = "https://script.google.com/macros/s/AKfycbzsPCd3EVQFC-ZC2PZpjwsVRagnJHkTiy4oC2MRl8rtbDKb1rcUgpMXnLcc29DlyelQ/exec";
-  const form = document.forms['google-sheet'];
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    var time = new Date().getHours() + ":" + new Date().getMinutes() + ":" + new Date().getSeconds();
-    var timestamp = document.getElementById("time");
-    timestamp.setAttribute("value", time);
-    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-      .then(response => {
-        alert("Thanks for Contacting us..! We Will Contact You Soon...");
-        document.getElementById("formCont").reset();
-      })
-      .catch(error => console.error('Error!', error.message))
-  })
-</script>
+  <!-- Side-Bar-Script -->
+  <script>
+    window.addEventListener('click', function (e) {
+      if (document.getElementById('menu1_btn').contains(e.target)) {
+        document.getElementById("menu1").classList.remove("translate-x-[-25vw]")
+      } else {
+        document.getElementById("menu1").classList.add("translate-x-[-25vw]")
+      }
+    });
+    // Previous-Conference-Links-Container
+    const el = document.getElementById('prev-conf-cont');
+    const hiddenDiv = document.getElementById('prev-conf-links');
+    el.addEventListener('mouseover', function handleMouseOver() {
+      hiddenDiv.classList.remove('translate-x-[-100%]')
+      hiddenDiv.classList.add('translate-x-0')
+      hiddenDiv.classList.remove('before:z-[1]')
+      hiddenDiv.classList.add('before:z-[-1]')
+      hiddenDiv.classList.add('shadow-xl')
+    });
+    el.addEventListener('mouseout', function handleMouseOut() {
+      hiddenDiv.classList.add('translate-x-[-100%]')
+      hiddenDiv.classList.remove('translate-x-0')
+      hiddenDiv.classList.add('before:z-[1]')
+      hiddenDiv.classList.remove('before:z-[-1]')
+      hiddenDiv.classList.remove('shadow-xl')
+    })
+  </script>
 
-<!-- registration-Script -->
-<script>
-  function open_modal2() {
-    document.getElementById("body").classList.add("overflow-hidden");
-    document.getElementById("registration").classList.remove("translate-x-[100vw]");
-  }
-  function close_modal2() {
-    document.getElementById("registration").classList.add("translate-x-[100vw]");
-    document.getElementById("body").classList.remove("overflow-hidden");
-  }
-</script>
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+  <!-- Carousel-Script -->
+  <script>
+    $(function () {
+      $('.carousel-item').eq(0).addClass('active');
+      var total = $('.carousel-item').length;
+      var current = 0;
+      $('#moveRight').on('click', function () {
+        var next = current;
+        current = current + 1;
+        setSlide(next, current);
+      });
+      $('#moveLeft').on('click', function () {
+        var prev = current;
+        current = current - 1;
+        setSlide(prev, current);
+      });
+      function setSlide(prev, next) {
+        var slide = current;
+        if (next > total - 1) {
+          slide = 0;
+          current = 0;
+        }
+        if (next < 0) {
+          slide = total - 1;
+          current = total - 1;
+        }
+        $('.carousel-item').eq(prev).removeClass('active');
+        $('.carousel-item').eq(slide).addClass('active');
+        setTimeout(function () {
+        }, 800);
+        console.log('current ' + current);
+        console.log('prev ' + prev);
+      }
+    });
 
-<script>
-  const counterNumber = document.querySelector('.counter-number');
-  const counterSuffix = document.querySelector('.counter-suffix');
-  const targetValue = parseInt(counterNumber.getAttribute('data-to-value'));
+    // Accordion-Script
+    (function ($) {
+      $('.accordion > li:eq(0) a').addClass('active').next().slideDown();
+      $('.accordion a').click(function (j) {
+        var dropDown = $(this).closest('li').find('p');
+        $(this).closest('.accordion').find('p').not(dropDown).slideUp();
+        if ($(this).hasClass('active')) {
+          $(this).removeClass('active');
+        } else {
+          $(this).closest('.accordion').find('a.active').removeClass('active');
+          $(this).addClass('active');
+        }
+        dropDown.stop(false, true).slideToggle();
+        j.preventDefault();
+      });
+    })(jQuery);
+  </script>
 
-  const options = {
-    duration: parseInt(counterNumber.getAttribute('data-duration')),
-    delimiter: counterNumber.getAttribute('data-delimiter'),
-  };
-
-  const updateCounter = () => {
-    let currentValue = parseInt(counterNumber.innerText.replace(options.delimiter, ''));
-    if (currentValue < targetValue) {
-      const increment = Math.ceil(targetValue / (options.duration / 1000));
-      currentValue += increment;
-      counterNumber.innerText = currentValue.toLocaleString();
-      requestAnimationFrame(updateCounter);
+  <!-- Contact-Script -->
+  <script>
+    function open_modal() {
+      document.getElementById("body").classList.add("overflow-hidden");
+      document.getElementById("contact").classList.remove("translate-y-[-100vh]");
     }
-  };
+    function close_modal() {
+      document.getElementById("contact").classList.add("translate-y-[-100vh]");
+      document.getElementById("body").classList.remove("overflow-hidden");
+    }
+  </script>
+  <script>
+    const scriptURL = "https://script.google.com/macros/s/AKfycbzsPCd3EVQFC-ZC2PZpjwsVRagnJHkTiy4oC2MRl8rtbDKb1rcUgpMXnLcc29DlyelQ/exec";
+    const form = document.forms['google-sheet'];
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      var time = new Date().getHours() + ":" + new Date().getMinutes() + ":" + new Date().getSeconds();
+      var timestamp = document.getElementById("time");
+      timestamp.setAttribute("value", time);
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          alert("Thanks for Contacting us..! We Will Contact You Soon...");
+          document.getElementById("formCont").reset();
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 
-  updateCounter();
-</script>
+  <!-- registration-Script -->
+  <script>
+    function open_modal2() {
+      document.getElementById("body").classList.add("overflow-hidden");
+      document.getElementById("registration").classList.remove("translate-x-[100vw]");
+    }
+    function close_modal2() {
+      document.getElementById("registration").classList.add("translate-x-[100vw]");
+      document.getElementById("body").classList.remove("overflow-hidden");
+    }
+  </script>
 
-<!-- Timeline-Script -->
-<script>
-  const data = [
-    { dateLabel: '22 Aug 2023', title: 'Call for Papers' },
-    { dateLabel: '21 Nov 2023', title: 'Last date of Submission' },
-    { dateLabel: '25 Dec 2023', title: 'Acceptance Notification' },
-    { dateLabel: '10 Jan 2024', title: 'Final Camera-Ready Paper' },
-    { dateLabel: '15 Jan 2024', title: 'Registration Deadline' },
-  ];
-  function createSlide(item) {
-    const slide = document.createElement('div');
-    slide.className = 'swiper-slide';
-    slide.innerHTML = `
+  <script>
+    const counterNumber = document.querySelector('.counter-number');
+    const counterSuffix = document.querySelector('.counter-suffix');
+    const targetValue = parseInt(counterNumber.getAttribute('data-to-value'));
+
+    const options = {
+      duration: parseInt(counterNumber.getAttribute('data-duration')),
+      delimiter: counterNumber.getAttribute('data-delimiter'),
+    };
+
+    const updateCounter = () => {
+      let currentValue = parseInt(counterNumber.innerText.replace(options.delimiter, ''));
+      if (currentValue < targetValue) {
+        const increment = Math.ceil(targetValue / (options.duration / 1000));
+        currentValue += increment;
+        counterNumber.innerText = currentValue.toLocaleString();
+        requestAnimationFrame(updateCounter);
+      }
+    };
+
+    updateCounter();
+  </script>
+
+  <!-- Timeline-Script -->
+  <script>
+    const data = [
+      { dateLabel: '22 Aug 2023', title: 'Call for Papers' },
+      { dateLabel: '10 Dec 2023', title: 'Last date of Submission' },
+      { dateLabel: '25 Dec 2023', title: 'Acceptance Notification' },
+      { dateLabel: '10 Jan 2024', title: 'Final Camera-Ready Paper' },
+      { dateLabel: '15 Jan 2024', title: 'Registration Deadline' },
+    ];
+    function createSlide(item) {
+      const slide = document.createElement('div');
+      slide.className = 'swiper-slide';
+      slide.innerHTML = `
         <div class="timestamp">
           <span class="date">${item.dateLabel}</span>
         </div>
@@ -826,75 +670,77 @@
           <span>${item.title}</span>
         </div>
       `;
-    return slide;
-  }
-  function initializeSwiper() {
-    const swiperWrapper = document.querySelector('.swiper-wrapper.timeline');
-    // const nextSlide = document.getElementById('next-slide');
-    // const prevSlide = document.getElementById('prev-slide');
-    data.forEach((item) => {
-      const slide = createSlide(item);
-      swiperWrapper.appendChild(slide);
-    });
-    const swiper = new Swiper('.swiper-container', {
-      slidesPerView: 4,
-      grabCursor: true,
-      autoplay: true,
-      // navigation: {
-      //   nextEl: nextSlide,
-      //   prevEl: prevSlide,
-      // },
-    });
-  }
-  document.addEventListener('DOMContentLoaded', initializeSwiper);
-</script>
+      return slide;
+    }
+    function initializeSwiper() {
+      const swiperWrapper = document.querySelector('.swiper-wrapper.timeline');
+      // const nextSlide = document.getElementById('next-slide');
+      // const prevSlide = document.getElementById('prev-slide');
+      data.forEach((item) => {
+        const slide = createSlide(item);
+        swiperWrapper.appendChild(slide);
+      });
+      const swiper = new Swiper('.swiper-container', {
+        slidesPerView: 4,
+        grabCursor: true,
+        autoplay: true,
+        // navigation: {
+        //   nextEl: nextSlide,
+        //   prevEl: prevSlide,
+        // },
+      });
+    }
+    document.addEventListener('DOMContentLoaded', initializeSwiper);
+  </script>
 
-<!-- Maps-Script -->
-<script type="module">
-  let map;
-  async function initMap() {
-    const position = { lat: 28.367186, lng: 77.540582 };
-    const { Map } = await google.maps.importLibrary("maps");
-    const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
-    map = new Map(document.getElementById("map"), {
-      zoom: 13,
-      center: position,
-      mapId: "Galgotias_Map_Id",
-    });
-    const marker = new AdvancedMarkerElement({
-      map: map,
-      position: position,
-      title: "Galgotias University",
-    });
-  }
-  initMap();
-</script>
-<script>
-  (g => {
-    var h, a, k, p = "The Google Maps JavaScript API",
-      c = "google",
-      l = "importLibrary",
-      q = "__ib__",
-      m = document,
-      b = window;
-    b = b[c] || (b[c] = {});
-    var d = b.maps || (b.maps = {}),
-      r = new Set
-    e = new URLSearchParams,
-      u = () => h || (h = new Promise(async (f, n) => {
-        await (a = m.createElement("script"));
-        e.set("libraries", [...r] + "");
-        for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]);
-        e.set("callback", c + ".maps." + q);
-        a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
-        d[q] = f;
-        a.onerror = () => h = n(Error(p + " could not load."));
-        a.nonce = m.querySelector("script[nonce]")?.nonce || "";
-        m.head.append(a)
-      }));
-    d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n))
-  })
-    ({ key: "AIzaSyCK_DcPNsy65WOA3CoVfw-yOJ0gQBl79jc", v: "beta" });
-</script>
+  <!-- Maps-Script -->
+  <script type="module">
+    let map;
+    async function initMap() {
+      const position = { lat: 28.367186, lng: 77.540582 };
+      const { Map } = await google.maps.importLibrary("maps");
+      const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+      map = new Map(document.getElementById("map"), {
+        zoom: 13,
+        center: position,
+        mapId: "Galgotias_Map_Id",
+      });
+      const marker = new AdvancedMarkerElement({
+        map: map,
+        position: position,
+        title: "Galgotias University",
+      });
+    }
+    initMap();
+  </script>
+  <script>
+    (g => {
+      var h, a, k, p = "The Google Maps JavaScript API",
+        c = "google",
+        l = "importLibrary",
+        q = "__ib__",
+        m = document,
+        b = window;
+      b = b[c] || (b[c] = {});
+      var d = b.maps || (b.maps = {}),
+        r = new Set
+      e = new URLSearchParams,
+        u = () => h || (h = new Promise(async (f, n) => {
+          await (a = m.createElement("script"));
+          e.set("libraries", [...r] + "");
+          for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]);
+          e.set("callback", c + ".maps." + q);
+          a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
+          d[q] = f;
+          a.onerror = () => h = n(Error(p + " could not load."));
+          a.nonce = m.querySelector("script[nonce]")?.nonce || "";
+          m.head.append(a)
+        }));
+      d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n))
+    })
+      ({ key: "AIzaSyCK_DcPNsy65WOA3CoVfw-yOJ0gQBl79jc", v: "beta" });
+  </script>
+
+</body>
 
 </html>

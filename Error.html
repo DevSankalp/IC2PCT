@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="autumn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="asset/Galgotias-logo-4.png">
+  <title>Error 404</title>
+  <style>
+    * {
+      margin: 0px auto;
+      padding: 0px;
+      text-align: center;
+    }
+
+    body {
+      background-color: #D4D9ED;
+    }
+
+    .cont_principal {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .cont_error {
+      position: absolute;
+      width: 100%;
+      height: 300px;
+      top: 50%;
+      margin-top: -150px;
+    }
+
+    .cont_error>h1 {
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      font-size: 150px;
+      color: #ea764c;
+      text-shadow: 4px 4px 2px rgba(0, 0, 0, .2);
+      position: relative;
+      left: -100%;
+      transition: all 0.5s;
+    }
+
+    .cont_error>p {
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      font-size: 24px;
+      letter-spacing: 5px;
+      color: #000;
+      position: relative;
+      left: 100%;
+      transition: all 0.5s;
+      transition-delay: 0.5s;
+      -webkit-transition: all 0.5s;
+      -webkit-transition-delay: 0.5s;
+    }
+
+    @media screen and (max-width:720px) {
+      .cont_error {
+        top: 40%;
+      }
+
+      .cont_error>h1 {
+        font-size: 80px;
+        top: 20%;
+        transform: rotate(-67deg);
+      }
+
+      .cont_error>p {
+        font-size: 16px;
+        top: 5%;
+        transform: rotate(-65deg);
+      }
+    }
+
+    .cont_aura_1 {
+      position: absolute;
+      width: 300px;
+      height: 120%;
+      top: 25px;
+      right: -340px;
+      background-color: #ea764c;
+      box-shadow: 0px 0px 60px 20px rgba(137, 100, 222, 0.5);
+      -webkit-transition: all 0.5s;
+      transition: all 0.5s;
+    }
+
+    .cont_aura_2 {
+      position: absolute;
+      width: 100%;
+      height: 300px;
+      right: -10%;
+      bottom: -301px;
+      background-color: #ea764c;
+      box-shadow: 0px 0px 60px 10px rgba(131, 95, 214, 0.5), 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+      z-index: 5;
+      transition: all 0.5s;
+      -webkit-transition: all 0.5s;
+    }
+
+    .cont_error_active>.cont_error>h1 {
+      left: 0%;
+    }
+
+    .cont_error_active>.cont_error>p {
+      left: 0%;
+    }
+
+    .cont_error_active>.cont_aura_2 {
+      animation-name: animation_error_2;
+      animation-duration: 4s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      transform: rotate(-20deg);
+    }
+
+    .cont_error_active>.cont_aura_1 {
+      transform: rotate(20deg);
+      right: -170px;
+      animation-name: animation_error_1;
+      animation-duration: 4s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+
+    @-webkit-keyframes animation_error_1 {
+      from {
+        -webkit-transform: rotate(20deg);
+        transform: rotate(20deg);
+      }
+
+      to {
+        -webkit-transform: rotate(25deg);
+        transform: rotate(25deg);
+      }
+    }
+
+    @-o-keyframes animation_error_1 {
+      from {
+        -webkit-transform: rotate(20deg);
+        transform: rotate(20deg);
+      }
+
+      to {
+        -webkit-transform: rotate(25deg);
+        transform: rotate(25deg);
+      }
+
+    }
+
+    @-moz-keyframes animation_error_1 {
+      from {
+        -webkit-transform: rotate(20deg);
+        transform: rotate(20deg);
+      }
+
+      to {
+        -webkit-transform: rotate(25deg);
+        transform: rotate(25deg);
+      }
+
+    }
+
+    @keyframes animation_error_1 {
+      from {
+        -webkit-transform: rotate(20deg);
+        transform: rotate(20deg);
+      }
+
+      to {
+        -webkit-transform: rotate(25deg);
+        transform: rotate(25deg);
+      }
+    }
+
+    @-webkit-keyframes animation_error_2 {
+      from {
+        -webkit-transform: rotate(-15deg);
+        transform: rotate(-15deg);
+      }
+
+      to {
+        -webkit-transform: rotate(-20deg);
+        transform: rotate(-20deg);
+      }
+    }
+
+    @-o-keyframes animation_error_2 {
+      from {
+        -webkit-transform: rotate(-15deg);
+        transform: rotate(-15deg);
+      }
+
+      to {
+        -webkit-transform: rotate(-20deg);
+        transform: rotate(-20deg);
+      }
+    }
+
+    @-moz-keyframes animation_error_2 {
+      from {
+        -webkit-transform: rotate(-15deg);
+        transform: rotate(-15deg);
+      }
+
+      to {
+        -webkit-transform: rotate(-20deg);
+        transform: rotate(-20deg);
+      }
+    }
+
+    @keyframes animation_error_2 {
+      from {
+        -webkit-transform: rotate(-15deg);
+        transform: rotate(-15deg);
+      }
+
+      to {
+        -webkit-transform: rotate(-20deg);
+        transform: rotate(-20deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="fixed top-0 z-10 flex justify-start p-2 w-full">
+    <a href="index.html"
+      class="flex m-0 p-3 rounded-lg gap-2 bg-[#ea764c] text-white hover:bg-white hover:text-black duration-500 active:scale-[.9]"><span><svg
+          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+        </svg>
+      </span>Home</a>
+  </nav>
+
+  <div class="cont_principal">
+    <div class="cont_error animate-pulse">
+      <h1>Oops</h1>
+      <p>The Page you're looking for isn't here.</p>
+    </div>
+    <div class="cont_aura_1"></div>
+    <div class="cont_aura_2"></div>
+  </div>
+
+  <script>
+    window.onload = function () {
+      document.querySelector('.cont_principal').className = "cont_principal cont_error_active";
+
+    }
+  </script>
+
+</body>
+
+</html>

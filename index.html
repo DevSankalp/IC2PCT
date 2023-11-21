@@ -18,132 +18,155 @@
   <link rel="icon" type="image/x-icon" href="asset/Galgotias-logo-4.png">
 
   <title>IC2PCT 2024</title>
+
+  <style>
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .header::before {
+      filter: drop-shadow(20px 20px 0 #B70404);
+      animation: header 1.5s;
+    }
+
+    @keyframes header {
+      from {
+        transform: translateX(10px);
+        transform: translateY(10px);
+        filter: drop-shadow(0 0 0 #f5f3f3);
+      }
+
+      to {
+        transform: translateX(0);
+        transform: translateY(0);
+        filter: drop-shadow(20px 20px 0 #b70404);
+      }
+    }
+
+    .marquee-container {
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .marquee-content {
+      animation: marquee 7s linear infinite;
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(80%);
+      }
+
+      100% {
+        transform: translateX(-80%);
+      }
+    }
+
+    @media screen and (max-width: 640px) {
+      .marquee-content {
+        animation: marquee 6s linear infinite;
+      }
+
+      @keyframes marquee {
+        0% {
+          transform: translateX(120%);
+        }
+
+        100% {
+          transform: translateX(-220%);
+        }
+      }
+    }
+
+    /* Timeline */
+    .timeline {
+      list-style-type: none;
+      display: flex;
+      padding: 0;
+      text-align: center;
+    }
+
+    .timeline li {
+      transition: all 200ms ease-in;
+    }
+
+    .timestamp {
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 0px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-weight: 100;
+    }
+
+    .status {
+      padding: 0px 40px;
+      display: flex;
+      justify-content: center;
+      border-top: 4px solid #3e70ff;
+      position: relative;
+      transition: all 200ms ease-in;
+    }
+
+    .status span {
+      font-weight: 600;
+      padding-top: 20px;
+    }
+
+    .status span:before {
+      content: '';
+      width: 25px;
+      height: 25px;
+      background-color: #e8eeff;
+      border-radius: 25px;
+      border: 4px solid #3e70ff;
+      position: absolute;
+      top: -15px;
+      left: calc(50% - 12px);
+      transition: all 200ms ease-in;
+    }
+
+    .swiper-control {
+      text-align: right;
+    }
+
+    .swiper-container {
+      width: 100%;
+      margin: 50px 0;
+      overflow: hidden;
+      padding: 0 20px 30px 20px;
+      position: relative;
+    }
+
+    .swiper-slide {
+      width: 200px;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .swiper-slide:nth-child(2n) {
+      width: 40%;
+    }
+
+    .swiper-slide:nth-child(3n) {
+      width: 20%;
+    }
+
+    @media screen and (max-width:720px) {
+      .swiper-slide {
+        font-size: 12px;
+      }
+    }
+  </style>
+
 </head>
-<style>
-  ::-webkit-scrollbar {
-    width: 6px;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.5);
-  }
-
-  .header::before {
-    filter: drop-shadow(20px 20px 0 #B70404);
-    animation: header 1.5s;
-  }
-
-  @keyframes header {
-    from {
-      transform: translateX(10px);
-      transform: translateY(10px);
-      filter: drop-shadow(0 0 0 #f5f3f3);
-    }
-
-    to {
-      transform: translateX(0);
-      transform: translateY(0);
-      filter: drop-shadow(20px 20px 0 #b70404);
-    }
-  }
-
-  .marquee-container {
-    overflow: hidden;
-    white-space: nowrap;
-    width: 50%;
-  }
-
-  .marquee-content {
-    animation: marquee 7s linear infinite;
-  }
-
-  @keyframes marquee {
-    0% {
-      transform: translateX(80%);
-    }
-
-    100% {
-      transform: translateX(-80%);
-    }
-  }
-
-  /* Timeline */
-  .timeline {
-    list-style-type: none;
-    display: flex;
-    padding: 0;
-    text-align: center;
-  }
-
-  .timeline li {
-    transition: all 200ms ease-in;
-  }
-
-  .timestamp {
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 0px 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-weight: 100;
-  }
-
-  .status {
-    padding: 0px 40px;
-    display: flex;
-    justify-content: center;
-    border-top: 4px solid #3e70ff;
-    position: relative;
-    transition: all 200ms ease-in;
-  }
-
-  .status span {
-    font-weight: 600;
-    padding-top: 20px;
-  }
-
-  .status span:before {
-    content: '';
-    width: 25px;
-    height: 25px;
-    background-color: #e8eeff;
-    border-radius: 25px;
-    border: 4px solid #3e70ff;
-    position: absolute;
-    top: -15px;
-    left: calc(50% - 12px);
-    transition: all 200ms ease-in;
-  }
-
-  .swiper-control {
-    text-align: right;
-  }
-
-  .swiper-container {
-    width: 100%;
-    margin: 50px 0;
-    overflow: hidden;
-    padding: 0 20px 30px 20px;
-    position: relative;
-  }
-
-  .swiper-slide {
-    width: 200px;
-    text-align: center;
-    font-size: 18px;
-  }
-
-  .swiper-slide:nth-child(2n) {
-    width: 40%;
-  }
-
-  .swiper-slide:nth-child(3n) {
-    width: 20%;
-  }
-</style>
 
 <body class="font-['poppins'] overflow-x-hidden" id="body">
 
@@ -216,20 +239,24 @@
           <div tabindex="0"
             class="fixed bottom-0 bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(255,255,255,1)_100%)] text-[#B70404] h-[92vh] md:w-[25%] flex flex-col translate-x-[-25vw] origin-left duration-300"
             id="menu1">
-            <a href="#about"
-              class="relative p-[27.3px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">About
-            </a>
+            <p
+              class="cursor-pointer relative p-[27.3px] before:bg-[#B70404] text-white before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:duration-500">
+              Home
+            </p>
             <a href="call.html"
               class="relative p-[27.3px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Call
               for Paper
 
             </a>
             <a href="committee.html"
-              class="relative p-[27.3px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Committee
+              class="relative p-[27.4px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Committee
             </a>
             <a href="author.html"
-              class="relative py-[28px] px-[27.3px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">For
+              class="relative py-[27.3px] px-[27.3px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">For
               Author
+            </a>
+            <a href="sponsors.html"
+              class="relative p-[27.3px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Sponsors
             </a>
 
             <!-- Previous Conferences -->
@@ -252,7 +279,7 @@
                     class="pl-4">2018</span></a>
               </div>
             </div>
-            <a href="#programs"
+            <a href="Error.html"
               class="relative p-[27.21px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Programs
             </a>
             <a onclick="open_modal2()"
@@ -261,9 +288,6 @@
             <a onclick="open_modal()"
               class="cursor-pointer relative p-[27.21px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Contact
             </a>
-            <!-- <a href="author.html"
-              class="relative p-[27.3px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Submission
-            </a> -->
           </div>
         </div>
 
@@ -294,49 +318,30 @@
           <ul tabindex="0"
             class="absolute scale-y-0 menu menu-compact p-2 bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(226,226,240,1)_85%,rgba(211,242,255,1)_100%)] text-[#B70404] font-[600] rounded-b-lg w-[95vw] origin-top duration-500 shadow-xl transition-all"
             id="menu">
-            <li><a href="#about">About</a></li>
-            <li><a href="#call">Call for Paper</a></li>
-            <li><a href="#committes">Committes</a></li>
-            <li><a href="#author">For Author</a></li>
-            <li><a href="prev-conf-cont" target="_blank">Previous Conferences</a></li>
-            <li><a href="#programs">Programs</a></li>
+            <li><a href="call.html">Call for Paper</a></li>
+            <li><a href="committee.html">Committes</a></li>
+            <li><a href="author.html">For Author</a></li>
+            <li><a href="sponsors.html">Sponsors</a></li>
+            <li><a href="Error.html">Programs</a></li>
             <li><a class="cursor-pointer" onclick="open_modal2()">Registration</a></li>
             <li><a onclick="open_modal()" class="cursor-pointer">Contact</a></li>
-            <li><a href="#">Submission</a></li>
+            <li><a href=" https://cmt3.research.microsoft.com/IC2PCT2024" target="_blank">Submit your paper</a></li>
           </ul>
         </div>
       </div>
 
       <!-- Logo -->
       <div class="navbar-center">
-        <img class="w-64 md:w-60" src="asset/galgotias-logo-2.png" alt="">
-        <img class="w-60 md:w-12 mx-2" src="asset/Galgotias-logo-4.png" alt="">
-        <img class="w-60 md:w-40" src="asset/logo-ieee.png" alt="">
+        <img class="w-32 md:w-60" src="asset/galgotias-logo-2.png" alt="">
+        <img class="w-12 md:w-12 mx-2" src="asset/Galgotias-logo-4.png" alt="">
+        <img class="w-20 md:w-40" src="asset/logo-ieee.png" alt="">
       </div>
 
       <!-- Submission-Button -->
       <div class="navbar-end h-[100%] mr-4">
         <a href=" https://cmt3.research.microsoft.com/IC2PCT2024" target="_blank"
-          class="btn btn-round bg-[#B70404] text-white hover:bg-black hover:shadow-3xl border-0 shadow-xl scale-75 sm:scale-100">SUBMIT
-          YOUR
-          PAPER</a>
-        <!-- Search-Bar -->
-        <!-- <div
-          class="hidden w-12 h-[75%] sm:flex justify-end items-center bg-[#B70404] transition-all origin-right duration-300 rounded-full border-0"
-          id="search-cont">
-          <input type="text" placeholder="Search"
-            class="h-[100%] w-[100%] placeholder:text-white bg-transparent text-white focus:outline-none scale-x-0 text-black rounded-l-full"
-            id="search-bar">
-          <button
-            class="btn w-12 h-12 rounded-full bg-transparent focus:outline-none border-0 text-white hover:animate-pulse duration-500 origin-right transition-all"
-            id="search-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-            </svg>
-          </button>
-        </div> -->
+          class="hidden sm:flex btn btn-round bg-[#B70404] text-white hover:bg-black hover:shadow-3xl border-0 shadow-xl scale-75 sm:scale-100">SUBMIT
+          YOUR PAPER</a>
       </div>
     </div>
   </nav>
@@ -345,46 +350,40 @@
   <section
     class="relative bg-[rgba(255,255,255,1)] flex justify-center text-justify text-black text-sm md:text-lg pb-12"
     id="about">
-    <div class="w-[100%] flex flex-col items-center">
-      <div class="marquee-container bg-white p-4">
+    <div class="pt-[12vh] sm:p-0 w-[100%] flex flex-col items-center">
+      <div class="marquee-container w-2/3 sm:w-1/2 bg-white p-4">
         <div class="marquee-content">
-          <h1 class=" font-semibold text-center text-blue-700 bg-white">
+          <h1 class="font-semibold text-center text-blue-700 bg-white">
             Last Date for Full Paper Submission: <span
-              class="text-base font-semibold text-center text-red-700 bg-white">21 Nov 2023</span>
+              class="text-sm sm:text-lg font-semibold text-center text-red-700 bg-white line-through ">21 Nov
+              2023</span><span class="ml-2 text-red-700">10 Dec 2023</span>
           </h1>
         </div>
       </div>
-      <div class="w-[80%] flex flex-col">
+      <div class="w-[90%] sm:w-[80%] flex flex-col">
+
+        <!-- Timeline -->
         <div id="app" class="container">
           <div class="swiper-container">
             <div class="swiper-wrapper timeline">
               <!-- Slides will be dynamically created here using JavaScript -->
             </div>
-            <!-- <div class="p-2 absolute right-0 bottom-0 flex border-2 border-black rounded-md">
-              <div class="prev-slide cursor-pointer" id="prev-slide">
-                <svg class="" width="24" height="24" viewBox="0 0 24 24">
-                  <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
-                </svg>
-              </div>
-              <div class="next-slide cursor-pointer border-l-2 ml-2" id="next-slide">
-                <svg class="ml-2" width="24" height="24" viewBox="0 0 24 24">
-                  <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
-                </svg>
-              </div>
-            </div> -->
           </div>
         </div>
+
+        <!-- About -->
         <h1 class="text-2xl md:text-4xl text-center text-blue-700 font-bold mt-8 underline">IEEE CONFERENCE RECORD NO.
           #60090
         </h1>
-        <h1 class="text-2xl md:text-4xl text-center text-blue-700 font-bold my-4">Financially sponsored by IEEE
-          UTTAR PRADESH SECTION</h1>
+        <h1 class="text-2xl md:text-4xl text-center text-red-700 font-bold my-4">Financially & Technically sponsored:
+        </h1>
+        <div class="flex items-center justify-center">
+          <img class="w-48 sm:w-64" src="asset/logo-ieee.png" alt="">
+        </div>
         <p class="mt-4">The 2024 5th International Conference on Computing, Power, and Communication Technologies
-          (IC2PCT)
-          earlier known as GUCON is scheduled to take place on February 9-10, 2024 at Galgotias University in Greater
-          Noida, India. This prestigious event is being organized with the financial and technical sponsorship of the
-          IEEE
-          Uttar Pradesh Section.</p=>
+          (IC2PCT) earlier known as GUCON is scheduled to take place on February 9-10, 2024 at Galgotias University in
+          Greater Noida, India. This prestigious event is being organized with the financial and technical sponsorship
+          of the IEEE Uttar Pradesh Section.</p>
         <p class="mt-4">IC2PCT offers a valuable opportunity for practicing engineers, academicians, and researchers to
           convene and engage in discussions regarding various issues and the future direction of emerging technologies.
           The conference aims to bring together experts from relevant fields to share their knowledge and experiences,
@@ -395,62 +394,30 @@
           potential of these fields.</p>
         <p class="mt-4">IC2PCT serves as a platform for fostering collaborations and networking among professionals from
           diverse backgrounds. It encourages the exchange of ideas, promotes interdisciplinary approaches, and
-          cultivates
-          an environment conducive to innovation and technological progress.</p>
+          cultivates an environment conducive to innovation and technological progress.</p>
         <p class="mt-4">By facilitating the dissemination of knowledge and expertise, IC2PCT plays a crucial role in
           shaping the future of research in computing, power, and communication technologies. It serves as a catalyst
-          for
-          exploring new frontiers, addressing challenges, and unlocking the transformative potential of emerging
+          for exploring new frontiers, addressing challenges, and unlocking the transformative potential of emerging
           technologies in various industries and sectors.</p>
         <p class="mt-4 mb-8">IC2PCT will provide an opportunity to the practicing engineers, academicians and
-          researchers
-          to
-          meet in a forum to discuss various issues and its future direction of various Emerging Technologies. The
-          conference aims to put together the experts from the relevant areas to disseminate their knowledge and
-          experience for the relevant future research scope. There are 16 tracks in the conference covering almost all
-          areas related to computing, power, and communication technologies..</p>
-        <!-- <div class="text-center bg-gray-100 py-10">
-        <h1 class="text-3xl md:text-4xl font-bold mb-6">Explore Our Conference Tracks</h1>
-        <ul class="max-w-xl mx-auto text-lg md:text-xl list-disc list-inside">
-            <li>Smart Cities & Technologies for Sustainable Development</li>
-            <li>Renewable Energy Technologies Including Hydrogen</li>
-            <li>Modern Power Electronics, Drives & Control, Electric Vehicles</li>
-            <li>Big Data, Cloud Computing, and Quantum Computing</li>
-            <li>Smart Manufacturing, Smart Tourism, and Industry 5.0</li>
-            <li>5G Applications, Emerging 6G Technologies, E-Commerce</li>
-            <li>Robotics, UAV, and Unmanned Vehicle Technologies</li>
-            <li>AI, AIoT, IIoT, Deep Learning, and Machine Learning</li>
-            <li>Applications of Wide Bandgap Semiconductors</li>
-            <li>Cyber Security and Humanitarian Technologies</li>
-            <li>Blockchain Applications</li>
-            <li>AR, VR, and Metaverse</li>
-            <li>Healthcare Applications</li>
-            <li>Human Computer Interface (HCI)</li>
-            <li>Special/Financial Technologies</li>
-            <li>Special/Sports Analytics and Technologies</li>
-        </ul>
-    </div> -->
+          researchers to meet in a forum to discuss various issues and its future direction of various Emerging
+          Technologies. The conference aims to put together the experts from the relevant areas to disseminate their
+          knowledge and experience for the relevant future research scope. There are 16 tracks in the conference
+          covering almost all areas related to computing, power, and communication technologies.</p>
         <h1 class="text-lg md:text-2xl font-bold my-4">Objectives</h1>
         <p class="">The major objectives of the conference series (IC2PCT) are as follows:</p>
         <ul>
           <li class="list-disc ml-4 sm:ml-12">To provide a prestigious international forum for specialist presentations
-            and
-            interactions in one or more areas of Engineering and Technology with in its tracks through papers,
-            exhibitions, plenary talk, tutorials, etc;
-          </li>
+            and interactions in one or more areas of Engineering and Technology with in its tracks through papers,
+            exhibitions, plenary talk, tutorials, etc.</li>
           <li class="list-disc ml-4 sm:ml-12">To contribute to the development, progress and welfare of societies
-            (S/Y/W)
-            by
-            disseminating technological knowledge and experience;</li>
+            (S/Y/W) by disseminating technological knowledge and experience.</li>
           <li class="list-disc ml-4 sm:ml-12">To encourage the study and discussion of technology and technological
-            applications in
-            a broad social, political and human context;</li>
+            applications in a broad social, political and human context.</li>
           <li class="list-disc ml-4 sm:ml-12">To polish and boost the interpersonal and professional skills of
-            volunteers
-            with
-            the
-            guidance of leaders and renowned personalities in the respective field of Engineering & Technology.
-          </li class="list-disc ml-4 sm:ml-12">
+            volunteers with the guidance of leaders and renowned personalities in the respective field of Engineering &
+            Technology.
+          </li>
         </ul>
         <h1 class="text-2xl md:text-4xl text-center text-blue-700 font-bold mt-12 mb-4">Support to students</h1>
         <ul>
@@ -459,15 +426,17 @@
           </li>
           <li class="list-disc ml-4 sm:ml-12">We will try to arrange some travel assistanships for the IEEE
             Student/Graduate Student members from registration fee/External funding/Organizational funding.</li>
-          </li class="list-disc ml-4 sm:ml-12">
         </ul>
         <h1 class="text-lg md:text-xl my-8 text-blue-700 w-[max-content] self-start">Sincerely,
-          <br>Conference
-          Organizing
-          Team<br>Galgotias University<br>Greater Noida, Uttar Pradesh<br>India
+          <br>Conference Organizing Team<br>Galgotias University<br>Greater Noida, Uttar Pradesh<br>India
         </h1>
+        <h1 class="text-2xl md:text-4xl text-center text-red-700 font-bold my-4">OTHER SPONSORS</h1>
+        <div class="flex items-center justify-center">
+          <a href="https://allconferencealert.net/">
+            <img class="w-80 md:w-50" src="asset/All_Conference.png" alt="">
+          </a>
+        </div>
       </div>
-    </div>
   </section>
 
   <!-- registration -->
@@ -541,7 +510,7 @@
             <p class="border-b-2 border-black">Punjab National Bank</p>
             </p>
           </div>
-          <a href="" class="text-base md:text-lg text-red absolute bottom-2">* Registration of paper
+          <a href="" class="text-sm md:text-lg text-red absolute bottom-2">* Registration of paper
             link will come very soon......</a>
         </div>
 
@@ -603,7 +572,7 @@
     <img src="asset/galgotias-logo-3.png" alt="Galgotias University" class="w-80 row-start-1">
 
     <!-- Contact -->
-    <div class="row-start-2 sm:col-start-1 ml-6 mt-6">
+    <div class="row-start-2 sm:col-start-1 ml-6 mt-2 md:mt-6">
       <h1 class="text-lg md:text-2xl font-bold">Contact Us</h1>
       <address class="text-[12px] md:text-sm flex flex-col gap-4">
         Plot No. 2, Yamuna Expy,<br>Opposite Buddha International Circuit, Sector 17A, Greater Noida,<br>Uttar
@@ -619,7 +588,7 @@
 
     <!-- Social-Links -->
     <div
-      class="flex sm:flex-col justify-center items-center gap-4 row-start-4 sm:row-start-1 sm:col-start-2 sm:row-span-2 pb-4 sm:pb-0">
+      class="flex sm:flex-col justify-center items-center gap-4 row-start-4 sm:row-start-1 sm:col-start-2 sm:row-span-2 py-4 sm:pb-0 col-span-2 md:col-span-1">
       <a href="#"><i
           class="invert hover:invert-0 before:w-[100%] relative before:absolute before:top-0 before:z-[-1] before:h-[100%] before:bg-[#fff] before:scale-x-0 hover:before:scale-x-100 before:rounded origin-left duration-300">
           <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 50 50">
@@ -660,180 +629,166 @@
       </a>
     </div>
 
-    <!-- Other-Logo -->
-    <!-- <div
-      class="sm:col-start-3 sm:row-start-1 sm:row-span-2 grid grid-cols-[max-content_max-content_max-content] sm:grid-cols-1 sm:grid-rows-[max-content_max-content_max-content_max-content] justify-center sm:justify-start gap-6 sm:justify-items-center py-4 sm:py-0">
-      <img class="w-20 sm:w-36" src="asset/g20-logo.png" alt="G20">
-      <img class="w-20 sm:w-36" src="asset/iiclogo.png" alt="IIC">
-    </div> -->
-
-    <!-- Screen-Smaller-than-768px -->
-    <div class="sm:hidden block text-sm font-bold text-center">Copyright &#169; 2023 IC2PCT
-      <h1 class="mt-2 text-[12px] sm:hidden">Made with <span class="text-red-700">❤</span><a
-          href="https://devsankalp.github.io/DeV_SaNkAlP-Portfolio/">by Sankalp</a></h1>
-    </div>
   </footer>
   <div
-    class="bg-[rgba(0,0,0,1)] text-white text-sm font-[500] h-[10vh] w-[100%] flex px-14 items-center justify-between">
+    class="bg-[rgba(0,0,0,1)] text-white text-sm font-[500] h-[9vh] w-[100%] flex flex-col sm:flex-row pt-2 sm:pt-0 sm:px-14 items-center gap-2 sm:gap-0 sm:justify-between">
     <p class="text-md">Copyright &#169; 2023 IC2PCT</p>
-    <div class="hidden sm:block">Made with<span class="text-red-700"> ❤ </span><a
+    <div class="">Made with<span class="text-red-700"> ❤ </span><a
         href="https://devsankalp.github.io/DeV_SaNkAlP-Portfolio/" class="hover:underline">by Sankalp</a></div>
   </div>
 
-</body>
-
-<!-- Top-Menu-Script -->
-<script>
-  window.addEventListener('click', function (e) {
-    if (document.getElementById('menu_btn').contains(e.target)) {
-      document.getElementById("menu").classList.remove("scale-y-0")
-      document.getElementById("nav_cont").classList.remove("rounded-lg")
-      document.getElementById("nav_cont").classList.add("rounded-t-lg")
-    } else {
-      document.getElementById("menu").classList.add("scale-y-0")
-      setTimeout(() => {
-        document.getElementById("nav_cont").classList.add("rounded-lg")
-        document.getElementById("nav_cont").classList.remove("rounded-t-lg")
-      }, 400);
-    }
-  });
-</script>
-
-<!-- Side-Bar-Script -->
-<script>
-  window.addEventListener('click', function (e) {
-    if (document.getElementById('menu1_btn').contains(e.target)) {
-      document.getElementById("menu1").classList.remove("translate-x-[-25vw]")
-    } else {
-      document.getElementById("menu1").classList.add("translate-x-[-25vw]")
-    }
-  });
-</script>
-
-<!-- Previous-Conference-Links-Container -->
-<script>
-  const el = document.getElementById('prev-conf-cont');
-  const hiddenDiv = document.getElementById('prev-conf-links');
-  el.addEventListener('mouseover', function handleMouseOver() {
-    hiddenDiv.classList.remove('translate-x-[-100%]')
-    hiddenDiv.classList.add('translate-x-0')
-    hiddenDiv.classList.remove('before:z-[1]')
-    hiddenDiv.classList.add('before:z-[-1]')
-  });
-  el.addEventListener('mouseout', function handleMouseOut() {
-    hiddenDiv.classList.add('translate-x-[-100%]')
-    hiddenDiv.classList.remove('translate-x-0')
-    hiddenDiv.classList.add('before:z-[1]')
-    hiddenDiv.classList.remove('before:z-[-1]')
-  })
-</script>
-
-<!-- CountDown-Script -->
-<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
-  crossorigin="anonymous"></script>
-<script>
-    (function () {
-      const second = 1000,
-        minute = second * 60,
-        hour = minute * 60,
-        day = hour * 24;
-      let today = new Date(),
-        dd = String(today.getDate()).padStart(2, "0"),
-        mm = String(today.getMonth() + 1).padStart(2, "0"),
-        yyyy = today.getFullYear(),
-        nextYear = yyyy + 1,
-        dayMonth = "02/09/",
-        birthday = dayMonth + yyyy;
-
-      today = mm + "/" + dd + "/" + yyyy;
-      if (today > birthday) {
-        birthday = dayMonth + nextYear;
+  <!-- Top-Menu-Script -->
+  <script>
+    window.addEventListener('click', function (e) {
+      if (document.getElementById('menu_btn').contains(e.target)) {
+        document.getElementById("menu").classList.remove("scale-y-0")
+        document.getElementById("nav_cont").classList.remove("rounded-lg")
+        document.getElementById("nav_cont").classList.add("rounded-t-lg")
+      } else {
+        document.getElementById("menu").classList.add("scale-y-0")
+        setTimeout(() => {
+          document.getElementById("nav_cont").classList.add("rounded-lg")
+          document.getElementById("nav_cont").classList.remove("rounded-t-lg")
+        }, 400);
       }
-      const countDown = new Date(birthday).getTime(),
-        x = setInterval(function () {
-
-          const now = new Date().getTime(),
-            distance = countDown - now;
-
-          document.getElementById("days").innerHTML = Math.floor(distance / (day)) + `<span class="text-sm md:text-2xl">days</span>`,
-            document.getElementById("hours").innerHTML = Math.floor((distance % (day)) / (hour)) + `<span class="text-sm md:text-2xl">hours</span>`,
-            document.getElementById("minutes").innerHTML = Math.floor((distance % (hour)) / (minute)) + `<span class="text-sm md:text-2xl">minutes</span>`,
-            document.getElementById("seconds").innerHTML = Math.floor((distance % (minute)) / second) + `<span class="text-sm md:text-2xl">seconds</span>`;
-        }, 0)
-    }());
-</script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
-<!-- Carousel-Script -->
-<script>
-  $(document).ready(function () {
-    $('.carousel').slick({
-      autoplay: true,
-      autoplaySpeed: 3000,
-      fade: true,
-      cssEase: 'linear',
-      // pauseOnHover: true,
-      // pauseOnFocus: true,
-      // arrows: true,
-      // dots: true
     });
-  });
-</script>
+  </script>
 
-<!-- Contact-Script -->
-<script>
-  function open_modal() {
-    document.getElementById("body").classList.add("overflow-hidden");
-    document.getElementById("contact").classList.remove("translate-y-[-100vh]");
-  }
-  function close_modal() {
-    document.getElementById("contact").classList.add("translate-y-[-100vh]");
-    document.getElementById("body").classList.remove("overflow-hidden");
-  }
-</script>
-<script>
-  const scriptURL = "https://script.google.com/macros/s/AKfycbzsPCd3EVQFC-ZC2PZpjwsVRagnJHkTiy4oC2MRl8rtbDKb1rcUgpMXnLcc29DlyelQ/exec";
-  const form = document.forms['google-sheet'];
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    var time = new Date().getHours() + ":" + new Date().getMinutes() + ":" + new Date().getSeconds();
-    var timestamp = document.getElementById("time");
-    timestamp.setAttribute("value", time);
-    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-      .then(response => {
-        alert("Thanks for Contacting us..! We Will Contact You Soon...");
-        document.getElementById("formCont").reset();
-      })
-      .catch(error => console.error('Error!', error.message))
-  })
-</script>
+  <!-- Side-Bar-Script -->
+  <script>
+    window.addEventListener('click', function (e) {
+      if (document.getElementById('menu1_btn').contains(e.target)) {
+        document.getElementById("menu1").classList.remove("translate-x-[-25vw]")
+      } else {
+        document.getElementById("menu1").classList.add("translate-x-[-25vw]")
+      }
+    });
+  </script>
 
-<!-- Registration-Script -->
-<script>
-  function open_modal2() {
-    document.getElementById("body").classList.add("overflow-hidden");
-    document.getElementById("registration").classList.remove("translate-x-[100vw]");
-  }
-  function close_modal2() {
-    document.getElementById("registration").classList.add("translate-x-[100vw]");
-    document.getElementById("body").classList.remove("overflow-hidden");
-  }
-</script>
+  <!-- Previous-Conference-Links-Container -->
+  <script>
+    const el = document.getElementById('prev-conf-cont');
+    const hiddenDiv = document.getElementById('prev-conf-links');
+    el.addEventListener('mouseover', function handleMouseOver() {
+      hiddenDiv.classList.remove('translate-x-[-100%]')
+      hiddenDiv.classList.add('translate-x-0')
+      hiddenDiv.classList.remove('before:z-[1]')
+      hiddenDiv.classList.add('before:z-[-1]')
+    });
+    el.addEventListener('mouseout', function handleMouseOut() {
+      hiddenDiv.classList.add('translate-x-[-100%]')
+      hiddenDiv.classList.remove('translate-x-0')
+      hiddenDiv.classList.add('before:z-[1]')
+      hiddenDiv.classList.remove('before:z-[-1]')
+    })
+  </script>
 
-<!-- Timeline-Script -->
-<script>
-  const data = [
-    { dateLabel: '22 Aug 2023', title: 'Call for Papers' },
-    { dateLabel: '21 Nov 2023', title: 'Last date of Submission' },
-    { dateLabel: '25 Dec 2023', title: 'Acceptance Notification' },
-    { dateLabel: '10 Jan 2024', title: 'Final Camera-Ready Paper' },
-    { dateLabel: '15 Jan 2024', title: 'Registration Deadline' },
-  ];
-  function createSlide(item) {
-    const slide = document.createElement('div');
-    slide.className = 'swiper-slide';
-    slide.innerHTML = `
+  <!-- CountDown-Script -->
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+  <script>
+      (function () {
+        const second = 1000,
+          minute = second * 60,
+          hour = minute * 60,
+          day = hour * 24;
+        let today = new Date(),
+          dd = String(today.getDate()).padStart(2, "0"),
+          mm = String(today.getMonth() + 1).padStart(2, "0"),
+          yyyy = today.getFullYear(),
+          nextYear = yyyy + 1,
+          dayMonth = "02/09/",
+          confDay = dayMonth + yyyy;
+
+        today = mm + "/" + dd + "/" + yyyy;
+        if (today > confDay) {
+          confDay = dayMonth + nextYear;
+        }
+        const countDown = new Date(confDay).getTime(),
+          x = setInterval(function () {
+
+            const now = new Date().getTime(),
+              distance = countDown - now;
+
+            document.getElementById("days").innerHTML = Math.floor(distance / (day)) + `<span class="text-sm md:text-2xl">days</span>`,
+              document.getElementById("hours").innerHTML = Math.floor((distance % (day)) / (hour)) + `<span class="text-sm md:text-2xl">hours</span>`,
+              document.getElementById("minutes").innerHTML = Math.floor((distance % (hour)) / (minute)) + `<span class="text-sm md:text-2xl">minutes</span>`,
+              document.getElementById("seconds").innerHTML = Math.floor((distance % (minute)) / second) + `<span class="text-sm md:text-2xl">seconds</span>`;
+          }, 0)
+      }());
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
+  <!-- Carousel-Script -->
+  <script>
+    $(document).ready(function () {
+      $('.carousel').slick({
+        autoplay: true,
+        autoplaySpeed: 3000,
+        fade: true,
+        cssEase: 'linear',
+        // pauseOnHover: true,
+        // pauseOnFocus: true,
+        // arrows: true,
+        // dots: true
+      });
+    });
+  </script>
+
+  <!-- Contact-Script -->
+  <script>
+    function open_modal() {
+      document.getElementById("body").classList.add("overflow-hidden");
+      document.getElementById("contact").classList.remove("translate-y-[-100vh]");
+    }
+    function close_modal() {
+      document.getElementById("contact").classList.add("translate-y-[-100vh]");
+      document.getElementById("body").classList.remove("overflow-hidden");
+    }
+  </script>
+  <script>
+    const scriptURL = "https://script.google.com/macros/s/AKfycbzsPCd3EVQFC-ZC2PZpjwsVRagnJHkTiy4oC2MRl8rtbDKb1rcUgpMXnLcc29DlyelQ/exec";
+    const form = document.forms['google-sheet'];
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      var time = new Date().getHours() + ":" + new Date().getMinutes() + ":" + new Date().getSeconds();
+      var timestamp = document.getElementById("time");
+      timestamp.setAttribute("value", time);
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          alert("Thanks for Contacting us..! We Will Contact You Soon...");
+          document.getElementById("formCont").reset();
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+  <!-- Registration-Script -->
+  <script>
+    function open_modal2() {
+      document.getElementById("body").classList.add("overflow-hidden");
+      document.getElementById("registration").classList.remove("translate-x-[100vw]");
+    }
+    function close_modal2() {
+      document.getElementById("registration").classList.add("translate-x-[100vw]");
+      document.getElementById("body").classList.remove("overflow-hidden");
+    }
+  </script>
+
+  <!-- Timeline-Script -->
+  <script>
+    const data = [
+      { dateLabel: '22 Aug 2023', title: 'Call for Papers' },
+      { dateLabel: '10 Dec 2023', title: 'Last date of Submission' },
+      { dateLabel: '25 Dec 2023', title: 'Acceptance Notification' },
+      { dateLabel: '10 Jan 2024', title: 'Final Camera-Ready Paper' },
+      { dateLabel: '15 Jan 2024', title: 'Registration Deadline' },
+    ];
+    function createSlide(item) {
+      const slide = document.createElement('div');
+      slide.className = 'swiper-slide';
+      slide.innerHTML = `
         <div class="timestamp">
           <span class="date">${item.dateLabel}</span>
         </div>
@@ -841,75 +796,77 @@
           <span>${item.title}</span>
         </div>
       `;
-    return slide;
-  }
-  function initializeSwiper() {
-    const swiperWrapper = document.querySelector('.swiper-wrapper.timeline');
-    // const nextSlide = document.getElementById('next-slide');
-    // const prevSlide = document.getElementById('prev-slide');
-    data.forEach((item) => {
-      const slide = createSlide(item);
-      swiperWrapper.appendChild(slide);
-    });
-    const swiper = new Swiper('.swiper-container', {
-      slidesPerView: 4,
-      grabCursor: true,
-      autoplay: true,
-      // navigation: {
-      //   nextEl: nextSlide,
-      //   prevEl: prevSlide,
-      // },
-    });
-  }
-  document.addEventListener('DOMContentLoaded', initializeSwiper);
-</script>
+      return slide;
+    }
+    function initializeSwiper() {
+      const swiperWrapper = document.querySelector('.swiper-wrapper.timeline');
+      // const nextSlide = document.getElementById('next-slide');
+      // const prevSlide = document.getElementById('prev-slide');
+      data.forEach((item) => {
+        const slide = createSlide(item);
+        swiperWrapper.appendChild(slide);
+      });
+      const swiper = new Swiper('.swiper-container', {
+        slidesPerView: 4,
+        grabCursor: true,
+        autoplay: true,
+        // navigation: {
+        //   nextEl: nextSlide,
+        //   prevEl: prevSlide,
+        // },
+      });
+    }
+    document.addEventListener('DOMContentLoaded', initializeSwiper);
+  </script>
 
-<!-- Maps-Script -->
-<script type="module">
-  let map;
-  async function initMap() {
-    const position = { lat: 28.367186, lng: 77.540582 };
-    const { Map } = await google.maps.importLibrary("maps");
-    const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
-    map = new Map(document.getElementById("map"), {
-      zoom: 13,
-      center: position,
-      mapId: "Galgotias_Map_Id",
-    });
-    const marker = new AdvancedMarkerElement({
-      map: map,
-      position: position,
-      title: "Galgotias University",
-    });
-  }
-  initMap();
-</script>
-<script>
-  (g => {
-    var h, a, k, p = "The Google Maps JavaScript API",
-      c = "google",
-      l = "importLibrary",
-      q = "__ib__",
-      m = document,
-      b = window;
-    b = b[c] || (b[c] = {});
-    var d = b.maps || (b.maps = {}),
-      r = new Set
-    e = new URLSearchParams,
-      u = () => h || (h = new Promise(async (f, n) => {
-        await (a = m.createElement("script"));
-        e.set("libraries", [...r] + "");
-        for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]);
-        e.set("callback", c + ".maps." + q);
-        a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
-        d[q] = f;
-        a.onerror = () => h = n(Error(p + " could not load."));
-        a.nonce = m.querySelector("script[nonce]")?.nonce || "";
-        m.head.append(a)
-      }));
-    d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n))
-  })
-    ({ key: "AIzaSyCK_DcPNsy65WOA3CoVfw-yOJ0gQBl79jc", v: "beta" });
-</script>
+  <!-- Maps-Script -->
+  <script type="module">
+    let map;
+    async function initMap() {
+      const position = { lat: 28.367186, lng: 77.540582 };
+      const { Map } = await google.maps.importLibrary("maps");
+      const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+      map = new Map(document.getElementById("map"), {
+        zoom: 13,
+        center: position,
+        mapId: "Galgotias_Map_Id",
+      });
+      const marker = new AdvancedMarkerElement({
+        map: map,
+        position: position,
+        title: "Galgotias University",
+      });
+    }
+    initMap();
+  </script>
+  <script>
+    (g => {
+      var h, a, k, p = "The Google Maps JavaScript API",
+        c = "google",
+        l = "importLibrary",
+        q = "__ib__",
+        m = document,
+        b = window;
+      b = b[c] || (b[c] = {});
+      var d = b.maps || (b.maps = {}),
+        r = new Set
+      e = new URLSearchParams,
+        u = () => h || (h = new Promise(async (f, n) => {
+          await (a = m.createElement("script"));
+          e.set("libraries", [...r] + "");
+          for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]);
+          e.set("callback", c + ".maps." + q);
+          a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
+          d[q] = f;
+          a.onerror = () => h = n(Error(p + " could not load."));
+          a.nonce = m.querySelector("script[nonce]")?.nonce || "";
+          m.head.append(a)
+        }));
+      d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n))
+    })
+      ({ key: "AIzaSyCK_DcPNsy65WOA3CoVfw-yOJ0gQBl79jc", v: "beta" });
+  </script>
+
+</body>
 
 </html>
