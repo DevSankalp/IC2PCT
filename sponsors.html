@@ -34,6 +34,7 @@
 </head>
 
 <body class="font-['poppins'] overflow-x-hidden" id="body">
+
   <!-- Navbar -->
   <nav class="w-[100vw] h-[max-content] flex justify-center fixed top-0 z-10">
     <div
@@ -47,21 +48,34 @@
             class="fixed bottom-0 bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(255,255,255,1)_100%)] text-[#B70404] h-[92vh] md:w-[25%] flex flex-col translate-x-[-25vw] origin-left duration-300"
             id="menu1">
             <a href="index.html"
-              class="relative p-[27.3px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Home</a>
+              class="relative p-[27.2px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Home</a>
             <a href="call.html"
-              class="relative p-[27.3px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Call
+              class="relative p-[27.2px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Call
               for Paper
             </a>
-            <a href="committee.html"
-              class="relative p-[27.4px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Committee
-            </a>
+
+            <!-- Committee  -->
+            <div id="committee-cont"
+              class="relative py-4 px-[27.3px] flex items-center justify-between before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500 h-min">
+              Committee <img src="asset/back-arrow.png" alt="" class="rotate-180 invert scale-75">
+              <div id="committee-links"
+                class="translate-x-[-100%] absolute z-[-10] w-1/2 top-0 left-[100%] text-[#B70404] flex flex-col h-full origin-left duration-500 before:absolute before:w-[100%] before:h-[100%] before:top-0 before:bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(255,255,255,1)_100%)] before:z-[1]">
+                <a href="committee.html"
+                  class="relative p-2 h-full flex items-center before:bg-[#B70404] hover:text-white before:w-[100%] before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500"><span
+                    class="pl-4">Members</span></a>
+                <a href="speakers.html"
+                  class="relative p-2 h-full flex items-center before:bg-[#B70404] hover:text-white before:w-[100%] before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500"><span
+                    class="pl-4">Speakers</span></a>
+              </div>
+            </div>
+
             <a href="author.html"
-              class="relative py-[27.3px] px-[27.3px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">For
+              class="relative py-[27.2px] px-[27.3px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">For
               Author
             </a>
             <p
-              class="cursor-pointer relative p-[27.3px] before:bg-[#B70404] text-white before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:duration-500">
-              Sponsors
+              class="cursor-pointer relative p-[27.2px] before:bg-[#B70404] text-white before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:duration-500">
+              Sponsorship
             </p>
 
             <!-- Previous Conferences -->
@@ -84,6 +98,7 @@
                     class="pl-4">2018</span></a>
               </div>
             </div>
+
             <a href="Error.html"
               class="relative p-[27.21px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Programs
             </a>
@@ -125,7 +140,8 @@
             id="menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="call.html">Call for Paper</a></li>
-            <li><a href="committee.html">Committes</a></li>
+            <li><a href="committee.html">Committee Members</a></li>
+            <li><a href="speakers.html">Speakers</a></li>
             <li><a href="author.html">For Author</a></li>
             <li><a href="Error.html">Programs</a></li>
             <li><a class="cursor-pointer" onclick="open_modal2()">Registration</a></li>
@@ -478,6 +494,24 @@
         document.getElementById("menu1").classList.add("translate-x-[-25vw]")
       }
     });
+  </script>
+
+  <!-- Committee-script -->
+  <script>
+    const el1 = document.getElementById('committee-cont');
+    const hiddenDiv1 = document.getElementById('committee-links');
+    el1.addEventListener('mouseover', function handleMouseOver() {
+      hiddenDiv1.classList.remove('translate-x-[-100%]')
+      hiddenDiv1.classList.add('translate-x-0')
+      hiddenDiv1.classList.remove('before:z-[1]')
+      hiddenDiv1.classList.add('before:z-[-1]')
+    });
+    el1.addEventListener('mouseout', function handleMouseOut() {
+      hiddenDiv1.classList.add('translate-x-[-100%]')
+      hiddenDiv1.classList.remove('translate-x-0')
+      hiddenDiv1.classList.add('before:z-[1]')
+      hiddenDiv1.classList.remove('before:z-[-1]')
+    })
   </script>
 
   <!-- Previous-Conference-Links-Container -->

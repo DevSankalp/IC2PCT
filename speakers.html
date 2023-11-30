@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick-theme.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <link rel="icon" type="image/x-icon" href="asset/Galgotias-logo-4.png">
+  <title>Speakers</title>
+
+  <style>
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+  </style>
+
+</head>
+
+<body class="font-['poppins'] overflow-x-hidden" id="body">
+
+  <!-- Navbar -->
+  <nav class="w-[100vw] h-[max-content] flex justify-center sticky top-0 z-10">
+    <div
+      class="navbar w-[95%] md:w-[100%] bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(226,226,240,1)_85%,rgba(211,242,255,1)_100%)] transition-all rounded-lg md:rounded-none shadow-xl mt-4 md:mt-0 p-0"
+      id="nav_cont">
+      <div class="hidden md:w-[50%] h-[100%] md:flex">
+
+        <!-- SideBar -->
+        <div class="relative self-end">
+          <div tabindex="0"
+            class="fixed bottom-0 bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(255,255,255,1)_100%)] text-[#B70404] h-[92vh] md:w-[25%] flex flex-col translate-x-[-25vw] origin-left duration-300"
+            id="menu1">
+            <p
+              class="cursor-pointer relative p-[27.3px] before:bg-[#B70404] text-white before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:duration-500">
+              Home
+            </p>
+            <a href="call.html"
+              class="relative py-6 px-[27.3px] flex items-center justify-between before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500 h-min">Call
+              for Paper
+
+            </a>
+
+            <!-- Committee  -->
+            <div id="committee-cont"
+              class="relative py-5 px-[27.3px] flex items-center justify-between before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500 h-min">
+              Committee <img src="asset/back-arrow.png" alt="" class="rotate-180 invert scale-75">
+              <div id="committee-links"
+                class="translate-x-[-100%] absolute z-[-10] w-1/2 top-0 left-[100%] text-[#B70404] flex flex-col h-full origin-left duration-500 before:absolute before:w-[100%] before:h-[100%] before:top-0 before:bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(255,255,255,1)_100%)] before:z-[1]">
+                <a href="committee.html"
+                  class="relative p-2 h-full flex items-center before:bg-[#B70404] hover:text-white before:w-[100%] before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500"><span
+                    class="pl-4">Members</span></a>
+                <p class="relative p-2 h-full flex items-center bg-[#B70404] text-white"><span
+                    class="pl-4">Speakers</span></p>
+              </div>
+            </div>
+
+            <a href="author.html"
+              class="relative py-[27.3px] px-[27.3px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">For
+              Author
+            </a>
+            <a href="sponsors.html"
+              class="relative p-[27.3px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Sponsorship
+            </a>
+
+            <!-- Previous Conferences -->
+            <div id="prev-conf-cont"
+              class="relative py-6 px-[27.3px] flex items-center justify-between before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500 h-min">
+              Previous Conferences <img src="asset/back-arrow.png" alt="" class="rotate-180 invert scale-75">
+              <div id="prev-conf-links"
+                class="translate-x-[-100%] absolute z-[-10] w-[50%] top-0 left-[100%] text-[#B70404] flex flex-col justify-center h-[192px] origin-left duration-500 before:absolute before:w-[100%] before:h-[100%] before:top-0 before:bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(255,255,255,1)_100%)] before:z-[1]">
+                <a href="https://ieeexplore.ieee.org/xpl/conhome/9573501/proceeding" target="_blank"
+                  class="relative p-2 h-[100%] flex items-center before:bg-[#B70404] hover:text-white before:w-[100%] before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500"><span
+                    class="pl-4">2021</span></a>
+                <a href="https://ieeexplore.ieee.org/xpl/conhome/9230460/proceeding" target="_blank"
+                  class="relative p-2 h-[100%] flex items-center before:bg-[#B70404] hover:text-white before:w-[100%] before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500"><span
+                    class="pl-4">2020</span></a>
+                <a href="https://ieeexplore.ieee.org/xpl/conhome/8933293/proceeding" target="_blank"
+                  class="relative p-2 h-[100%] flex items-center before:bg-[#B70404] hover:text-white before:w-[100%] before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500"><span
+                    class="pl-4">2019</span></a>
+                <a href="https://ieeexplore.ieee.org/xpl/conhome/8671767/proceeding" target="_blank"
+                  class="relative p-2 h-[100%] flex items-center before:bg-[#B70404] hover:text-white before:w-[100%] before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500"><span
+                    class="pl-4">2018</span></a>
+              </div>
+            </div>
+
+            <a href="Error.html"
+              class="relative p-[27.21px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Programs
+            </a>
+            <a onclick="open_modal2()"
+              class="cursor-pointer relative p-[27.21px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Registration
+            </a>
+            <a onclick="open_modal()"
+              class="cursor-pointer relative p-[27.21px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Contact
+            </a>
+          </div>
+        </div>
+
+        <!-- Burger-Icon -->
+        <label tabindex="0"
+          class="btn btn-ghost bg-[#B70404] h-[max-content] hover:bg-black flex-row gap-2 w-[max-content] ml-2 text-white rounded-lg"
+          id="menu1_btn">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+          </svg>
+          <span>menu</span>
+        </label>
+      </div>
+
+      <!-- Screen-Smaller-than-768px -->
+      <div class="md:hidden navbar-start h-[100%]">
+        <div class="h-[100%]">
+
+          <!-- Burger-Icon -->
+          <label tabindex="0" class="btn btn-ghost btn-circle h-[100%] hover:bg-transparent" id="menu_btn">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+            </svg>
+          </label>
+
+          <!-- Top-MenuBar -->
+          <ul tabindex="0"
+            class="absolute scale-y-0 menu menu-compact p-2 bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(226,226,240,1)_85%,rgba(211,242,255,1)_100%)] text-[#B70404] font-[600] rounded-b-lg w-[95vw] origin-top duration-500 shadow-xl transition-all"
+            id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="call.html">Call for Paper</a></li>
+            <li><a href="committee.html">Committee Members</a></li>
+            <li><a href="author.html">For Author</a></li>
+            <li><a href="sponsors.html">Sponsorship</a></li>
+            <li><a href="Error.html">Programs</a></li>
+            <li><a class="cursor-pointer" onclick="open_modal2()">Registration</a></li>
+            <li><a onclick="open_modal()" class="cursor-pointer">Contact</a></li>
+            <li><a href=" https://cmt3.research.microsoft.com/IC2PCT2024" target="_blank">Submit your paper</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Logo -->
+      <div class="navbar-center">
+        <img class="w-32 md:w-60" src="asset/galgotias-logo-2.png" alt="">
+        <img class="w-12 md:w-12 mx-2" src="asset/Galgotias-logo-4.png" alt="">
+        <img class="w-20 md:w-40" src="asset/logo-ieee.png" alt="">
+      </div>
+
+      <!-- Submission-Button -->
+      <div class="navbar-end h-[100%] mr-4">
+        <a href=" https://cmt3.research.microsoft.com/IC2PCT2024" target="_blank"
+          class="hidden sm:flex btn btn-round bg-[#B70404] text-white rounded-md hover:bg-black hover:shadow-3xl border-0 shadow-xl scale-75 sm:scale-100">SUBMIT
+          YOUR PAPER</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Speakers -->
+  <section class="w-full min-h-[100vh] flex flex-col items-center justify-center">
+    <h1
+      class="flex justify-center text-red-700 text-5xl py-12 mb-12 text-center relative before:absolute before:w-full before:h-[2%] before:bg-red-700 before:bottom-6">
+      Speakers
+    </h1>
+
+    <!-- Speakers-Section1 -->
+    <div class="flex md:flex-row flex-col items-center justify-center gap-12 border-b-2 border-[#ccc] w-[90%] pb-8">
+      <!-- Speaker-Card -->
+      <div class="flex flex-col items-center bg-white rounded-xl overflow-hidden relative drop-shadow-xl">
+        <div class="bg-[rgba(0,0,0,0.1)] rounded-xl">
+          <img src="asset/banner1.png" alt="speakers_banner" class="w-72">
+        </div>
+        <img src="asset/S N SINGH SIR.jpeg" alt="Speaker1" class="absolute w-32 h-32 top-14 rounded-full">
+        <div class="flex flex-col items-center justify-center min-h-max h-[26vh] pt-12">
+          <p>Prof. (Dr.) S. N. Singh</p>
+          <p>Director IIITM, Gwalior India</p>
+          <p class="w-64 text-justify mt-6 text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo,
+            fugit!
+          </p>
+        </div>
+      </div>
+      <!-- Speaker-Card -->
+      <div class="flex flex-col items-center bg-white rounded-xl overflow-hidden relative drop-shadow-xl">
+        <div class="bg-[rgba(0,0,0,0.1)] rounded-xl">
+          <img src="asset/banner2.png" alt="speakers_banner" class="w-72">
+        </div>
+        <img src="asset/AKS_pic.jpg" alt="Speaker2" class="absolute w-32 h-32 top-14 rounded-full">
+        <div class="flex flex-col items-center justify-center min-h-max h-[26vh] pt-12">
+          <p>Prof. (Dr.) Asheesh Kumar Singh</p>
+          <p>MNNIT Allahabad India</p>
+          <p class="w-64 text-justify mt-6 text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo,
+            fugit!
+          </p>
+        </div>
+      </div>
+      <!-- Speaker-Card -->
+      <div class="flex flex-col items-center bg-white rounded-xl overflow-hidden relative drop-shadow-xl">
+        <div class="bg-[rgba(0,0,0,0.1)] rounded-xl">
+          <img src="asset/banner1.png" alt="speakers_banner" class="w-72">
+        </div>
+        <img src="asset/" alt="Speaker3" class="absolute w-32 h-32 top-14 rounded-full">
+        <div class="flex flex-col items-center justify-center min-h-max h-[26vh] pt-12">
+          <p>Demo</p>
+          <p>Demo</p>
+          <p class="w-64 text-justify mt-6 text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo,
+            fugit!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Speakers-Section2 -->
+    <div class="flex md:flex-row flex-col items-center justify-center gap-12 py-8">
+      <!-- Speaker-Card -->
+      <div class="flex flex-col items-center bg-white rounded-xl overflow-hidden relative drop-shadow-xl">
+        <div class="bg-[rgba(0,0,0,0.1)] rounded-xl">
+          <img src="asset/banner1.png" alt="speakers_banner" class="w-72">
+        </div>
+        <img src="asset/S N SINGH SIR.jpeg" alt="Speaker1" class="absolute w-32 h-32 top-14 rounded-full">
+        <div class="flex flex-col items-center justify-center min-h-max h-[26vh] pt-12">
+          <p>Prof. (Dr.) S. N. Singh</p>
+          <p>Director IIITM, Gwalior India</p>
+          <p class="w-64 text-justify mt-6 text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo,
+            fugit!
+          </p>
+        </div>
+      </div>
+      <!-- Speaker-Card -->
+      <div class="flex flex-col items-center bg-white rounded-xl overflow-hidden relative drop-shadow-xl">
+        <div class="bg-[rgba(0,0,0,0.1)] rounded-xl">
+          <img src="asset/banner2.png" alt="speakers_banner" class="w-72">
+        </div>
+        <img src="asset/AKS_pic.jpg" alt="Speaker2" class="absolute w-32 h-32 top-14 rounded-full">
+        <div class="flex flex-col items-center justify-center min-h-max h-[26vh] pt-12">
+          <p>Prof. (Dr.) Asheesh Kumar Singh</p>
+          <p>MNNIT Allahabad India</p>
+          <p class="w-64 text-justify mt-6 text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo,
+            fugit!
+          </p>
+        </div>
+      </div>
+      <!-- Speaker-Card -->
+      <div class="flex flex-col items-center bg-white rounded-xl overflow-hidden relative drop-shadow-xl">
+        <div class="bg-[rgba(0,0,0,0.1)] rounded-xl">
+          <img src="asset/banner1.png" alt="speakers_banner" class="w-72">
+        </div>
+        <img src="asset/" alt="Speaker3" class="absolute w-32 h-32 top-14 rounded-full">
+        <div class="flex flex-col items-center justify-center min-h-max h-[26vh] pt-12">
+          <p>Demo</p>
+          <p>Demo</p>
+          <p class="w-64 text-justify mt-6 text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo,
+            fugit!
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- registration -->
+  <section
+    class="translate-x-[100vw] duration-700 fixed top-0 h-[100vh] w-[100vw] bg-[rgba(0,0,0,0.8)] flex justify-center text-justify text-black text-sm md:text-lg z-20"
+    id="registration">
+    <button
+      class="btn btn-circle btn-outline absolute md:left-[2%] top-8 md:top-[2%] m-2 bg-white text-black border-0 hover:bg-black hover:text-white drop-shadow-[0_0_10px_rgba(0,0,0,0.2)] z-[99]"
+      onclick="close_modal2()">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    <div class="w-[80%] text-white flex flex-col justify-center items-center">
+      <h1 class=" text-2xl md:text-4xl text-center text-white font-bold mt-8 mb-4">Registration</h1>
+      <div
+        class="w-[100%] grid grid-rows-[max-content_max-content] grid-cols-1 text-[#B70404] bg-[rgba(255,255,255,1)] rounded-md">
+
+        <!-- Prices -->
+        <div class="p-2 sm:p-4">
+          <div class="grid grid-cols-4 items-center border-black border-y-2 text-xs sm:text-sm md:text-lg">
+            <h1 class="text-center md:border-black border-x-2 h-[max-content]">Registration Type</h1>
+            <h1 class="text-center md:border-black border-r-2 h-[max-content]">Country of registration</h1>
+            <h1 class="text-center md:border-black border-r-2 h-[max-content]">IEEE Member</h1>
+            <h1 class="text-center md:border-black border-r-2">Non-IEEE Member</h1>
+          </div>
+          <div class="grid grid-cols-4 border-black border-b-2 text-xs sm:text-sm md:text-lg">
+            <p class="pl-1 sm:pl-4 border-black border-x-2 h-[100%] flex items-center">Regular Author</p>
+            <p class="pl-1 sm:pl-4 border-black border-r-2 h-[100%]">Indian<br>Foreigner</p>
+            <p class="pl-1 sm:pl-4 border-black border-r-2 h-[100%]">7,000 INR<br>350 USD</p>
+            <p class="pl-1 border-black border-r-2 sm:pl-4">9,000 INR<br>400 USD</p>
+          </div>
+          <div class="grid grid-cols-4 border-black border-b-2 text-xs sm:text-sm md:text-lg">
+            <p class="pl-1 sm:pl-4 border-black border-x-2 h-[100%] flex items-center">Student Author</p>
+            <p class="pl-1 sm:pl-4 border-black border-r-2 h-[100%]">Indian<br>Foreigner</p>
+            <p class="pl-1 sm:pl-4 border-black border-r-2 h-[100%]">5,000 INR<br>200 USD</p>
+            <p class="pl-1 border-black border-r-2 sm:pl-4">6,500 INR<br>300 USD</p>
+          </div>
+          <div class="grid grid-cols-4 border-black border-b-2 text-xs sm:text-sm md:text-lg">
+            <p class="pl-1 sm:pl-4 border-black border-x-2 h-[100%] flex items-center">Industry</p>
+            <p class="pl-1 sm:pl-4 border-black border-r-2 h-[100%]">Indian<br>Foreigner</p>
+            <p class="pl-1 sm:pl-4 border-black border-r-2 h-[100%]">8,000 INR<br>350 USD</p>
+            <p class="pl-1 border-black border-r-2 sm:pl-4">10,000 INR<br>400 USD</p>
+          </div>
+          <div class="grid grid-cols-4 border-black border-b-2 text-xs sm:text-sm md:text-lg h-[max-content]">
+            <p class="pl-1 sm:pl-4 border-black border-x-2 h-[100%] flex items-center">Attendee</p>
+            <p class="pl-1 sm:pl-4 border-black border-r-2 h-[100%]">Indian<br>Foreigner</p>
+            <p class="pl-1 sm:pl-4 border-black border-r-2 h-[100%]">4,000 INR<br>200 USD</p>
+            <p class="pl-1 border-black border-r-2 sm:pl-4">6,500 INR<br>350 USD</p>
+          </div>
+          <p class="text-xs md:text-sm p-2 text-black border-b-2 border-black">* Extra page charge of ₹ 1000/- INR per
+            page Indian author and $ 50 per page International author will be chargeable to the author's during
+            registration process.</p>
+        </div>
+
+        <!-- Account-Info -->
+        <div
+          class="grid grid-cols-[max-content_1fr] grid-rows-[max-content_1fr] text-left mx-5 mt-4 pb-12 text-xs sm:text-sm md:text-lg relative">
+          <h1 class="text-2xl text-black col-span-2">Account Details</h1>
+          <div class="row-start-2 border-2 border-black p-2 sm:p-4 w-[max-content]">
+            <p class="border-b-2 border-black">Name of Account</p>
+            <p class="border-b-2 border-black">Account Number</p>
+            <p class="border-b-2 border-black">IFSC Code</p>
+            <p class="border-b-2 border-black">Bank Name</p>
+          </div>
+
+          <div class="row-start-2 border-2 border-black p-2 sm:p-4 ml-1 w-[100%]">
+            <p class="border-b-2 border-black">GU Conferences</p>
+            <p class="border-b-2 border-black">6717000100025845</p>
+            <p class="border-b-2 border-black">PUNB0671700</p>
+            <p class="border-b-2 border-black">Punjab National Bank</p>
+            </p>
+          </div>
+          <a href="" class="text-sm md:text-lg text-red absolute bottom-2">* Registration of paper
+            link will come very soon......</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact-Page-->
+  <section
+    class="translate-y-[-100vh] duration-700 fixed top-0 bg-[rgba(0,0,0,.8)] h-[100vh] w-[100vw] flex justify-center text-justify text-black text-sm md:text-lg overflow-hidden drop-shadow-none z-20"
+    id="contact">
+    <button
+      class="btn btn-circle btn-outline absolute md:right-[25%] top-12 md:top-[12%] m-2 bg-white text-black border-0 hover:bg-black hover:text-white drop-shadow-[0_0_10px_rgba(0,0,0,0.2)] z-[99]"
+      onclick="close_modal()">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+
+    <!-- Form -->
+    <div class="w-[100%] sm:w-[80%] flex flex-col justify-center">
+      <h1 class="text-2xl md:text-5xl text-center text-white font-bold mt-8 md:mb-12">Contact Us</h1>
+      <div class="w-[100%] flex items-center justify-center font-semibold">
+        <form method="post" autocomplete="off" name="google-sheet"
+          class="flex flex-col px-8 md:w-[40%] rounded-md shadow-[0_0_15px_rgba(0,0,0,0.3)] scale-75 md:scale-100"
+          id="formCont" data-theme="light">
+          <input type="text" name="Time" class="hidden" id="time">
+          <label for="Name"
+            class="my-8 border-0 text-left relative before:absolute before:bg-black before:bottom-0 before:w-[100%] before:h-[2px] before:scale-x-0 before:focus-within:scale-x-100 before:origin-right before:duration-500">
+            Full Name
+            <input type="text" name="Name"
+              class="focus:outline-none bg-inherit w-[100%] p-2 border-2 rounded-sm font-[400]" required />
+          </label>
+          <label for="Email"
+            class="border-0 relative before:absolute before:bg-black before:bottom-0 before:w-[100%] before:h-[2px] before:scale-x-0 before:focus-within:scale-x-100 before:origin-right before:duration-500">
+            Email
+            <input type="email" placeholder="you@example.com" name="Email"
+              class="focus:outline-none bg-inherit border-2 w-[100%] p-2 rounded-sm font-[400]" required />
+          </label>
+          <label for="Message"
+            class="my-8 border-0 relative before:absolute before:bg-black before:bottom-0 before:w-[100%] before:h-[2px] before:scale-x-0 before:focus-within:scale-x-100 before:origin-right before:duration-500">
+            Message
+            <textarea type="text" name="Message"
+              class="text-sm font-[200] focus:outline-none bg-inherit w-[100%] p-2 border-2 h-[100px] rounded-sm"></textarea>
+          </label>
+          <button type="submit" name="submit"
+            class="mb-8 w-[50%] self-center hover:drop-shadow-[5px_5px_5px_rgba(0,0,0,0.3)] btn border-0 hover:border-0 hover:bg-cyan-400 bg-[#b70404] text-white hover:text-black">Submit</button>
+        </form>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer
+    class="relative grid grid-rows-[max-content_max-content_max-content_max-content_max-content_max-content] grid-cols-1 sm:grid-cols-[40%_20%_40%] sm:grid-rows-[max-content_auto] bg-[linear-gradient(150deg,rgba(0,0,0,1)_40%,rgba(255,255,255,1)_100%)] sm:p-2 md:p-8 text-white">
+
+    <!-- Logo -->
+    <img src="asset/galgotias-logo-3.png" alt="Galgotias University" class="w-80 row-start-1">
+
+    <!-- Contact -->
+    <div class="row-start-2 sm:col-start-1 ml-6 mt-2 mr-2 md:mr-0 md:mt-6">
+      <h1 class="text-lg md:text-2xl font-bold">Contact Us</h1>
+      <address class="text-[12px] md:text-sm flex flex-col gap-4">
+        Plot No. 2, Yamuna Expy,<br>Opposite Buddha International Circuit, Sector 17A, Greater Noida,<br>Uttar
+        Pradesh 203201
+        <a class="text-[#FF5733] origin-left hover:underline transition-all duration-500 w-[max-content]"
+          href="mailto:ic2pct@galgotiasuniversity.edu.in">Email:
+          ic2pct@galgotiasuniversity.edu.in</a>
+      </address>
+    </div>
+
+    <!-- Google-Map -->
+    <div id="map" class="h-[21vh] w-[60%] col-start-3 row-span-2 place-self-center"></div>
+
+    <!-- Places -->
+    <div
+      class="flex sm:flex-col gap-6 items-center justify-center sm:justify-start row-start-4 sm:row-start-1 sm:col-start-2 sm:row-span-2 py-4 sm:pb-0 col-span-2 md:col-span-1 text-sm sm:text-lg">
+      <h1 class="self-start">PLaces to visit -</h1>
+      <div class="flex flex-col gap-2">
+        <a href="https://uptourism.gov.in/en/page/agra-fatehpur-sikri"
+          class="relative w-max duration-500 hover:text-[#FF5733] before:absolute before:w-full before:h-[2%] before:bottom-0 before:bg-[#FF5733] before:scale-x-0 hover:before:scale-x-100 before:duration-500 before:origin-left">UP
+          Tourism</a>
+        <a href="https://www.delhitourism.gov.in/delhitourism/index.jsp"
+          class="relative w-max duration-500 hover:text-[#FF5733] before:absolute before:w-full before:h-[2%] before:bottom-0 before:bg-[#FF5733] before:scale-x-0 hover:before:scale-x-100 before:duration-500 before:origin-left">Delhi
+          Tourism</a>
+      </div>
+    </div>
+
+  </footer>
+  <div
+    class="bg-[rgba(0,0,0,1)] text-white text-sm font-[500] h-[9vh] w-[100%] flex flex-col sm:flex-row pt-2 sm:pt-0 sm:px-14 items-center gap-2 sm:gap-0 sm:justify-between">
+    <p class="text-md">Copyright &#169; 2023 IC2PCT</p>
+    <div class="">Made with<span class="text-red-700"> ❤ </span><a
+        href="https://devsankalp.github.io/DeV_SaNkAlP-Portfolio/" class="hover:underline">by Sankalp</a></div>
+  </div>
+
+  <!-- Top-Menu-Script -->
+  <script>
+    window.addEventListener('click', function (e) {
+      if (document.getElementById('menu_btn').contains(e.target)) {
+        document.getElementById("menu").classList.remove("scale-y-0")
+        document.getElementById("nav_cont").classList.remove("rounded-lg")
+        document.getElementById("nav_cont").classList.add("rounded-t-lg")
+      } else {
+        document.getElementById("menu").classList.add("scale-y-0")
+        setTimeout(() => {
+          document.getElementById("nav_cont").classList.add("rounded-lg")
+          document.getElementById("nav_cont").classList.remove("rounded-t-lg")
+        }, 400);
+      }
+    });
+  </script>
+
+  <!-- Side-Bar-Script -->
+  <script>
+    window.addEventListener('click', function (e) {
+      if (document.getElementById('menu1_btn').contains(e.target)) {
+        document.getElementById("menu1").classList.remove("translate-x-[-25vw]")
+      } else {
+        document.getElementById("menu1").classList.add("translate-x-[-25vw]")
+      }
+    });
+  </script>
+
+  <!-- Committee-script -->
+  <script>
+    const el1 = document.getElementById('committee-cont');
+    const hiddenDiv1 = document.getElementById('committee-links');
+    el1.addEventListener('mouseover', function handleMouseOver() {
+      hiddenDiv1.classList.remove('translate-x-[-100%]')
+      hiddenDiv1.classList.add('translate-x-0')
+      hiddenDiv1.classList.remove('before:z-[1]')
+      hiddenDiv1.classList.add('before:z-[-1]')
+    });
+    el1.addEventListener('mouseout', function handleMouseOut() {
+      hiddenDiv1.classList.add('translate-x-[-100%]')
+      hiddenDiv1.classList.remove('translate-x-0')
+      hiddenDiv1.classList.add('before:z-[1]')
+      hiddenDiv1.classList.remove('before:z-[-1]')
+    })
+  </script>
+
+  <!-- Previous-Conference-Links-Container -->
+  <script>
+    const el2 = document.getElementById('prev-conf-cont');
+    const hiddenDiv2 = document.getElementById('prev-conf-links');
+    el2.addEventListener('mouseover', function handleMouseOver() {
+      hiddenDiv2.classList.remove('translate-x-[-100%]')
+      hiddenDiv2.classList.add('translate-x-0')
+      hiddenDiv2.classList.remove('before:z-[1]')
+      hiddenDiv2.classList.add('before:z-[-1]')
+    });
+    el2.addEventListener('mouseout', function handleMouseOut() {
+      hiddenDiv2.classList.add('translate-x-[-100%]')
+      hiddenDiv2.classList.remove('translate-x-0')
+      hiddenDiv2.classList.add('before:z-[1]')
+      hiddenDiv2.classList.remove('before:z-[-1]')
+    })
+  </script>
+
+  <!-- Contact-Script -->
+  <script>
+    function open_modal() {
+      document.getElementById("body").classList.add("overflow-hidden");
+      document.getElementById("contact").classList.remove("translate-y-[-100vh]");
+    }
+    function close_modal() {
+      document.getElementById("contact").classList.add("translate-y-[-100vh]");
+      document.getElementById("body").classList.remove("overflow-hidden");
+    }
+  </script>
+  <script>
+    const scriptURL = "https://script.google.com/macros/s/AKfycbzsPCd3EVQFC-ZC2PZpjwsVRagnJHkTiy4oC2MRl8rtbDKb1rcUgpMXnLcc29DlyelQ/exec";
+    const form = document.forms['google-sheet'];
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      var time = new Date().getHours() + ":" + new Date().getMinutes() + ":" + new Date().getSeconds();
+      var timestamp = document.getElementById("time");
+      timestamp.setAttribute("value", time);
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          alert("Thanks for Contacting us..! We Will Contact You Soon...");
+          document.getElementById("formCont").reset();
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+  <!-- Registration-Script -->
+  <script>
+    function open_modal2() {
+      document.getElementById("body").classList.add("overflow-hidden");
+      document.getElementById("registration").classList.remove("translate-x-[100vw]");
+    }
+    function close_modal2() {
+      document.getElementById("registration").classList.add("translate-x-[100vw]");
+      document.getElementById("body").classList.remove("overflow-hidden");
+    }
+  </script>
+
+  <!-- Maps-Script -->
+  <script type="module">
+    let map;
+    async function initMap() {
+      const position = { lat: 28.367186, lng: 77.540582 };
+      const { Map } = await google.maps.importLibrary("maps");
+      const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+      map = new Map(document.getElementById("map"), {
+        zoom: 13,
+        center: position,
+        mapId: "Galgotias_Map_Id",
+      });
+      const marker = new AdvancedMarkerElement({
+        map: map,
+        position: position,
+        title: "Galgotias University",
+      });
+    }
+    initMap();
+  </script>
+  <script>
+    (g => {
+      var h, a, k, p = "The Google Maps JavaScript API",
+        c = "google",
+        l = "importLibrary",
+        q = "__ib__",
+        m = document,
+        b = window;
+      b = b[c] || (b[c] = {});
+      var d = b.maps || (b.maps = {}),
+        r = new Set
+      e = new URLSearchParams,
+        u = () => h || (h = new Promise(async (f, n) => {
+          await (a = m.createElement("script"));
+          e.set("libraries", [...r] + "");
+          for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]);
+          e.set("callback", c + ".maps." + q);
+          a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
+          d[q] = f;
+          a.onerror = () => h = n(Error(p + " could not load."));
+          a.nonce = m.querySelector("script[nonce]")?.nonce || "";
+          m.head.append(a)
+        }));
+      d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n))
+    })
+      ({ key: "AIzaSyCK_DcPNsy65WOA3CoVfw-yOJ0gQBl79jc", v: "beta" });
+  </script>
+
+</body>
+
+</html>
