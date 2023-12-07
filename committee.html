@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="asset/Galgotias-logo-4.png">
   <link rel="stylesheet" href="committee.css">
-  <title>IC2PCT 2023</title>
+  <title>IC2PCT 2024</title>
 </head>
 
 <body class="font-['poppins'] overflow-x-hidden" id="body">
@@ -25,69 +25,70 @@
       <div class="hidden md:w-[50%] h-[100%] md:flex">
 
         <!-- SideBar -->
-        <div class="relative self-end">
+        <div class="">
           <div tabindex="0"
-            class="fixed bottom-0 bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(255,255,255,1)_100%)] text-[#B70404] h-[92vh] md:w-[25%] flex flex-col translate-x-[-25vw] origin-left duration-300"
+            class="fixed top-0 bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(255,255,255,1)_100%)] text-[#B70404] h-full w-1/4 flex flex-col translate-x-[-25vw] origin-left duration-300"
             id="menu1">
             <a href="index.html"
-              class="relative p-[27.3px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Home
+              class="relative py-[6%] px-[27.3px] flex items-center justify-between before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500 h-min">Home
             </a>
             <a href="call.html"
-              class="relative p-[27.5px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Call
+              class="relative py-[6%] px-[27.3px] flex items-center justify-between before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500 h-min">Call
               for Paper
             </a>
 
             <!-- Committee  -->
             <div id="committee-cont"
-              class="relative py-4 px-[27.3px] flex items-center justify-between before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500 h-min">
+              class="relative py-[5%] px-[27.3px] flex items-center justify-between before:bg-[#B70404] text-white before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] h-min">
               Committee <img src="asset/back-arrow.png" alt="" class="rotate-180 invert scale-75">
               <div id="committee-links"
                 class="translate-x-[-100%] absolute z-[-10] w-1/2 top-0 left-[100%] text-[#B70404] flex flex-col h-full origin-left duration-500 before:absolute before:w-[100%] before:h-[100%] before:top-0 before:bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(255,255,255,1)_100%)] before:z-[1]">
-                <p class="relative p-2 h-full flex items-center bg-[#B70404] text-white"><span
-                    class="pl-4">Members</span></p>
+                <p
+                  class="relative p-[1%] h-full flex items-center before:bg-[#B70404] text-white before:w-[100%] before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%]">
+                  <span class="pl-4">Members</span>
+                </p>
                 <a href="speakers.html"
-                  class="relative p-2 h-full flex items-center before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500"><span
+                  class="relative p-[1%] h-full flex items-center before:bg-[#B70404] hover:text-white before:w-[100%] before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500"><span
                     class="pl-4">Speakers</span></a>
               </div>
             </div>
 
             <a href="author.html"
-              class="relative py-[28px] px-[27.3px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">For
+              class="relative py-[6%] px-[27.3px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">For
               Author
             </a>
+            <a onclick="open_modal2()"
+              class="cursor-pointer relative py-[6%] px-[27.3px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Registration
+            </a>
             <a href="sponsors.html"
-              class="relative py-[28px] px-[27.3px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Sponsorship
+              class="relative py-[6%] px-[27.3px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Sponsorship
             </a>
 
             <!-- Previous Conferences -->
             <div id="prev-conf-cont"
-              class="relative py-6 px-[27.3px] flex items-center justify-between before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500 h-[min-content]">
+              class="relative py-[6%] px-[27.3px] flex items-center justify-between before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500 h-min">
               Previous Conferences <img src="asset/back-arrow.png" alt="" class="rotate-180 invert scale-75">
               <div id="prev-conf-links"
-                class="translate-x-[-100%] absolute z-[-10] w-[50%] top-0 left-[100%] text-[#B70404] flex flex-col justify-center h-[192px] origin-left duration-500 before:absolute before:w-[100%] before:h-[100%] before:top-0 before:bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(255,255,255,1)_100%)] before:z-[1]">
+                class="translate-x-[-100%] absolute z-[-10] w-[50%] top-0 left-[100%] text-[#B70404] flex flex-col justify-center h-[200%] origin-left duration-500 before:absolute before:w-[100%] before:h-[100%] before:top-0 before:bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(255,255,255,1)_100%)] before:z-[1]">
                 <a href="https://ieeexplore.ieee.org/xpl/conhome/9573501/proceeding" target="_blank"
-                  class="relative p-2 h-[100%] flex items-center before:bg-[#B70404] hover:text-white before:w-[100%] before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500"><span
+                  class="relative p-2 h-1/4 flex items-center before:bg-[#B70404] hover:text-white before:w-[100%] before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500"><span
                     class="pl-4">2021</span></a>
                 <a href="https://ieeexplore.ieee.org/xpl/conhome/9230460/proceeding" target="_blank"
-                  class="relative p-2 h-[100%] flex items-center before:bg-[#B70404] hover:text-white before:w-[100%] before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500"><span
+                  class="relative p-2 h-1/4 flex items-center before:bg-[#B70404] hover:text-white before:w-[100%] before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500"><span
                     class="pl-4">2020</span></a>
                 <a href="https://ieeexplore.ieee.org/xpl/conhome/8933293/proceeding" target="_blank"
-                  class="relative p-2 h-[100%] flex items-center before:bg-[#B70404] hover:text-white before:w-[100%] before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500"><span
+                  class="relative p-2 h-1/4 flex items-center before:bg-[#B70404] hover:text-white before:w-[100%] before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500"><span
                     class="pl-4">2019</span></a>
                 <a href="https://ieeexplore.ieee.org/xpl/conhome/8671767/proceeding" target="_blank"
-                  class="relative p-2 h-[100%] flex items-center before:bg-[#B70404] hover:text-white before:w-[100%] before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500"><span
+                  class="relative p-2 h-1/4 flex items-center before:bg-[#B70404] hover:text-white before:w-[100%] before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500"><span
                     class="pl-4">2018</span></a>
               </div>
             </div>
-
             <a href="Error.html"
-              class="relative p-[27.21px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Programs
-            </a>
-            <a onclick="open_modal2()"
-              class="cursor-pointer relative p-[27.21px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Registration
+              class="relative py-[6%] px-[27.3px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Programs
             </a>
             <a onclick="open_modal()"
-              class="cursor-pointer relative p-[27.21px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Contact
+              class="cursor-pointer relative py-[6%] px-[27.3px] before:bg-[#B70404] hover:text-white before:scale-x-0 hover:before:scale-x-100 before:absolute before:top-0 before:left-0 before:z-[-1] before:w-[100%] before:h-[100%] before:origin-left before:duration-500">Contact
             </a>
           </div>
         </div>
@@ -123,7 +124,7 @@
             <li><a href="call.html">Call for Paper</a></li>
             <li><a href="speakers.html">Speakers</a></li>
             <li><a href="author.html">For Author</a></li>
-            <li><a href="sponsors.html">Sponsors</a></li>
+            <li><a href="sponsors.html">Sponsorship</a></li>
             <li><a href="Error.html">Programs</a></li>
             <li><a class="cursor-pointer" onclick="open_modal2()">Registration</a></li>
             <li><a onclick="open_modal()" class="cursor-pointer">Contact</a></li>
@@ -660,7 +661,7 @@
 
   <!-- registration -->
   <section
-    class="translate-x-[100vw] duration-700 fixed top-0 h-[100vh] w-[100vw] bg-[rgba(0,0,0,0.8)] flex justify-center text-justify text-black text-sm md:text-lg z-20"
+    class="translate-x-[100vw] duration-700 fixed top-0 h-[100vh] w-[100vw] bg-[rgba(0,0,0,0.8)] flex justify-center text-justify text-black text-sm md:text-lg z-20 overflow-scroll"
     id="registration">
     <button
       class="btn btn-circle btn-outline absolute md:left-[2%] top-8 md:top-[2%] m-2 bg-white text-black border-0 hover:bg-black hover:text-white drop-shadow-[0_0_10px_rgba(0,0,0,0.2)] z-[99]"
@@ -672,7 +673,7 @@
     <div class="w-[80%] text-white flex flex-col justify-center items-center">
       <h1 class=" text-2xl md:text-4xl text-center text-white font-bold mt-8 mb-4">Registration</h1>
       <div
-        class="w-[100%] grid grid-rows-[max-content_max-content] grid-cols-1 text-[#B70404] bg-[rgba(255,255,255,1)] rounded-md">
+        class="w-[100%] grid grid-rows-[max-content_max-content] grid-cols-1 text-[#B70404] bg-[rgba(255,255,255,1)] rounded-md relative">
 
         <!-- Prices -->
         <div class="p-2 sm:p-4">
@@ -713,7 +714,7 @@
 
         <!-- Account-Info -->
         <div
-          class="grid grid-cols-[max-content_1fr] grid-rows-[max-content_1fr] text-left mx-5 mt-4 pb-12 text-xs sm:text-sm md:text-lg relative">
+          class="grid grid-cols-[max-content_1fr] grid-rows-[max-content_1fr] text-left mx-5 mt-4 pb-16 text-xs sm:text-sm md:text-lg">
           <h1 class="text-2xl text-black col-span-2">Account Details</h1>
           <div class="row-start-2 border-2 border-black p-2 sm:p-4 w-[max-content]">
             <p class="border-b-2 border-black">Name of Account</p>
@@ -729,8 +730,9 @@
             <p class="border-b-2 border-black">Punjab National Bank</p>
             </p>
           </div>
-          <a href="" class="text-sm md:text-lg text-red absolute bottom-2">* Registration of paper
-            link will come very soon......</a>
+          <a href=""
+            class="text-sm md:text-lg text-white bg-red-600 py-2 px-6 absolute bottom-0 left-0 hover:bg-red-800 transition-all duration-500 rounded-bl-md">Register
+            Here</a>
         </div>
 
       </div>
@@ -890,12 +892,18 @@
     window.addEventListener('click', function (e) {
       if (document.getElementById('menu1_btn').contains(e.target)) {
         document.getElementById("menu1").classList.remove("translate-x-[-25vw]")
+        document.getElementById("body").classList.remove("overflow-x-hidden")
+        document.getElementById("body").classList.add("overflow-hidden")
       } else {
         document.getElementById("menu1").classList.add("translate-x-[-25vw]")
+        document.getElementById("body").classList.add("overflow-x-hidden")
+        document.getElementById("body").classList.remove("overflow-hidden")
       }
     });
+  </script>
 
-    // Committee-Script
+  <!-- Committee-script -->
+  <script>
     const el1 = document.getElementById('committee-cont');
     const hiddenDiv1 = document.getElementById('committee-links');
     el1.addEventListener('mouseover', function handleMouseOver() {
@@ -910,23 +918,23 @@
       hiddenDiv1.classList.add('before:z-[1]')
       hiddenDiv1.classList.remove('before:z-[-1]')
     })
+  </script>
 
-    // Previous-Conference-Links-Container
-    const el = document.getElementById('prev-conf-cont');
-    const hiddenDiv = document.getElementById('prev-conf-links');
-    el.addEventListener('mouseover', function handleMouseOver() {
-      hiddenDiv.classList.remove('translate-x-[-100%]')
-      hiddenDiv.classList.add('translate-x-0')
-      hiddenDiv.classList.remove('before:z-[1]')
-      hiddenDiv.classList.add('before:z-[-1]')
-      hiddenDiv.classList.add('shadow-xl')
+  <!-- Previous-Conference-Links-Container -->
+  <script>
+    const el2 = document.getElementById('prev-conf-cont');
+    const hiddenDiv2 = document.getElementById('prev-conf-links');
+    el2.addEventListener('mouseover', function handleMouseOver() {
+      hiddenDiv2.classList.remove('translate-x-[-100%]')
+      hiddenDiv2.classList.add('translate-x-0')
+      hiddenDiv2.classList.remove('before:z-[1]')
+      hiddenDiv2.classList.add('before:z-[-1]')
     });
-    el.addEventListener('mouseout', function handleMouseOut() {
-      hiddenDiv.classList.add('translate-x-[-100%]')
-      hiddenDiv.classList.remove('translate-x-0')
-      hiddenDiv.classList.add('before:z-[1]')
-      hiddenDiv.classList.remove('before:z-[-1]')
-      hiddenDiv.classList.remove('shadow-xl')
+    el2.addEventListener('mouseout', function handleMouseOut() {
+      hiddenDiv2.classList.add('translate-x-[-100%]')
+      hiddenDiv2.classList.remove('translate-x-0')
+      hiddenDiv2.classList.add('before:z-[1]')
+      hiddenDiv2.classList.remove('before:z-[-1]')
     })
   </script>
 
@@ -990,12 +998,16 @@
   <!-- Contact-Script -->
   <script>
     function open_modal() {
-      document.getElementById("body").classList.add("overflow-hidden");
-      document.getElementById("contact").classList.remove("translate-y-[-100vh]");
+      setTimeout(() => {
+        document.getElementById("body").classList.add("overflow-hidden");
+        document.getElementById("body").classList.remove("overflow-x-hidden");
+        document.getElementById("contact").classList.remove("translate-y-[-100vh]");
+      }, 100);
     }
     function close_modal() {
       document.getElementById("contact").classList.add("translate-y-[-100vh]");
       document.getElementById("body").classList.remove("overflow-hidden");
+      document.getElementById("body").classList.add("overflow-x-hidden");
     }
   </script>
   <script>
@@ -1015,15 +1027,20 @@
     })
   </script>
 
-  <!-- registration-Script -->
+  <!-- Registration-Script -->
   <script>
     function open_modal2() {
-      document.getElementById("body").classList.add("overflow-hidden");
-      document.getElementById("registration").classList.remove("translate-x-[100vw]");
+      setTimeout(() => {
+
+        document.getElementById("body").classList.add("overflow-hidden");
+        document.getElementById("body").classList.remove("overflow-x-hidden");
+        document.getElementById("registration").classList.remove("translate-x-[100vw]");
+      }, 100);
     }
     function close_modal2() {
       document.getElementById("registration").classList.add("translate-x-[100vw]");
       document.getElementById("body").classList.remove("overflow-hidden");
+      document.getElementById("body").classList.add("overflow-x-hidden");
     }
   </script>
 
