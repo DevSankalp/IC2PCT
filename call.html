@@ -591,6 +591,27 @@
     })
   </script>
 
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+  <!-- Accordion-Script -->
+  <script>
+      (function ($) {
+        $('.accordion > li:eq(0) a').addClass('active').next().slideDown();
+        $('.accordion a').click(function (j) {
+          var dropDown = $(this).closest('li').find('div');
+          $(this).closest('.accordion').find('div').not(dropDown).slideUp();
+          if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+          } else {
+            $(this).closest('.accordion').find('a.active').removeClass('active');
+            $(this).addClass('active');
+          }
+          dropDown.stop(false, true).slideToggle();
+          j.preventDefault();
+        });
+      })(jQuery);
+  </script>
+
   <!-- Previous-Conference-Links-Container -->
   <script>
     const el2 = document.getElementById('prev-conf-cont');
